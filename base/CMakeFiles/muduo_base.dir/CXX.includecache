@@ -1,0 +1,156 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/AsyncLog.cpp
+AsyncLog.h
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/AsyncLog.h
+ctime
+-
+time.h
+-
+string.h
+-
+sstream
+-
+iostream
+-
+stdarg.h
+-
+../base/Platform.h
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/Platform.h
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/AsyncLog.h
+stdio.h
+-
+string
+-
+list
+-
+thread
+-
+memory
+-
+mutex
+-
+condition_variable
+-
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/ConfigFileReader.cpp
+ConfigFileReader.h
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/ConfigFileReader.h
+stdio.h
+-
+string.h
+-
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/ConfigFileReader.h
+map
+-
+string
+-
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/CountDownLatch.cpp
+CountDownLatch.h
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/CountDownLatch.h
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/CountDownLatch.h
+mutex
+-
+condition_variable
+-
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/Platform.cpp
+Platform.h
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/Platform.h
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/Platform.h
+stdint.h
+-
+winsock2.h
+-
+ws2tcpip.h
+-
+Windows.h
+-
+Ws2ipdef.h
+-
+io.h
+-
+fcntl.h
+-
+shlwapi.h
+-
+arpa/inet.h
+-
+netinet/in.h
+-
+netinet/tcp.h
+-
+netinet/in.h
+-
+netdb.h
+-
+unistd.h
+-
+stdint.h
+-
+endian.h
+-
+poll.h
+-
+fcntl.h
+-
+signal.h
+-
+inttypes.h
+-
+errno.h
+-
+dirent.h
+-
+sys/socket.h
+-
+sys/select.h
+-
+sys/time.h
+-
+sys/types.h
+-
+sys/eventfd.h
+-
+sys/stat.h
+-
+sys/uio.h
+-
+sys/epoll.h
+-
+sys/uio.h
+-
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/Timestamp.cpp
+Timestamp.h
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/Timestamp.h
+chrono
+-
+ctime
+-
+iomanip
+-
+sstream
+-
+stdio.h
+-
+
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/base/Timestamp.h
+stdint.h
+-
+algorithm
+-
+string
+-
+

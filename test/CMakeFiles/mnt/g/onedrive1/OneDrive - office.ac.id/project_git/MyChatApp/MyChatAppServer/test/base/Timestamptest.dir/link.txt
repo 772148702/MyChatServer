@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic "CMakeFiles//mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/test/base/Timestamptest.dir/base/Timestamptest.cpp.o"  -o "/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/test/base/Timestamptest" ../base/libmuduo_base.a libgtest.a -lpthread 

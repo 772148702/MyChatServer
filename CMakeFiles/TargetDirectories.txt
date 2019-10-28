@@ -1,0 +1,4 @@
+/home/lzy/MyChatAppServer/CMakeFiles/rebuild_cache.dir
+/home/lzy/MyChatAppServer/CMakeFiles/edit_cache.dir
+/home/lzy/MyChatAppServer/CMakeFiles/chatserver.dir
+/home/lzy/MyChatAppServer/CMakeFiles/Timestamptest.dir
