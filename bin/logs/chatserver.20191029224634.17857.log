@@ -1,0 +1,13 @@
+[INFO][[2019-10-29 22:46:34:103]][140529664481152][/home/lzy/MyChatAppServer/chatserversrc/UserManager.cpp:106]current base userid: 0, current base group id: 268435455
+[INFO][[2019-10-29 22:46:34:123]][140529664481152][/home/lzy/MyChatAppServer/chatserversrc/main.cpp:153]chatserver initialization completed, now you can use client to connect it.
+[INFO][[2019-10-29 22:46:39:806]][140529241155328][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x837edcc0 , threadID: 140529241155328
+[INFO][[2019-10-29 22:46:39:806]][140529232762624][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x82feccc0 , threadID: 140529232762624
+[INFO][[2019-10-29 22:46:39:806]][140529224369920][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x827ebcc0 , threadID: 140529224369920
+[INFO][[2019-10-29 22:46:39:806]][140529215977216][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x81feacc0 , threadID: 140529215977216
+[INFO][[2019-10-29 22:46:39:806]][140529207584512][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x817e9cc0 , threadID: 140529207584512
+[INFO][[2019-10-29 22:46:39:806]][140529629480704][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x9aa43cc0 , threadID: 140529629480704
+[INFO][[2019-10-29 22:46:39:806]][140529618945792][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x9a037cc0 , threadID: 140529618945792
+[INFO][[2019-10-29 22:46:39:806]][140529610553088][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x99836cc0 , threadID: 140529610553088
+[INFO][[2019-10-29 22:46:39:806]][140529602160384][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x99035cc0 , threadID: 140529602160384
+[INFO][[2019-10-29 22:46:39:806]][140529593767680][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x98834cc0 , threadID: 140529593767680
+[INFO][[2019-10-29 22:46:39:806]][140529249548032][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x83feecc0 , threadID: 140529249548032

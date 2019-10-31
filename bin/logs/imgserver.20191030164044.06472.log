@@ -1,0 +1,10 @@
+[ERROR][[2019-10-30 16:40:44:259]][139729850435456][/home/lzy/MyChatAppServer/fileserversrc/FileManager.cpp:45]open base dir error, errno: 2, No such file or directory
+[INFO][[2019-10-30 16:40:44:275]][139729850435456][/home/lzy/MyChatAppServer/imgserversrc/main.cpp:109]imgserver initialization complete, now you can use client to connect it.
+[INFO][[2019-10-30 16:40:46:472]][139729825195776][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x62975cc0 , threadID: 139729825195776
+[INFO][[2019-10-30 16:40:46:473]][139729816803072][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x62174cc0 , threadID: 139729816803072
+[INFO][[2019-10-30 16:40:46:473]][139729808410368][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x61973cc0 , threadID: 139729808410368
+[INFO][[2019-10-30 16:40:46:473]][139729800017664][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x61172cc0 , threadID: 139729800017664
+[INFO][[2019-10-30 16:40:46:473]][139729791624960][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x60971cc0 , threadID: 139729791624960
+[INFO][[2019-10-30 16:40:46:473]][139729446106880][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x4bfeecc0 , threadID: 139729446106880
+[INFO][[2019-10-30 16:40:46:473]][139729850435456][/home/lzy/MyChatAppServer/net/EventLoop.cpp:141]Exiting loop, EventLoop object: 0x75fc40 , threadID: 139729850435456
+[INFO][[2019-10-30 16:40:46:473]][139729850435456][/home/lzy/MyChatAppServer/imgserversrc/main.cpp:113]exit imgserver.

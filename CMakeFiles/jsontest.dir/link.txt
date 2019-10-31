@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++0x -g -Wall -O0 -Wno-unused-variable -pthread  -rdynamic CMakeFiles/jsontest.dir/test/json/jsontest.cpp.o  -o bin/jsontest  -L/home/lzy/MyChatAppServer/lib  -L/usr/lib64/mysql -Wl,-rpath,/home/lzy/MyChatAppServer/lib:/usr/lib64/mysql libnetlib.a libgtest.a libjsonlib.a 
