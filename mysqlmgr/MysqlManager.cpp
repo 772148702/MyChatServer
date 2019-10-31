@@ -102,7 +102,7 @@ CMysqlManager::~CMysqlManager(void)
 
 }
 
-bool CMysqlManager::init(const char* host, const char* user, const char* pwd, const char* dbname)
+bool CMysqlManager::Init(const char* host, const char* user, const char* pwd, const char* dbname)
 {
 	m_strHost = host;
 	m_strUser = user;
@@ -113,16 +113,16 @@ bool CMysqlManager::init(const char* host, const char* user, const char* pwd, co
 
 	//注意：检查数据库是否存在时，需要将数据库名称设置为空
 	m_poConn.reset(new CDatabaseMysql());
-    if (!m_poConn->initialize(m_strHost, m_strUser, m_strPassword, ""))
+    if (!m_poConn->Initialize(m_strHost, m_strUser, m_strPassword, ""))
 	{
 		//LOG_FATAL << "CMysqlManager::Init failed, please check params(" << m_strHost << ", " << m_strUser << ", " << m_strPassword << ")";
 		return false;
 	}
 
 	////////////////////// 1. 检查库是否存在 /////////////////////////
-	if (!isDBExist())
+	if (!_IsDBExist())
 	{
-		if (!createDB())
+		if (!_CreateDB())
 		{
 			return false;
 		}
@@ -130,7 +130,7 @@ bool CMysqlManager::init(const char* host, const char* user, const char* pwd, co
 
 	//再次确定是否可以连接上数据库
     m_poConn.reset(new CDatabaseMysql());
-	if (!m_poConn->initialize(m_strHost, m_strUser, m_strPassword, m_strDataBase))
+	if (!m_poConn->Initialize(m_strHost, m_strUser, m_strPassword, m_strDataBase))
 	{
 		//LOG_FATAL << "CMysqlManager::Init failed, please check params(" << m_strHost << ", " << m_strUser
 		//	<< ", " << m_strPassword << ", " << m_strDataBase << ")";
@@ -141,7 +141,7 @@ bool CMysqlManager::init(const char* host, const char* user, const char* pwd, co
 	for (size_t i = 0; i < m_vecTableInfo.size(); i++)
 	{
 		STableInfo table = m_vecTableInfo[i];
-		if (!checkTable(table))
+		if (!_CheckTable(table))
 		{
 			//LOG_FATAL << "CMysqlManager::Init, table check failed : " << table.m_strName;
 			return false;
@@ -153,46 +153,46 @@ bool CMysqlManager::init(const char* host, const char* user, const char* pwd, co
     return true;
 }
 
-bool CMysqlManager::isDBExist()
+bool CMysqlManager::_IsDBExist()
 {
 	if (NULL == m_poConn)
 	{
 		return false;
 	}
 
-	QueryResult* pResult = m_poConn->query("show databases");
+	QueryResult* pResult = m_poConn->Query("show databases");
 	if (NULL == pResult)
 	{
 		//LOGI << "CMysqlManager::_IsDBExist, no database(" << m_strDataBase << ")";
 		return false;
 	}
 
-	Field* pRow = pResult->fetch();
+	Field* pRow = pResult->Fetch();
 	while (pRow != NULL)
 	{
-		std::string name = pRow[0].getString();
+		string name = pRow[0].GetString();
 		if (name == m_strDataBase)
 		{
 			//LOGI << "CMysqlManager::_IsDBExist, find database(" << m_strDataBase << ")";
-			pResult->endQuery();
+			pResult->EndQuery();
 			return true;
 		}
 		
-		if (pResult->nextRow() == false)
+		if (pResult->NextRow() == false)
 		{
 			break;
 		}
-		pRow = pResult->fetch();
+		pRow = pResult->Fetch();
 	}
 
 	//LOGI << "CMysqlManager::_IsDBExist, no database(" << m_strDataBase << ")";
-	pResult->endQuery();
+	pResult->EndQuery();
 
     delete pResult;
 	return false;
 }
 
-bool CMysqlManager::createDB()
+bool CMysqlManager::_CreateDB()
 {
 	if (NULL == m_poConn)
 	{
@@ -202,9 +202,9 @@ bool CMysqlManager::createDB()
 	uint32_t uAffectedCount = 0;
 	int nErrno = 0;
 
-	std::stringstream ss;
+	stringstream ss;
 	ss << "create database " << m_strDataBase;
-	if (m_poConn->execute(ss.str().c_str(), uAffectedCount, nErrno))
+	if (m_poConn->Execute(ss.str().c_str(), uAffectedCount, nErrno))
 	{
 		if (uAffectedCount == 1)
 		{
@@ -222,26 +222,26 @@ bool CMysqlManager::createDB()
 	return false;
 }
 
-bool CMysqlManager::checkTable(const STableInfo& table)
+bool CMysqlManager::_CheckTable(const STableInfo& table)
 {
 	if (NULL == m_poConn)
 	{
 		return false;
 	}
 
-	if (table.m_strName.find_first_not_of("\t\r\n ") == std::string::npos)
+	if (table.m_strName.find_first_not_of("\t\r\n ") == string::npos)
 	{
 		//LOGW << "CMysqlManager::_CheckTable, tale info not valid";
 		return true;
 	}
 
-	std::stringstream ss;
+	stringstream ss;
 	ss << "desc " << table.m_strName;
-	QueryResult* pResult = m_poConn->query(ss.str());
+	QueryResult* pResult = m_poConn->Query(ss.str());
 	if (NULL == pResult)
 	{
 		//LOGI << "CMysqlManager::_CheckTable, no table" << table.m_strName << ", begin create.....";
-		if (createTable(table))
+		if (_CreateTable(table))
 		{
 			//LOGI << "CMysqlManager::_CheckTable, " << table.m_strName << ", end create.....";
 			return true;
@@ -250,36 +250,36 @@ bool CMysqlManager::checkTable(const STableInfo& table)
 	}
 	else // 检查字段是否匹配， 暂时只检查是否存在， 还需进一步看类型是否需要修改 
 	{
-		std::map<std::string, std::string> mapOldTable;
-		Field* pRow = pResult->fetch();
+		map<string, string> mapOldTable;
+		Field* pRow = pResult->Fetch();
 		while (pRow != NULL)
 		{
-            std::string name = pRow[0].getString();
-            std::string type = pRow[1].getString();
+			string name = pRow[0].GetString();
+			string type = pRow[1].GetString();
 			mapOldTable[name] = type;
 
-			if (pResult->nextRow() == false)
+			if (pResult->NextRow() == false)
 			{
 				break;
 			}
-			pRow = pResult->fetch();
+			pRow = pResult->Fetch();
 		}
 
-		pResult->endQuery();
+		pResult->EndQuery();
         delete pResult;
 
-		for (std::map<std::string, STableField>::const_iterator it = table.m_mapField.begin();
+		for (map<string, STableField>::const_iterator it = table.m_mapField.begin();
 			it != table.m_mapField.end(); ++it)
 		{
 			STableField field = it->second;
 			if (mapOldTable.find(field.m_strName) == mapOldTable.end())
 			{
-                std::stringstream ss;
+				stringstream ss;
 				ss << "alter table " << table.m_strName << " add column "
 					<< field.m_strName << " " << field.m_strType;
 
-                std::string sql = ss.str();
-				if (m_poConn->execute(sql.c_str()))
+				string sql = ss.str();
+				if (m_poConn->Execute(sql.c_str()))
 				{
 					//LOGI << sql;
 					continue;
@@ -296,18 +296,17 @@ bool CMysqlManager::checkTable(const STableInfo& table)
 	return true;
 }
 
-bool CMysqlManager::createTable(const STableInfo& table)
+bool CMysqlManager::_CreateTable(const STableInfo& table)
 {
 	if (table.m_mapField.size() == 0)
 	{
 		//LOGE << "CMysqlManager::_CreateTable, table info not valid, " << table.m_strName;
 		return false;
 	}
-
-    std::stringstream ss;
+	stringstream ss;
 	ss << "CREATE TABLE IF NOT EXISTS " << table.m_strName << " (";
 	
-	for (std::map<std::string, STableField>::const_iterator it = table.m_mapField.begin();
+	for (map<string, STableField>::const_iterator it = table.m_mapField.begin();
 		it != table.m_mapField.end(); ++it)
 	{
 		if (it != table.m_mapField.begin())
@@ -325,7 +324,7 @@ bool CMysqlManager::createTable(const STableInfo& table)
 	}
 
 	ss << ")default charset = utf8, ENGINE = InnoDB;";
-	if (m_poConn->execute(ss.str().c_str()))
+	if (m_poConn->Execute(ss.str().c_str()))
 	{
 		return true;
 	}

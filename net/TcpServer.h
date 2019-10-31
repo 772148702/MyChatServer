@@ -1,7 +1,7 @@
 #pragma once
 
 #include <atomic>
-//#include <cstdatomic> // 锟斤拷gcc头锟侥硷拷
+//#include <cstdatomic> // 老gcc头文件
 #include <map>
 #include <memory>
 //#include "EventLoop.h"
@@ -32,7 +32,7 @@ namespace net
 		TcpServer(EventLoop* loop,
 			      const InetAddress& listenAddr,
 			      const std::string& nameArg,
-			      Option option = kReusePort);
+			      Option option = kReusePort);      //TODO: 默认修改成kReusePort
 		~TcpServer();  // force out-line dtor, for scoped_ptr members.
 
 		const std::string& hostport() const { return hostport_; }

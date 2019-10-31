@@ -7,11 +7,11 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/lzy/MyChatAppServer -I/home/lzy/MyChatAppServer/third_party/gmock/gmock -I/home/lzy/MyChatAppServer/third_party/gmock/gtest -isystem /home/lzy/MyChatAppServer/third_party/gmock 
+C_INCLUDES = -I/home/lzy/MyChatAppServer -I/home/lzy/MyChatAppServer/third_party/gmock 
 
 CXX_FLAGS =  -std=c++0x -g -Wall -O0 -Wno-unused-variable -pthread  
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lzy/MyChatAppServer -I/home/lzy/MyChatAppServer/third_party/gmock/gmock -I/home/lzy/MyChatAppServer/third_party/gmock/gtest -isystem /home/lzy/MyChatAppServer/third_party/gmock 
+CXX_INCLUDES = -I/home/lzy/MyChatAppServer -I/home/lzy/MyChatAppServer/third_party/gmock 
 

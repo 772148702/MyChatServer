@@ -1,2 +1,0 @@
-/usr/bin/ar qc libutillib.a  CMakeFiles/utillib.dir/utils/StringUtil.cpp.o CMakeFiles/utillib.dir/utils/URLEncodeUtil.cpp.o CMakeFiles/utillib.dir/utils/MD5.cpp.o CMakeFiles/utillib.dir/utils/DaemonRun.cpp.o
-/usr/bin/ranlib libutillib.a

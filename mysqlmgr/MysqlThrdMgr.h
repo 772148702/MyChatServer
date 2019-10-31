@@ -10,20 +10,20 @@ public:
     virtual ~CMysqlThrdMgr(void);
 
 public:
-	bool init(const std::string& host, const std::string& user, const std::string& pwd, const std::string& dbname);
-	bool addTask(uint32_t dwHashID, IMysqlTask* poTask);
-    bool addTask(IMysqlTask* poTask) 
+	bool Init(const string& host, const string& user, const string& pwd, const string& dbname);
+	bool AddTask(uint32_t dwHashID, IMysqlTask* poTask);
+    bool AddTask(IMysqlTask* poTask) 
     { 
-        return m_aoMysqlThreads[m_dwThreadsCount].addTask(poTask); 
+        return m_aoMysqlThreads[m_dwThreadsCount].AddTask(poTask); 
     }
 
-	inline uint32_t getTableHashID(uint32_t dwHashID) const 
+	inline uint32_t GetTableHashID(uint32_t dwHashID) const 
     { 
         return dwHashID % m_dwThreadsCount; 
     }
 
-    bool processReplyTask(int32_t nCount);
-    static uint32_t getThreadsCount() 
+    bool ProcessReplyTask(int32_t nCount);
+    static uint32_t GetThreadsCount() 
     { 
         return m_dwThreadsCount; 
     }

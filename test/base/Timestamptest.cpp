@@ -1,4 +1,4 @@
-#include "../../third_party/gmock/gtest/gtest.h"
+#include "gtest/gtest.h"
 #include "../../base/Timestamp.h"
 #include <iostream>
 #include <time.h>

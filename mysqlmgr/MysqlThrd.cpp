@@ -17,8 +17,8 @@ CMysqlThrd::~CMysqlThrd(void)
 
 void CMysqlThrd::Run()
 {
-	mainLoop();
-	uninit();
+	_MainLoop();
+	_Uninit();
 
 	if (NULL != m_pThread)
 	{
@@ -26,7 +26,7 @@ void CMysqlThrd::Run()
 	}
 }
 
-bool CMysqlThrd::start(const std::string& host, const std::string& user, const std::string& pwd, const std::string& dbname)
+bool CMysqlThrd::Start(const string& host, const string& user, const string& pwd, const string& dbname)
 {
 	m_poConn = new CDatabaseMysql();
 
@@ -36,15 +36,15 @@ bool CMysqlThrd::start(const std::string& host, const std::string& user, const s
         return false;
     }
 
-	if (m_poConn->initialize(host, user, pwd, dbname) == false)
+	if (m_poConn->Initialize(host, user, pwd, dbname) == false)
 	{
 		return false;
 	}
 
-    return init();
+    return _Init();
 }
 
-void CMysqlThrd::stop()
+void CMysqlThrd::Stop()
 {
 	if (m_bTerminate)
 	{
@@ -54,7 +54,7 @@ void CMysqlThrd::stop()
 	m_pThread->join();
 }
 
-bool CMysqlThrd::init()
+bool CMysqlThrd::_Init()
 {
     if (m_bStart)
     {
@@ -62,7 +62,7 @@ bool CMysqlThrd::init()
     }
 
     // Æô¶¯Ïß³Ì
-	m_pThread.reset(new std::thread(std::bind(&CMysqlThrd::mainLoop, this)));
+	m_pThread.reset(new std::thread(std::bind(&CMysqlThrd::_MainLoop, this)));
 
 	{
 		std::unique_lock<std::mutex> lock(mutex_);
@@ -75,12 +75,12 @@ bool CMysqlThrd::init()
     return true;
 }
 
-void CMysqlThrd::uninit()
+void CMysqlThrd::_Uninit()
 {
     //m_poConn->Close();
 }
 
-void CMysqlThrd::mainLoop()
+void CMysqlThrd::_MainLoop()
 {
 	m_bStart = true;
 
@@ -93,13 +93,14 @@ void CMysqlThrd::mainLoop()
 
 	while(!m_bTerminate)
 	{
-        if(NULL != (poTask = m_oTask.pop()))
+        if(NULL != (poTask = m_oTask.Pop()))
         {
-            poTask->execute(m_poConn);
-            m_oReplyTask.push(poTask);
+            poTask->Execute(m_poConn);
+            m_oReplyTask.Push(poTask);
             continue;
         }
 
-		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+		this_thread::sleep_for(chrono::milliseconds(1000));
 	}
 }
+

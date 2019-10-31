@@ -53,31 +53,14 @@ CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Polltest.dir/all
-all: CMakeFiles/jsontest.dir/all
-all: CMakeFiles/Timestamptest.dir/all
-all: CMakeFiles/utillib.dir/all
-all: CMakeFiles/netlib.dir/all
-all: CMakeFiles/AsynLogtest.dir/all
-all: CMakeFiles/jsonlib.dir/all
-all: CMakeFiles/fileserver.dir/all
 all: CMakeFiles/chatserver.dir/all
-all: CMakeFiles/imgserver.dir/all
+all: CMakeFiles/Timestamptest.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Polltest.dir/clean
-clean: CMakeFiles/jsontest.dir/clean
-clean: CMakeFiles/Timestamptest.dir/clean
-clean: CMakeFiles/utillib.dir/clean
-clean: CMakeFiles/netlib.dir/clean
-clean: CMakeFiles/AsynLogtest.dir/clean
-clean: CMakeFiles/jsonlib.dir/clean
-clean: CMakeFiles/fileserver.dir/clean
-clean: CMakeFiles/gtest.dir/clean
 clean: CMakeFiles/chatserver.dir/clean
-clean: CMakeFiles/imgserver.dir/clean
+clean: CMakeFiles/Timestamptest.dir/clean
 
 .PHONY : clean
 
@@ -87,269 +70,18 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/Polltest.dir
-
-# All Build rule for target.
-CMakeFiles/Polltest.dir/all: CMakeFiles/netlib.dir/all
-CMakeFiles/Polltest.dir/all: CMakeFiles/jsonlib.dir/all
-CMakeFiles/Polltest.dir/all: CMakeFiles/gtest.dir/all
-	$(MAKE) -f CMakeFiles/Polltest.dir/build.make CMakeFiles/Polltest.dir/depend
-	$(MAKE) -f CMakeFiles/Polltest.dir/build.make CMakeFiles/Polltest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=2 "Built target Polltest"
-.PHONY : CMakeFiles/Polltest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Polltest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 18
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Polltest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/Polltest.dir/rule
-
-# Convenience name for target.
-Polltest: CMakeFiles/Polltest.dir/rule
-
-.PHONY : Polltest
-
-# clean rule for target.
-CMakeFiles/Polltest.dir/clean:
-	$(MAKE) -f CMakeFiles/Polltest.dir/build.make CMakeFiles/Polltest.dir/clean
-.PHONY : CMakeFiles/Polltest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/jsontest.dir
-
-# All Build rule for target.
-CMakeFiles/jsontest.dir/all: CMakeFiles/netlib.dir/all
-CMakeFiles/jsontest.dir/all: CMakeFiles/jsonlib.dir/all
-CMakeFiles/jsontest.dir/all: CMakeFiles/gtest.dir/all
-	$(MAKE) -f CMakeFiles/jsontest.dir/build.make CMakeFiles/jsontest.dir/depend
-	$(MAKE) -f CMakeFiles/jsontest.dir/build.make CMakeFiles/jsontest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=83 "Built target jsontest"
-.PHONY : CMakeFiles/jsontest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/jsontest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 18
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/jsontest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/jsontest.dir/rule
-
-# Convenience name for target.
-jsontest: CMakeFiles/jsontest.dir/rule
-
-.PHONY : jsontest
-
-# clean rule for target.
-CMakeFiles/jsontest.dir/clean:
-	$(MAKE) -f CMakeFiles/jsontest.dir/build.make CMakeFiles/jsontest.dir/clean
-.PHONY : CMakeFiles/jsontest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Timestamptest.dir
-
-# All Build rule for target.
-CMakeFiles/Timestamptest.dir/all: CMakeFiles/netlib.dir/all
-CMakeFiles/Timestamptest.dir/all: CMakeFiles/jsonlib.dir/all
-CMakeFiles/Timestamptest.dir/all: CMakeFiles/gtest.dir/all
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/depend
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=3 "Built target Timestamptest"
-.PHONY : CMakeFiles/Timestamptest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Timestamptest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 18
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Timestamptest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/Timestamptest.dir/rule
-
-# Convenience name for target.
-Timestamptest: CMakeFiles/Timestamptest.dir/rule
-
-.PHONY : Timestamptest
-
-# clean rule for target.
-CMakeFiles/Timestamptest.dir/clean:
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/clean
-.PHONY : CMakeFiles/Timestamptest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/utillib.dir
-
-# All Build rule for target.
-CMakeFiles/utillib.dir/all:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/depend
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=98,99,100 "Built target utillib"
-.PHONY : CMakeFiles/utillib.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/utillib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/utillib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/utillib.dir/rule
-
-# Convenience name for target.
-utillib: CMakeFiles/utillib.dir/rule
-
-.PHONY : utillib
-
-# clean rule for target.
-CMakeFiles/utillib.dir/clean:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/clean
-.PHONY : CMakeFiles/utillib.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/netlib.dir
-
-# All Build rule for target.
-CMakeFiles/netlib.dir/all:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/depend
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=84,85,86,87,88,89,90,91,92,93,94,95,96,97 "Built target netlib"
-.PHONY : CMakeFiles/netlib.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/netlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 14
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/netlib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/netlib.dir/rule
-
-# Convenience name for target.
-netlib: CMakeFiles/netlib.dir/rule
-
-.PHONY : netlib
-
-# clean rule for target.
-CMakeFiles/netlib.dir/clean:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/clean
-.PHONY : CMakeFiles/netlib.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/AsynLogtest.dir
-
-# All Build rule for target.
-CMakeFiles/AsynLogtest.dir/all: CMakeFiles/netlib.dir/all
-CMakeFiles/AsynLogtest.dir/all: CMakeFiles/jsonlib.dir/all
-CMakeFiles/AsynLogtest.dir/all: CMakeFiles/gtest.dir/all
-	$(MAKE) -f CMakeFiles/AsynLogtest.dir/build.make CMakeFiles/AsynLogtest.dir/depend
-	$(MAKE) -f CMakeFiles/AsynLogtest.dir/build.make CMakeFiles/AsynLogtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=1 "Built target AsynLogtest"
-.PHONY : CMakeFiles/AsynLogtest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/AsynLogtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 18
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/AsynLogtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/AsynLogtest.dir/rule
-
-# Convenience name for target.
-AsynLogtest: CMakeFiles/AsynLogtest.dir/rule
-
-.PHONY : AsynLogtest
-
-# clean rule for target.
-CMakeFiles/AsynLogtest.dir/clean:
-	$(MAKE) -f CMakeFiles/AsynLogtest.dir/build.make CMakeFiles/AsynLogtest.dir/clean
-.PHONY : CMakeFiles/AsynLogtest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/jsonlib.dir
-
-# All Build rule for target.
-CMakeFiles/jsonlib.dir/all:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/depend
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=81,82 "Built target jsonlib"
-.PHONY : CMakeFiles/jsonlib.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/jsonlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/jsonlib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/jsonlib.dir/rule
-
-# Convenience name for target.
-jsonlib: CMakeFiles/jsonlib.dir/rule
-
-.PHONY : jsonlib
-
-# clean rule for target.
-CMakeFiles/jsonlib.dir/clean:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/clean
-.PHONY : CMakeFiles/jsonlib.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/fileserver.dir
-
-# All Build rule for target.
-CMakeFiles/fileserver.dir/all:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/depend
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59 "Built target fileserver"
-.PHONY : CMakeFiles/fileserver.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/fileserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 20
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fileserver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/fileserver.dir/rule
-
-# Convenience name for target.
-fileserver: CMakeFiles/fileserver.dir/rule
-
-.PHONY : fileserver
-
-# clean rule for target.
-CMakeFiles/fileserver.dir/clean:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/clean
-.PHONY : CMakeFiles/fileserver.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/gtest.dir
-
-# All Build rule for target.
-CMakeFiles/gtest.dir/all:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/depend
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=60 "Built target gtest"
-.PHONY : CMakeFiles/gtest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/gtest.dir/rule
-
-# Convenience name for target.
-gtest: CMakeFiles/gtest.dir/rule
-
-.PHONY : gtest
-
-# clean rule for target.
-CMakeFiles/gtest.dir/clean:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/clean
-.PHONY : CMakeFiles/gtest.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/chatserver.dir
 
 # All Build rule for target.
 CMakeFiles/chatserver.dir/all:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/depend
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39 "Built target chatserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Built target chatserver"
 .PHONY : CMakeFiles/chatserver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/chatserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 62
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/chatserver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
 .PHONY : CMakeFiles/chatserver.dir/rule
@@ -365,31 +97,31 @@ CMakeFiles/chatserver.dir/clean:
 .PHONY : CMakeFiles/chatserver.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/imgserver.dir
+# Target rules for target CMakeFiles/Timestamptest.dir
 
 # All Build rule for target.
-CMakeFiles/imgserver.dir/all:
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/depend
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80 "Built target imgserver"
-.PHONY : CMakeFiles/imgserver.dir/all
+CMakeFiles/Timestamptest.dir/all:
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/depend
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target Timestamptest"
+.PHONY : CMakeFiles/Timestamptest.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/imgserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 20
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/imgserver.dir/all
+CMakeFiles/Timestamptest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 26
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Timestamptest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
-.PHONY : CMakeFiles/imgserver.dir/rule
+.PHONY : CMakeFiles/Timestamptest.dir/rule
 
 # Convenience name for target.
-imgserver: CMakeFiles/imgserver.dir/rule
+Timestamptest: CMakeFiles/Timestamptest.dir/rule
 
-.PHONY : imgserver
+.PHONY : Timestamptest
 
 # clean rule for target.
-CMakeFiles/imgserver.dir/clean:
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/clean
-.PHONY : CMakeFiles/imgserver.dir/clean
+CMakeFiles/Timestamptest.dir/clean:
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/clean
+.PHONY : CMakeFiles/Timestamptest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

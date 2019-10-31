@@ -1,9 +1,4 @@
-/**
- * Http会话类, HttpSession.h
- * zhangyl 2018.05.16
- */
-#ifndef __MONITOR_SESSION_H__
-#define __MONITOR_SESSION_H__
+#pragma once
 
 #include "../net/Buffer.h"
 #include "../base/Timestamp.h"
@@ -12,6 +7,7 @@
 #include <memory>
 
 using namespace net;
+
 
 class HttpSession
 {
@@ -22,10 +18,10 @@ public:
     HttpSession& operator =(const HttpSession& rhs) = delete;
 
 public:
-    //有数据可读, 会被多个工作loop调用
-    void onRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBuffer, Timestamp receivTime);
+    //锟斤拷锟斤拷锟捷可讹拷, 锟结被锟斤拷锟斤拷锟斤拷锟絣oop锟斤拷锟斤拷
+    void OnRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBuffer, Timestamp receivTime);
 
-    std::shared_ptr<TcpConnection> getConnectionPtr()
+    std::shared_ptr<TcpConnection> GetConnectionPtr()
     {
         if (m_tmpConn.expired())
             return NULL;
@@ -33,18 +29,15 @@ public:
         return m_tmpConn.lock();
     }
 
-    void send(const char* data, size_t length);
+    void Send(const char* data, size_t length);
 
 private:
-    bool process(const std::shared_ptr<TcpConnection>& conn, const std::string& url, const std::string& param);
-    void makeupResponse(const std::string& input, std::string& output);
+    bool Process(const std::shared_ptr<TcpConnection>& conn, const std::string& url, const std::string& param);
+    void MakeupResponse(const std::string& input, std::string& output);
 
-    void onRegisterResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onLoginResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnRegisterResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnLoginResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
     
 private:
     std::weak_ptr<TcpConnection>       m_tmpConn;
 };
-
-
-#endif //!__MONITOR_SESSION_H__

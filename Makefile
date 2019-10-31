@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,30 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Polltest
+# Target rules for targets named chatserver
 
 # Build rule for target.
-Polltest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Polltest
-.PHONY : Polltest
+chatserver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chatserver
+.PHONY : chatserver
 
 # fast build rule for target.
-Polltest/fast:
-	$(MAKE) -f CMakeFiles/Polltest.dir/build.make CMakeFiles/Polltest.dir/build
-.PHONY : Polltest/fast
-
-#=============================================================================
-# Target rules for targets named jsontest
-
-# Build rule for target.
-jsontest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 jsontest
-.PHONY : jsontest
-
-# fast build rule for target.
-jsontest/fast:
-	$(MAKE) -f CMakeFiles/jsontest.dir/build.make CMakeFiles/jsontest.dir/build
-.PHONY : jsontest/fast
+chatserver/fast:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/build
+.PHONY : chatserver/fast
 
 #=============================================================================
 # Target rules for targets named Timestamptest
@@ -149,120 +136,14 @@ Timestamptest/fast:
 	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/build
 .PHONY : Timestamptest/fast
 
-#=============================================================================
-# Target rules for targets named utillib
-
-# Build rule for target.
-utillib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 utillib
-.PHONY : utillib
-
-# fast build rule for target.
-utillib/fast:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/build
-.PHONY : utillib/fast
-
-#=============================================================================
-# Target rules for targets named netlib
-
-# Build rule for target.
-netlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 netlib
-.PHONY : netlib
-
-# fast build rule for target.
-netlib/fast:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/build
-.PHONY : netlib/fast
-
-#=============================================================================
-# Target rules for targets named AsynLogtest
-
-# Build rule for target.
-AsynLogtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 AsynLogtest
-.PHONY : AsynLogtest
-
-# fast build rule for target.
-AsynLogtest/fast:
-	$(MAKE) -f CMakeFiles/AsynLogtest.dir/build.make CMakeFiles/AsynLogtest.dir/build
-.PHONY : AsynLogtest/fast
-
-#=============================================================================
-# Target rules for targets named jsonlib
-
-# Build rule for target.
-jsonlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 jsonlib
-.PHONY : jsonlib
-
-# fast build rule for target.
-jsonlib/fast:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/build
-.PHONY : jsonlib/fast
-
-#=============================================================================
-# Target rules for targets named fileserver
-
-# Build rule for target.
-fileserver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fileserver
-.PHONY : fileserver
-
-# fast build rule for target.
-fileserver/fast:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/build
-.PHONY : fileserver/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-#=============================================================================
-# Target rules for targets named chatserver
-
-# Build rule for target.
-chatserver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chatserver
-.PHONY : chatserver
-
-# fast build rule for target.
-chatserver/fast:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/build
-.PHONY : chatserver/fast
-
-#=============================================================================
-# Target rules for targets named imgserver
-
-# Build rule for target.
-imgserver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 imgserver
-.PHONY : imgserver
-
-# fast build rule for target.
-imgserver/fast:
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/build
-.PHONY : imgserver/fast
-
 base/AsyncLog.o: base/AsyncLog.cpp.o
 
 .PHONY : base/AsyncLog.o
 
 # target to build an object file
 base/AsyncLog.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/AsyncLog.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/AsyncLog.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/AsyncLog.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/AsyncLog.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/AsyncLog.cpp.o
 .PHONY : base/AsyncLog.cpp.o
 
 base/AsyncLog.i: base/AsyncLog.cpp.i
@@ -271,10 +152,8 @@ base/AsyncLog.i: base/AsyncLog.cpp.i
 
 # target to preprocess a source file
 base/AsyncLog.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/AsyncLog.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/AsyncLog.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/AsyncLog.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/AsyncLog.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/AsyncLog.cpp.i
 .PHONY : base/AsyncLog.cpp.i
 
 base/AsyncLog.s: base/AsyncLog.cpp.s
@@ -283,10 +162,8 @@ base/AsyncLog.s: base/AsyncLog.cpp.s
 
 # target to generate assembly for a file
 base/AsyncLog.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/AsyncLog.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/AsyncLog.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/AsyncLog.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/AsyncLog.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/AsyncLog.cpp.s
 .PHONY : base/AsyncLog.cpp.s
 
 base/ConfigFileReader.o: base/ConfigFileReader.cpp.o
@@ -295,10 +172,8 @@ base/ConfigFileReader.o: base/ConfigFileReader.cpp.o
 
 # target to build an object file
 base/ConfigFileReader.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/ConfigFileReader.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/ConfigFileReader.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/ConfigFileReader.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/ConfigFileReader.cpp.o
 .PHONY : base/ConfigFileReader.cpp.o
 
 base/ConfigFileReader.i: base/ConfigFileReader.cpp.i
@@ -307,10 +182,8 @@ base/ConfigFileReader.i: base/ConfigFileReader.cpp.i
 
 # target to preprocess a source file
 base/ConfigFileReader.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/ConfigFileReader.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/ConfigFileReader.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/ConfigFileReader.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/ConfigFileReader.cpp.i
 .PHONY : base/ConfigFileReader.cpp.i
 
 base/ConfigFileReader.s: base/ConfigFileReader.cpp.s
@@ -319,10 +192,8 @@ base/ConfigFileReader.s: base/ConfigFileReader.cpp.s
 
 # target to generate assembly for a file
 base/ConfigFileReader.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/ConfigFileReader.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/ConfigFileReader.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/ConfigFileReader.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/ConfigFileReader.cpp.s
 .PHONY : base/ConfigFileReader.cpp.s
 
 base/Platform.o: base/Platform.cpp.o
@@ -331,10 +202,8 @@ base/Platform.o: base/Platform.cpp.o
 
 # target to build an object file
 base/Platform.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Platform.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/Platform.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Platform.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/Platform.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Platform.cpp.o
 .PHONY : base/Platform.cpp.o
 
 base/Platform.i: base/Platform.cpp.i
@@ -343,10 +212,8 @@ base/Platform.i: base/Platform.cpp.i
 
 # target to preprocess a source file
 base/Platform.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Platform.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/Platform.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Platform.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/Platform.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Platform.cpp.i
 .PHONY : base/Platform.cpp.i
 
 base/Platform.s: base/Platform.cpp.s
@@ -355,10 +222,8 @@ base/Platform.s: base/Platform.cpp.s
 
 # target to generate assembly for a file
 base/Platform.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Platform.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/Platform.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Platform.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/Platform.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Platform.cpp.s
 .PHONY : base/Platform.cpp.s
 
 base/Timestamp.o: base/Timestamp.cpp.o
@@ -367,10 +232,8 @@ base/Timestamp.o: base/Timestamp.cpp.o
 
 # target to build an object file
 base/Timestamp.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Timestamp.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/Timestamp.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Timestamp.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/Timestamp.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Timestamp.cpp.o
 .PHONY : base/Timestamp.cpp.o
 
 base/Timestamp.i: base/Timestamp.cpp.i
@@ -379,10 +242,8 @@ base/Timestamp.i: base/Timestamp.cpp.i
 
 # target to preprocess a source file
 base/Timestamp.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Timestamp.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/Timestamp.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Timestamp.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/Timestamp.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Timestamp.cpp.i
 .PHONY : base/Timestamp.cpp.i
 
 base/Timestamp.s: base/Timestamp.cpp.s
@@ -391,10 +252,8 @@ base/Timestamp.s: base/Timestamp.cpp.s
 
 # target to generate assembly for a file
 base/Timestamp.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Timestamp.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/base/Timestamp.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Timestamp.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/base/Timestamp.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Timestamp.cpp.s
 .PHONY : base/Timestamp.cpp.s
 
 chatserversrc/BussinessLogic.o: chatserversrc/BussinessLogic.cpp.o
@@ -694,190 +553,13 @@ chatserversrc/main.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/chatserversrc/main.cpp.s
 .PHONY : chatserversrc/main.cpp.s
 
-fileserversrc/FileManager.o: fileserversrc/FileManager.cpp.o
-
-.PHONY : fileserversrc/FileManager.o
-
-# target to build an object file
-fileserversrc/FileManager.cpp.o:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileManager.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileManager.cpp.o
-.PHONY : fileserversrc/FileManager.cpp.o
-
-fileserversrc/FileManager.i: fileserversrc/FileManager.cpp.i
-
-.PHONY : fileserversrc/FileManager.i
-
-# target to preprocess a source file
-fileserversrc/FileManager.cpp.i:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileManager.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileManager.cpp.i
-.PHONY : fileserversrc/FileManager.cpp.i
-
-fileserversrc/FileManager.s: fileserversrc/FileManager.cpp.s
-
-.PHONY : fileserversrc/FileManager.s
-
-# target to generate assembly for a file
-fileserversrc/FileManager.cpp.s:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileManager.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileManager.cpp.s
-.PHONY : fileserversrc/FileManager.cpp.s
-
-fileserversrc/FileServer.o: fileserversrc/FileServer.cpp.o
-
-.PHONY : fileserversrc/FileServer.o
-
-# target to build an object file
-fileserversrc/FileServer.cpp.o:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileServer.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileServer.cpp.o
-.PHONY : fileserversrc/FileServer.cpp.o
-
-fileserversrc/FileServer.i: fileserversrc/FileServer.cpp.i
-
-.PHONY : fileserversrc/FileServer.i
-
-# target to preprocess a source file
-fileserversrc/FileServer.cpp.i:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileServer.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileServer.cpp.i
-.PHONY : fileserversrc/FileServer.cpp.i
-
-fileserversrc/FileServer.s: fileserversrc/FileServer.cpp.s
-
-.PHONY : fileserversrc/FileServer.s
-
-# target to generate assembly for a file
-fileserversrc/FileServer.cpp.s:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileServer.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileServer.cpp.s
-.PHONY : fileserversrc/FileServer.cpp.s
-
-fileserversrc/FileSession.o: fileserversrc/FileSession.cpp.o
-
-.PHONY : fileserversrc/FileSession.o
-
-# target to build an object file
-fileserversrc/FileSession.cpp.o:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileSession.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileSession.cpp.o
-.PHONY : fileserversrc/FileSession.cpp.o
-
-fileserversrc/FileSession.i: fileserversrc/FileSession.cpp.i
-
-.PHONY : fileserversrc/FileSession.i
-
-# target to preprocess a source file
-fileserversrc/FileSession.cpp.i:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileSession.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileSession.cpp.i
-.PHONY : fileserversrc/FileSession.cpp.i
-
-fileserversrc/FileSession.s: fileserversrc/FileSession.cpp.s
-
-.PHONY : fileserversrc/FileSession.s
-
-# target to generate assembly for a file
-fileserversrc/FileSession.cpp.s:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/FileSession.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/FileSession.cpp.s
-.PHONY : fileserversrc/FileSession.cpp.s
-
-fileserversrc/TcpSession.o: fileserversrc/TcpSession.cpp.o
-
-.PHONY : fileserversrc/TcpSession.o
-
-# target to build an object file
-fileserversrc/TcpSession.cpp.o:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/TcpSession.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/TcpSession.cpp.o
-.PHONY : fileserversrc/TcpSession.cpp.o
-
-fileserversrc/TcpSession.i: fileserversrc/TcpSession.cpp.i
-
-.PHONY : fileserversrc/TcpSession.i
-
-# target to preprocess a source file
-fileserversrc/TcpSession.cpp.i:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/TcpSession.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/TcpSession.cpp.i
-.PHONY : fileserversrc/TcpSession.cpp.i
-
-fileserversrc/TcpSession.s: fileserversrc/TcpSession.cpp.s
-
-.PHONY : fileserversrc/TcpSession.s
-
-# target to generate assembly for a file
-fileserversrc/TcpSession.cpp.s:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/TcpSession.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/fileserversrc/TcpSession.cpp.s
-.PHONY : fileserversrc/TcpSession.cpp.s
-
-fileserversrc/main.o: fileserversrc/main.cpp.o
-
-.PHONY : fileserversrc/main.o
-
-# target to build an object file
-fileserversrc/main.cpp.o:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/main.cpp.o
-.PHONY : fileserversrc/main.cpp.o
-
-fileserversrc/main.i: fileserversrc/main.cpp.i
-
-.PHONY : fileserversrc/main.i
-
-# target to preprocess a source file
-fileserversrc/main.cpp.i:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/main.cpp.i
-.PHONY : fileserversrc/main.cpp.i
-
-fileserversrc/main.s: fileserversrc/main.cpp.s
-
-.PHONY : fileserversrc/main.s
-
-# target to generate assembly for a file
-fileserversrc/main.cpp.s:
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/fileserversrc/main.cpp.s
-.PHONY : fileserversrc/main.cpp.s
-
-imgserversrc/main.o: imgserversrc/main.cpp.o
-
-.PHONY : imgserversrc/main.o
-
-# target to build an object file
-imgserversrc/main.cpp.o:
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/imgserversrc/main.cpp.o
-.PHONY : imgserversrc/main.cpp.o
-
-imgserversrc/main.i: imgserversrc/main.cpp.i
-
-.PHONY : imgserversrc/main.i
-
-# target to preprocess a source file
-imgserversrc/main.cpp.i:
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/imgserversrc/main.cpp.i
-.PHONY : imgserversrc/main.cpp.i
-
-imgserversrc/main.s: imgserversrc/main.cpp.s
-
-.PHONY : imgserversrc/main.s
-
-# target to generate assembly for a file
-imgserversrc/main.cpp.s:
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/imgserversrc/main.cpp.s
-.PHONY : imgserversrc/main.cpp.s
-
 jsoncpp1.9.0/json_reader.o: jsoncpp1.9.0/json_reader.cpp.o
 
 .PHONY : jsoncpp1.9.0/json_reader.o
 
 # target to build an object file
 jsoncpp1.9.0/json_reader.cpp.o:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_reader.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_reader.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_reader.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_reader.cpp.o
 .PHONY : jsoncpp1.9.0/json_reader.cpp.o
 
 jsoncpp1.9.0/json_reader.i: jsoncpp1.9.0/json_reader.cpp.i
@@ -886,10 +568,7 @@ jsoncpp1.9.0/json_reader.i: jsoncpp1.9.0/json_reader.cpp.i
 
 # target to preprocess a source file
 jsoncpp1.9.0/json_reader.cpp.i:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_reader.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_reader.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_reader.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_reader.cpp.i
 .PHONY : jsoncpp1.9.0/json_reader.cpp.i
 
 jsoncpp1.9.0/json_reader.s: jsoncpp1.9.0/json_reader.cpp.s
@@ -898,10 +577,7 @@ jsoncpp1.9.0/json_reader.s: jsoncpp1.9.0/json_reader.cpp.s
 
 # target to generate assembly for a file
 jsoncpp1.9.0/json_reader.cpp.s:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_reader.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_reader.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_reader.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_reader.cpp.s
 .PHONY : jsoncpp1.9.0/json_reader.cpp.s
 
 jsoncpp1.9.0/json_value.o: jsoncpp1.9.0/json_value.cpp.o
@@ -910,10 +586,7 @@ jsoncpp1.9.0/json_value.o: jsoncpp1.9.0/json_value.cpp.o
 
 # target to build an object file
 jsoncpp1.9.0/json_value.cpp.o:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_value.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_value.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_value.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_value.cpp.o
 .PHONY : jsoncpp1.9.0/json_value.cpp.o
 
 jsoncpp1.9.0/json_value.i: jsoncpp1.9.0/json_value.cpp.i
@@ -922,10 +595,7 @@ jsoncpp1.9.0/json_value.i: jsoncpp1.9.0/json_value.cpp.i
 
 # target to preprocess a source file
 jsoncpp1.9.0/json_value.cpp.i:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_value.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_value.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_value.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_value.cpp.i
 .PHONY : jsoncpp1.9.0/json_value.cpp.i
 
 jsoncpp1.9.0/json_value.s: jsoncpp1.9.0/json_value.cpp.s
@@ -934,10 +604,7 @@ jsoncpp1.9.0/json_value.s: jsoncpp1.9.0/json_value.cpp.s
 
 # target to generate assembly for a file
 jsoncpp1.9.0/json_value.cpp.s:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_value.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_value.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_value.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_value.cpp.s
 .PHONY : jsoncpp1.9.0/json_value.cpp.s
 
 jsoncpp1.9.0/json_writer.o: jsoncpp1.9.0/json_writer.cpp.o
@@ -946,10 +613,7 @@ jsoncpp1.9.0/json_writer.o: jsoncpp1.9.0/json_writer.cpp.o
 
 # target to build an object file
 jsoncpp1.9.0/json_writer.cpp.o:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_writer.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_writer.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_writer.cpp.o
 .PHONY : jsoncpp1.9.0/json_writer.cpp.o
 
 jsoncpp1.9.0/json_writer.i: jsoncpp1.9.0/json_writer.cpp.i
@@ -958,10 +622,7 @@ jsoncpp1.9.0/json_writer.i: jsoncpp1.9.0/json_writer.cpp.i
 
 # target to preprocess a source file
 jsoncpp1.9.0/json_writer.cpp.i:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_writer.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_writer.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_writer.cpp.i
 .PHONY : jsoncpp1.9.0/json_writer.cpp.i
 
 jsoncpp1.9.0/json_writer.s: jsoncpp1.9.0/json_writer.cpp.s
@@ -970,11 +631,35 @@ jsoncpp1.9.0/json_writer.s: jsoncpp1.9.0/json_writer.cpp.s
 
 # target to generate assembly for a file
 jsoncpp1.9.0/json_writer.cpp.s:
-	$(MAKE) -f CMakeFiles/jsonlib.dir/build.make CMakeFiles/jsonlib.dir/jsoncpp1.9.0/json_writer.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/jsoncpp1.9.0/json_writer.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/jsoncpp1.9.0/json_writer.cpp.s
 .PHONY : jsoncpp1.9.0/json_writer.cpp.s
+
+myChatserver/mysqlmgr/MysqlManager.o: myChatserver/mysqlmgr/MysqlManager.cpp.o
+
+.PHONY : myChatserver/mysqlmgr/MysqlManager.o
+
+# target to build an object file
+myChatserver/mysqlmgr/MysqlManager.cpp.o:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o
+.PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.o
+
+myChatserver/mysqlmgr/MysqlManager.i: myChatserver/mysqlmgr/MysqlManager.cpp.i
+
+.PHONY : myChatserver/mysqlmgr/MysqlManager.i
+
+# target to preprocess a source file
+myChatserver/mysqlmgr/MysqlManager.cpp.i:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.i
+.PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.i
+
+myChatserver/mysqlmgr/MysqlManager.s: myChatserver/mysqlmgr/MysqlManager.cpp.s
+
+.PHONY : myChatserver/mysqlmgr/MysqlManager.s
+
+# target to generate assembly for a file
+myChatserver/mysqlmgr/MysqlManager.cpp.s:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.s
+.PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.s
 
 mysqlapi/DatabaseMysql.o: mysqlapi/DatabaseMysql.cpp.o
 
@@ -1057,124 +742,14 @@ mysqlapi/QueryResult.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/QueryResult.cpp.s
 .PHONY : mysqlapi/QueryResult.cpp.s
 
-mysqlmgr/MysqlManager.o: mysqlmgr/MysqlManager.cpp.o
-
-.PHONY : mysqlmgr/MysqlManager.o
-
-# target to build an object file
-mysqlmgr/MysqlManager.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.o
-.PHONY : mysqlmgr/MysqlManager.cpp.o
-
-mysqlmgr/MysqlManager.i: mysqlmgr/MysqlManager.cpp.i
-
-.PHONY : mysqlmgr/MysqlManager.i
-
-# target to preprocess a source file
-mysqlmgr/MysqlManager.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.i
-.PHONY : mysqlmgr/MysqlManager.cpp.i
-
-mysqlmgr/MysqlManager.s: mysqlmgr/MysqlManager.cpp.s
-
-.PHONY : mysqlmgr/MysqlManager.s
-
-# target to generate assembly for a file
-mysqlmgr/MysqlManager.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.s
-.PHONY : mysqlmgr/MysqlManager.cpp.s
-
-mysqlmgr/MysqlThrd.o: mysqlmgr/MysqlThrd.cpp.o
-
-.PHONY : mysqlmgr/MysqlThrd.o
-
-# target to build an object file
-mysqlmgr/MysqlThrd.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.o
-.PHONY : mysqlmgr/MysqlThrd.cpp.o
-
-mysqlmgr/MysqlThrd.i: mysqlmgr/MysqlThrd.cpp.i
-
-.PHONY : mysqlmgr/MysqlThrd.i
-
-# target to preprocess a source file
-mysqlmgr/MysqlThrd.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.i
-.PHONY : mysqlmgr/MysqlThrd.cpp.i
-
-mysqlmgr/MysqlThrd.s: mysqlmgr/MysqlThrd.cpp.s
-
-.PHONY : mysqlmgr/MysqlThrd.s
-
-# target to generate assembly for a file
-mysqlmgr/MysqlThrd.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.s
-.PHONY : mysqlmgr/MysqlThrd.cpp.s
-
-mysqlmgr/MysqlThrdMgr.o: mysqlmgr/MysqlThrdMgr.cpp.o
-
-.PHONY : mysqlmgr/MysqlThrdMgr.o
-
-# target to build an object file
-mysqlmgr/MysqlThrdMgr.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.o
-.PHONY : mysqlmgr/MysqlThrdMgr.cpp.o
-
-mysqlmgr/MysqlThrdMgr.i: mysqlmgr/MysqlThrdMgr.cpp.i
-
-.PHONY : mysqlmgr/MysqlThrdMgr.i
-
-# target to preprocess a source file
-mysqlmgr/MysqlThrdMgr.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.i
-.PHONY : mysqlmgr/MysqlThrdMgr.cpp.i
-
-mysqlmgr/MysqlThrdMgr.s: mysqlmgr/MysqlThrdMgr.cpp.s
-
-.PHONY : mysqlmgr/MysqlThrdMgr.s
-
-# target to generate assembly for a file
-mysqlmgr/MysqlThrdMgr.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.s
-.PHONY : mysqlmgr/MysqlThrdMgr.cpp.s
-
-mysqlmgr/TaskList.o: mysqlmgr/TaskList.cpp.o
-
-.PHONY : mysqlmgr/TaskList.o
-
-# target to build an object file
-mysqlmgr/TaskList.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.o
-.PHONY : mysqlmgr/TaskList.cpp.o
-
-mysqlmgr/TaskList.i: mysqlmgr/TaskList.cpp.i
-
-.PHONY : mysqlmgr/TaskList.i
-
-# target to preprocess a source file
-mysqlmgr/TaskList.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.i
-.PHONY : mysqlmgr/TaskList.cpp.i
-
-mysqlmgr/TaskList.s: mysqlmgr/TaskList.cpp.s
-
-.PHONY : mysqlmgr/TaskList.s
-
-# target to generate assembly for a file
-mysqlmgr/TaskList.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.s
-.PHONY : mysqlmgr/TaskList.cpp.s
-
 net/Acceptor.o: net/Acceptor.cpp.o
 
 .PHONY : net/Acceptor.o
 
 # target to build an object file
 net/Acceptor.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Acceptor.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Acceptor.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Acceptor.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Acceptor.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Acceptor.cpp.o
 .PHONY : net/Acceptor.cpp.o
 
 net/Acceptor.i: net/Acceptor.cpp.i
@@ -1183,10 +758,8 @@ net/Acceptor.i: net/Acceptor.cpp.i
 
 # target to preprocess a source file
 net/Acceptor.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Acceptor.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Acceptor.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Acceptor.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Acceptor.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Acceptor.cpp.i
 .PHONY : net/Acceptor.cpp.i
 
 net/Acceptor.s: net/Acceptor.cpp.s
@@ -1195,10 +768,8 @@ net/Acceptor.s: net/Acceptor.cpp.s
 
 # target to generate assembly for a file
 net/Acceptor.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Acceptor.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Acceptor.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Acceptor.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Acceptor.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Acceptor.cpp.s
 .PHONY : net/Acceptor.cpp.s
 
 net/Buffer.o: net/Buffer.cpp.o
@@ -1207,10 +778,8 @@ net/Buffer.o: net/Buffer.cpp.o
 
 # target to build an object file
 net/Buffer.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Buffer.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Buffer.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Buffer.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Buffer.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Buffer.cpp.o
 .PHONY : net/Buffer.cpp.o
 
 net/Buffer.i: net/Buffer.cpp.i
@@ -1219,10 +788,8 @@ net/Buffer.i: net/Buffer.cpp.i
 
 # target to preprocess a source file
 net/Buffer.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Buffer.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Buffer.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Buffer.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Buffer.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Buffer.cpp.i
 .PHONY : net/Buffer.cpp.i
 
 net/Buffer.s: net/Buffer.cpp.s
@@ -1231,10 +798,8 @@ net/Buffer.s: net/Buffer.cpp.s
 
 # target to generate assembly for a file
 net/Buffer.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Buffer.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Buffer.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Buffer.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Buffer.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Buffer.cpp.s
 .PHONY : net/Buffer.cpp.s
 
 net/Channel.o: net/Channel.cpp.o
@@ -1243,10 +808,8 @@ net/Channel.o: net/Channel.cpp.o
 
 # target to build an object file
 net/Channel.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Channel.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Channel.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Channel.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Channel.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Channel.cpp.o
 .PHONY : net/Channel.cpp.o
 
 net/Channel.i: net/Channel.cpp.i
@@ -1255,10 +818,8 @@ net/Channel.i: net/Channel.cpp.i
 
 # target to preprocess a source file
 net/Channel.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Channel.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Channel.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Channel.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Channel.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Channel.cpp.i
 .PHONY : net/Channel.cpp.i
 
 net/Channel.s: net/Channel.cpp.s
@@ -1267,10 +828,8 @@ net/Channel.s: net/Channel.cpp.s
 
 # target to generate assembly for a file
 net/Channel.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Channel.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Channel.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Channel.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Channel.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Channel.cpp.s
 .PHONY : net/Channel.cpp.s
 
 net/Connector.o: net/Connector.cpp.o
@@ -1279,10 +838,8 @@ net/Connector.o: net/Connector.cpp.o
 
 # target to build an object file
 net/Connector.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Connector.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Connector.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Connector.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Connector.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Connector.cpp.o
 .PHONY : net/Connector.cpp.o
 
 net/Connector.i: net/Connector.cpp.i
@@ -1291,10 +848,8 @@ net/Connector.i: net/Connector.cpp.i
 
 # target to preprocess a source file
 net/Connector.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Connector.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Connector.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Connector.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Connector.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Connector.cpp.i
 .PHONY : net/Connector.cpp.i
 
 net/Connector.s: net/Connector.cpp.s
@@ -1303,10 +858,8 @@ net/Connector.s: net/Connector.cpp.s
 
 # target to generate assembly for a file
 net/Connector.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Connector.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Connector.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Connector.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Connector.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Connector.cpp.s
 .PHONY : net/Connector.cpp.s
 
 net/EpollPoller.o: net/EpollPoller.cpp.o
@@ -1315,10 +868,8 @@ net/EpollPoller.o: net/EpollPoller.cpp.o
 
 # target to build an object file
 net/EpollPoller.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EpollPoller.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EpollPoller.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EpollPoller.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EpollPoller.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EpollPoller.cpp.o
 .PHONY : net/EpollPoller.cpp.o
 
 net/EpollPoller.i: net/EpollPoller.cpp.i
@@ -1327,10 +878,8 @@ net/EpollPoller.i: net/EpollPoller.cpp.i
 
 # target to preprocess a source file
 net/EpollPoller.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EpollPoller.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EpollPoller.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EpollPoller.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EpollPoller.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EpollPoller.cpp.i
 .PHONY : net/EpollPoller.cpp.i
 
 net/EpollPoller.s: net/EpollPoller.cpp.s
@@ -1339,10 +888,8 @@ net/EpollPoller.s: net/EpollPoller.cpp.s
 
 # target to generate assembly for a file
 net/EpollPoller.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EpollPoller.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EpollPoller.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EpollPoller.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EpollPoller.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EpollPoller.cpp.s
 .PHONY : net/EpollPoller.cpp.s
 
 net/EventLoop.o: net/EventLoop.cpp.o
@@ -1351,10 +898,8 @@ net/EventLoop.o: net/EventLoop.cpp.o
 
 # target to build an object file
 net/EventLoop.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoop.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoop.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoop.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoop.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoop.cpp.o
 .PHONY : net/EventLoop.cpp.o
 
 net/EventLoop.i: net/EventLoop.cpp.i
@@ -1363,10 +908,8 @@ net/EventLoop.i: net/EventLoop.cpp.i
 
 # target to preprocess a source file
 net/EventLoop.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoop.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoop.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoop.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoop.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoop.cpp.i
 .PHONY : net/EventLoop.cpp.i
 
 net/EventLoop.s: net/EventLoop.cpp.s
@@ -1375,10 +918,8 @@ net/EventLoop.s: net/EventLoop.cpp.s
 
 # target to generate assembly for a file
 net/EventLoop.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoop.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoop.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoop.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoop.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoop.cpp.s
 .PHONY : net/EventLoop.cpp.s
 
 net/EventLoopThread.o: net/EventLoopThread.cpp.o
@@ -1387,10 +928,8 @@ net/EventLoopThread.o: net/EventLoopThread.cpp.o
 
 # target to build an object file
 net/EventLoopThread.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoopThread.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThread.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoopThread.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThread.cpp.o
 .PHONY : net/EventLoopThread.cpp.o
 
 net/EventLoopThread.i: net/EventLoopThread.cpp.i
@@ -1399,10 +938,8 @@ net/EventLoopThread.i: net/EventLoopThread.cpp.i
 
 # target to preprocess a source file
 net/EventLoopThread.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThread.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoopThread.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThread.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoopThread.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThread.cpp.i
 .PHONY : net/EventLoopThread.cpp.i
 
 net/EventLoopThread.s: net/EventLoopThread.cpp.s
@@ -1411,10 +948,8 @@ net/EventLoopThread.s: net/EventLoopThread.cpp.s
 
 # target to generate assembly for a file
 net/EventLoopThread.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThread.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoopThread.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThread.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoopThread.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThread.cpp.s
 .PHONY : net/EventLoopThread.cpp.s
 
 net/EventLoopThreadPool.o: net/EventLoopThreadPool.cpp.o
@@ -1423,10 +958,8 @@ net/EventLoopThreadPool.o: net/EventLoopThreadPool.cpp.o
 
 # target to build an object file
 net/EventLoopThreadPool.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoopThreadPool.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThreadPool.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoopThreadPool.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThreadPool.cpp.o
 .PHONY : net/EventLoopThreadPool.cpp.o
 
 net/EventLoopThreadPool.i: net/EventLoopThreadPool.cpp.i
@@ -1435,10 +968,8 @@ net/EventLoopThreadPool.i: net/EventLoopThreadPool.cpp.i
 
 # target to preprocess a source file
 net/EventLoopThreadPool.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoopThreadPool.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThreadPool.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoopThreadPool.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThreadPool.cpp.i
 .PHONY : net/EventLoopThreadPool.cpp.i
 
 net/EventLoopThreadPool.s: net/EventLoopThreadPool.cpp.s
@@ -1447,10 +978,8 @@ net/EventLoopThreadPool.s: net/EventLoopThreadPool.cpp.s
 
 # target to generate assembly for a file
 net/EventLoopThreadPool.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/EventLoopThreadPool.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThreadPool.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/EventLoopThreadPool.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThreadPool.cpp.s
 .PHONY : net/EventLoopThreadPool.cpp.s
 
 net/InetAddress.o: net/InetAddress.cpp.o
@@ -1459,10 +988,8 @@ net/InetAddress.o: net/InetAddress.cpp.o
 
 # target to build an object file
 net/InetAddress.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/InetAddress.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/InetAddress.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/InetAddress.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/InetAddress.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/InetAddress.cpp.o
 .PHONY : net/InetAddress.cpp.o
 
 net/InetAddress.i: net/InetAddress.cpp.i
@@ -1471,10 +998,8 @@ net/InetAddress.i: net/InetAddress.cpp.i
 
 # target to preprocess a source file
 net/InetAddress.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/InetAddress.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/InetAddress.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/InetAddress.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/InetAddress.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/InetAddress.cpp.i
 .PHONY : net/InetAddress.cpp.i
 
 net/InetAddress.s: net/InetAddress.cpp.s
@@ -1483,10 +1008,8 @@ net/InetAddress.s: net/InetAddress.cpp.s
 
 # target to generate assembly for a file
 net/InetAddress.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/InetAddress.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/InetAddress.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/InetAddress.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/InetAddress.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/InetAddress.cpp.s
 .PHONY : net/InetAddress.cpp.s
 
 net/PollPoller.o: net/PollPoller.cpp.o
@@ -1495,10 +1018,8 @@ net/PollPoller.o: net/PollPoller.cpp.o
 
 # target to build an object file
 net/PollPoller.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/PollPoller.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/PollPoller.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/PollPoller.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/PollPoller.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/PollPoller.cpp.o
 .PHONY : net/PollPoller.cpp.o
 
 net/PollPoller.i: net/PollPoller.cpp.i
@@ -1507,10 +1028,8 @@ net/PollPoller.i: net/PollPoller.cpp.i
 
 # target to preprocess a source file
 net/PollPoller.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/PollPoller.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/PollPoller.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/PollPoller.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/PollPoller.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/PollPoller.cpp.i
 .PHONY : net/PollPoller.cpp.i
 
 net/PollPoller.s: net/PollPoller.cpp.s
@@ -1519,10 +1038,8 @@ net/PollPoller.s: net/PollPoller.cpp.s
 
 # target to generate assembly for a file
 net/PollPoller.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/PollPoller.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/PollPoller.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/PollPoller.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/PollPoller.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/PollPoller.cpp.s
 .PHONY : net/PollPoller.cpp.s
 
 net/Poller.o: net/Poller.cpp.o
@@ -1531,10 +1048,8 @@ net/Poller.o: net/Poller.cpp.o
 
 # target to build an object file
 net/Poller.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Poller.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Poller.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Poller.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Poller.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Poller.cpp.o
 .PHONY : net/Poller.cpp.o
 
 net/Poller.i: net/Poller.cpp.i
@@ -1543,10 +1058,8 @@ net/Poller.i: net/Poller.cpp.i
 
 # target to preprocess a source file
 net/Poller.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Poller.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Poller.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Poller.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Poller.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Poller.cpp.i
 .PHONY : net/Poller.cpp.i
 
 net/Poller.s: net/Poller.cpp.s
@@ -1555,10 +1068,8 @@ net/Poller.s: net/Poller.cpp.s
 
 # target to generate assembly for a file
 net/Poller.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Poller.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Poller.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Poller.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Poller.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Poller.cpp.s
 .PHONY : net/Poller.cpp.s
 
 net/ProtocolStream.o: net/ProtocolStream.cpp.o
@@ -1567,10 +1078,8 @@ net/ProtocolStream.o: net/ProtocolStream.cpp.o
 
 # target to build an object file
 net/ProtocolStream.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/ProtocolStream.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/ProtocolStream.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/ProtocolStream.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/ProtocolStream.cpp.o
 .PHONY : net/ProtocolStream.cpp.o
 
 net/ProtocolStream.i: net/ProtocolStream.cpp.i
@@ -1579,10 +1088,8 @@ net/ProtocolStream.i: net/ProtocolStream.cpp.i
 
 # target to preprocess a source file
 net/ProtocolStream.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/ProtocolStream.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/ProtocolStream.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/ProtocolStream.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/ProtocolStream.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/ProtocolStream.cpp.i
 .PHONY : net/ProtocolStream.cpp.i
 
 net/ProtocolStream.s: net/ProtocolStream.cpp.s
@@ -1591,10 +1098,8 @@ net/ProtocolStream.s: net/ProtocolStream.cpp.s
 
 # target to generate assembly for a file
 net/ProtocolStream.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/ProtocolStream.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/ProtocolStream.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/ProtocolStream.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/ProtocolStream.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/ProtocolStream.cpp.s
 .PHONY : net/ProtocolStream.cpp.s
 
 net/SelectPoller.o: net/SelectPoller.cpp.o
@@ -1603,10 +1108,8 @@ net/SelectPoller.o: net/SelectPoller.cpp.o
 
 # target to build an object file
 net/SelectPoller.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/SelectPoller.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/SelectPoller.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/SelectPoller.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/SelectPoller.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/SelectPoller.cpp.o
 .PHONY : net/SelectPoller.cpp.o
 
 net/SelectPoller.i: net/SelectPoller.cpp.i
@@ -1615,10 +1118,8 @@ net/SelectPoller.i: net/SelectPoller.cpp.i
 
 # target to preprocess a source file
 net/SelectPoller.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/SelectPoller.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/SelectPoller.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/SelectPoller.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/SelectPoller.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/SelectPoller.cpp.i
 .PHONY : net/SelectPoller.cpp.i
 
 net/SelectPoller.s: net/SelectPoller.cpp.s
@@ -1627,10 +1128,8 @@ net/SelectPoller.s: net/SelectPoller.cpp.s
 
 # target to generate assembly for a file
 net/SelectPoller.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/SelectPoller.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/SelectPoller.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/SelectPoller.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/SelectPoller.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/SelectPoller.cpp.s
 .PHONY : net/SelectPoller.cpp.s
 
 net/Sockets.o: net/Sockets.cpp.o
@@ -1639,10 +1138,8 @@ net/Sockets.o: net/Sockets.cpp.o
 
 # target to build an object file
 net/Sockets.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Sockets.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Sockets.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Sockets.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Sockets.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Sockets.cpp.o
 .PHONY : net/Sockets.cpp.o
 
 net/Sockets.i: net/Sockets.cpp.i
@@ -1651,10 +1148,8 @@ net/Sockets.i: net/Sockets.cpp.i
 
 # target to preprocess a source file
 net/Sockets.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Sockets.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Sockets.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Sockets.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Sockets.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Sockets.cpp.i
 .PHONY : net/Sockets.cpp.i
 
 net/Sockets.s: net/Sockets.cpp.s
@@ -1663,10 +1158,8 @@ net/Sockets.s: net/Sockets.cpp.s
 
 # target to generate assembly for a file
 net/Sockets.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Sockets.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Sockets.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Sockets.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Sockets.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Sockets.cpp.s
 .PHONY : net/Sockets.cpp.s
 
 net/TcpClient.o: net/TcpClient.cpp.o
@@ -1675,10 +1168,8 @@ net/TcpClient.o: net/TcpClient.cpp.o
 
 # target to build an object file
 net/TcpClient.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpClient.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpClient.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpClient.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpClient.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpClient.cpp.o
 .PHONY : net/TcpClient.cpp.o
 
 net/TcpClient.i: net/TcpClient.cpp.i
@@ -1687,10 +1178,8 @@ net/TcpClient.i: net/TcpClient.cpp.i
 
 # target to preprocess a source file
 net/TcpClient.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpClient.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpClient.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpClient.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpClient.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpClient.cpp.i
 .PHONY : net/TcpClient.cpp.i
 
 net/TcpClient.s: net/TcpClient.cpp.s
@@ -1699,10 +1188,8 @@ net/TcpClient.s: net/TcpClient.cpp.s
 
 # target to generate assembly for a file
 net/TcpClient.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpClient.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpClient.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpClient.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpClient.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpClient.cpp.s
 .PHONY : net/TcpClient.cpp.s
 
 net/TcpConnection.o: net/TcpConnection.cpp.o
@@ -1711,10 +1198,8 @@ net/TcpConnection.o: net/TcpConnection.cpp.o
 
 # target to build an object file
 net/TcpConnection.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpConnection.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpConnection.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpConnection.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpConnection.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpConnection.cpp.o
 .PHONY : net/TcpConnection.cpp.o
 
 net/TcpConnection.i: net/TcpConnection.cpp.i
@@ -1723,10 +1208,8 @@ net/TcpConnection.i: net/TcpConnection.cpp.i
 
 # target to preprocess a source file
 net/TcpConnection.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpConnection.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpConnection.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpConnection.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpConnection.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpConnection.cpp.i
 .PHONY : net/TcpConnection.cpp.i
 
 net/TcpConnection.s: net/TcpConnection.cpp.s
@@ -1735,10 +1218,8 @@ net/TcpConnection.s: net/TcpConnection.cpp.s
 
 # target to generate assembly for a file
 net/TcpConnection.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpConnection.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpConnection.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpConnection.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpConnection.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpConnection.cpp.s
 .PHONY : net/TcpConnection.cpp.s
 
 net/TcpServer.o: net/TcpServer.cpp.o
@@ -1747,10 +1228,8 @@ net/TcpServer.o: net/TcpServer.cpp.o
 
 # target to build an object file
 net/TcpServer.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpServer.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpServer.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpServer.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpServer.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpServer.cpp.o
 .PHONY : net/TcpServer.cpp.o
 
 net/TcpServer.i: net/TcpServer.cpp.i
@@ -1759,10 +1238,8 @@ net/TcpServer.i: net/TcpServer.cpp.i
 
 # target to preprocess a source file
 net/TcpServer.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpServer.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpServer.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpServer.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpServer.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpServer.cpp.i
 .PHONY : net/TcpServer.cpp.i
 
 net/TcpServer.s: net/TcpServer.cpp.s
@@ -1771,10 +1248,8 @@ net/TcpServer.s: net/TcpServer.cpp.s
 
 # target to generate assembly for a file
 net/TcpServer.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpServer.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TcpServer.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpServer.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TcpServer.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpServer.cpp.s
 .PHONY : net/TcpServer.cpp.s
 
 net/Timer.o: net/Timer.cpp.o
@@ -1783,10 +1258,8 @@ net/Timer.o: net/Timer.cpp.o
 
 # target to build an object file
 net/Timer.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Timer.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Timer.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Timer.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Timer.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Timer.cpp.o
 .PHONY : net/Timer.cpp.o
 
 net/Timer.i: net/Timer.cpp.i
@@ -1795,10 +1268,8 @@ net/Timer.i: net/Timer.cpp.i
 
 # target to preprocess a source file
 net/Timer.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Timer.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Timer.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Timer.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Timer.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Timer.cpp.i
 .PHONY : net/Timer.cpp.i
 
 net/Timer.s: net/Timer.cpp.s
@@ -1807,10 +1278,8 @@ net/Timer.s: net/Timer.cpp.s
 
 # target to generate assembly for a file
 net/Timer.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Timer.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/Timer.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Timer.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/Timer.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Timer.cpp.s
 .PHONY : net/Timer.cpp.s
 
 net/TimerQueue.o: net/TimerQueue.cpp.o
@@ -1819,10 +1288,8 @@ net/TimerQueue.o: net/TimerQueue.cpp.o
 
 # target to build an object file
 net/TimerQueue.cpp.o:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TimerQueue.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TimerQueue.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TimerQueue.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TimerQueue.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TimerQueue.cpp.o
 .PHONY : net/TimerQueue.cpp.o
 
 net/TimerQueue.i: net/TimerQueue.cpp.i
@@ -1831,10 +1298,8 @@ net/TimerQueue.i: net/TimerQueue.cpp.i
 
 # target to preprocess a source file
 net/TimerQueue.cpp.i:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TimerQueue.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TimerQueue.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TimerQueue.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TimerQueue.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TimerQueue.cpp.i
 .PHONY : net/TimerQueue.cpp.i
 
 net/TimerQueue.s: net/TimerQueue.cpp.s
@@ -1843,38 +1308,9 @@ net/TimerQueue.s: net/TimerQueue.cpp.s
 
 # target to generate assembly for a file
 net/TimerQueue.cpp.s:
-	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TimerQueue.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/net/TimerQueue.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TimerQueue.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/net/TimerQueue.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TimerQueue.cpp.s
 .PHONY : net/TimerQueue.cpp.s
-
-test/base/AsynLogtest.o: test/base/AsynLogtest.cpp.o
-
-.PHONY : test/base/AsynLogtest.o
-
-# target to build an object file
-test/base/AsynLogtest.cpp.o:
-	$(MAKE) -f CMakeFiles/AsynLogtest.dir/build.make CMakeFiles/AsynLogtest.dir/test/base/AsynLogtest.cpp.o
-.PHONY : test/base/AsynLogtest.cpp.o
-
-test/base/AsynLogtest.i: test/base/AsynLogtest.cpp.i
-
-.PHONY : test/base/AsynLogtest.i
-
-# target to preprocess a source file
-test/base/AsynLogtest.cpp.i:
-	$(MAKE) -f CMakeFiles/AsynLogtest.dir/build.make CMakeFiles/AsynLogtest.dir/test/base/AsynLogtest.cpp.i
-.PHONY : test/base/AsynLogtest.cpp.i
-
-test/base/AsynLogtest.s: test/base/AsynLogtest.cpp.s
-
-.PHONY : test/base/AsynLogtest.s
-
-# target to generate assembly for a file
-test/base/AsynLogtest.cpp.s:
-	$(MAKE) -f CMakeFiles/AsynLogtest.dir/build.make CMakeFiles/AsynLogtest.dir/test/base/AsynLogtest.cpp.s
-.PHONY : test/base/AsynLogtest.cpp.s
 
 test/base/Timestamptest.o: test/base/Timestamptest.cpp.o
 
@@ -1903,94 +1339,13 @@ test/base/Timestamptest.cpp.s:
 	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/test/base/Timestamptest.cpp.s
 .PHONY : test/base/Timestamptest.cpp.s
 
-test/json/jsontest.o: test/json/jsontest.cpp.o
-
-.PHONY : test/json/jsontest.o
-
-# target to build an object file
-test/json/jsontest.cpp.o:
-	$(MAKE) -f CMakeFiles/jsontest.dir/build.make CMakeFiles/jsontest.dir/test/json/jsontest.cpp.o
-.PHONY : test/json/jsontest.cpp.o
-
-test/json/jsontest.i: test/json/jsontest.cpp.i
-
-.PHONY : test/json/jsontest.i
-
-# target to preprocess a source file
-test/json/jsontest.cpp.i:
-	$(MAKE) -f CMakeFiles/jsontest.dir/build.make CMakeFiles/jsontest.dir/test/json/jsontest.cpp.i
-.PHONY : test/json/jsontest.cpp.i
-
-test/json/jsontest.s: test/json/jsontest.cpp.s
-
-.PHONY : test/json/jsontest.s
-
-# target to generate assembly for a file
-test/json/jsontest.cpp.s:
-	$(MAKE) -f CMakeFiles/jsontest.dir/build.make CMakeFiles/jsontest.dir/test/json/jsontest.cpp.s
-.PHONY : test/json/jsontest.cpp.s
-
-test/net/Polltest.o: test/net/Polltest.cpp.o
-
-.PHONY : test/net/Polltest.o
-
-# target to build an object file
-test/net/Polltest.cpp.o:
-	$(MAKE) -f CMakeFiles/Polltest.dir/build.make CMakeFiles/Polltest.dir/test/net/Polltest.cpp.o
-.PHONY : test/net/Polltest.cpp.o
-
-test/net/Polltest.i: test/net/Polltest.cpp.i
-
-.PHONY : test/net/Polltest.i
-
-# target to preprocess a source file
-test/net/Polltest.cpp.i:
-	$(MAKE) -f CMakeFiles/Polltest.dir/build.make CMakeFiles/Polltest.dir/test/net/Polltest.cpp.i
-.PHONY : test/net/Polltest.cpp.i
-
-test/net/Polltest.s: test/net/Polltest.cpp.s
-
-.PHONY : test/net/Polltest.s
-
-# target to generate assembly for a file
-test/net/Polltest.cpp.s:
-	$(MAKE) -f CMakeFiles/Polltest.dir/build.make CMakeFiles/Polltest.dir/test/net/Polltest.cpp.s
-.PHONY : test/net/Polltest.cpp.s
-
-third_party/gmock/gmock-gtest-all.o: third_party/gmock/gmock-gtest-all.cc.o
-
-.PHONY : third_party/gmock/gmock-gtest-all.o
-
-# target to build an object file
-third_party/gmock/gmock-gtest-all.cc.o:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/third_party/gmock/gmock-gtest-all.cc.o
-.PHONY : third_party/gmock/gmock-gtest-all.cc.o
-
-third_party/gmock/gmock-gtest-all.i: third_party/gmock/gmock-gtest-all.cc.i
-
-.PHONY : third_party/gmock/gmock-gtest-all.i
-
-# target to preprocess a source file
-third_party/gmock/gmock-gtest-all.cc.i:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/third_party/gmock/gmock-gtest-all.cc.i
-.PHONY : third_party/gmock/gmock-gtest-all.cc.i
-
-third_party/gmock/gmock-gtest-all.s: third_party/gmock/gmock-gtest-all.cc.s
-
-.PHONY : third_party/gmock/gmock-gtest-all.s
-
-# target to generate assembly for a file
-third_party/gmock/gmock-gtest-all.cc.s:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/third_party/gmock/gmock-gtest-all.cc.s
-.PHONY : third_party/gmock/gmock-gtest-all.cc.s
-
 third_party/gmock/gmock_main.o: third_party/gmock/gmock_main.cc.o
 
 .PHONY : third_party/gmock/gmock_main.o
 
 # target to build an object file
 third_party/gmock/gmock_main.cc.o:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/third_party/gmock/gmock_main.cc.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/third_party/gmock/gmock_main.cc.o
 .PHONY : third_party/gmock/gmock_main.cc.o
 
 third_party/gmock/gmock_main.i: third_party/gmock/gmock_main.cc.i
@@ -1999,7 +1354,7 @@ third_party/gmock/gmock_main.i: third_party/gmock/gmock_main.cc.i
 
 # target to preprocess a source file
 third_party/gmock/gmock_main.cc.i:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/third_party/gmock/gmock_main.cc.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/third_party/gmock/gmock_main.cc.i
 .PHONY : third_party/gmock/gmock_main.cc.i
 
 third_party/gmock/gmock_main.s: third_party/gmock/gmock_main.cc.s
@@ -2008,7 +1363,7 @@ third_party/gmock/gmock_main.s: third_party/gmock/gmock_main.cc.s
 
 # target to generate assembly for a file
 third_party/gmock/gmock_main.cc.s:
-	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/third_party/gmock/gmock_main.cc.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/third_party/gmock/gmock_main.cc.s
 .PHONY : third_party/gmock/gmock_main.cc.s
 
 utils/DaemonRun.o: utils/DaemonRun.cpp.o
@@ -2017,10 +1372,7 @@ utils/DaemonRun.o: utils/DaemonRun.cpp.o
 
 # target to build an object file
 utils/DaemonRun.cpp.o:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/DaemonRun.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/DaemonRun.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/DaemonRun.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/DaemonRun.cpp.o
 .PHONY : utils/DaemonRun.cpp.o
 
 utils/DaemonRun.i: utils/DaemonRun.cpp.i
@@ -2029,10 +1381,7 @@ utils/DaemonRun.i: utils/DaemonRun.cpp.i
 
 # target to preprocess a source file
 utils/DaemonRun.cpp.i:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/DaemonRun.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/DaemonRun.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/DaemonRun.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/DaemonRun.cpp.i
 .PHONY : utils/DaemonRun.cpp.i
 
 utils/DaemonRun.s: utils/DaemonRun.cpp.s
@@ -2041,10 +1390,7 @@ utils/DaemonRun.s: utils/DaemonRun.cpp.s
 
 # target to generate assembly for a file
 utils/DaemonRun.cpp.s:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/DaemonRun.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/DaemonRun.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/DaemonRun.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/DaemonRun.cpp.s
 .PHONY : utils/DaemonRun.cpp.s
 
 utils/MD5.o: utils/MD5.cpp.o
@@ -2053,10 +1399,7 @@ utils/MD5.o: utils/MD5.cpp.o
 
 # target to build an object file
 utils/MD5.cpp.o:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/MD5.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/MD5.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/MD5.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/MD5.cpp.o
 .PHONY : utils/MD5.cpp.o
 
 utils/MD5.i: utils/MD5.cpp.i
@@ -2065,10 +1408,7 @@ utils/MD5.i: utils/MD5.cpp.i
 
 # target to preprocess a source file
 utils/MD5.cpp.i:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/MD5.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/MD5.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/MD5.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/MD5.cpp.i
 .PHONY : utils/MD5.cpp.i
 
 utils/MD5.s: utils/MD5.cpp.s
@@ -2077,10 +1417,7 @@ utils/MD5.s: utils/MD5.cpp.s
 
 # target to generate assembly for a file
 utils/MD5.cpp.s:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/MD5.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/MD5.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/MD5.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/MD5.cpp.s
 .PHONY : utils/MD5.cpp.s
 
 utils/StringUtil.o: utils/StringUtil.cpp.o
@@ -2089,10 +1426,7 @@ utils/StringUtil.o: utils/StringUtil.cpp.o
 
 # target to build an object file
 utils/StringUtil.cpp.o:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/StringUtil.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/StringUtil.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/StringUtil.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/StringUtil.cpp.o
 .PHONY : utils/StringUtil.cpp.o
 
 utils/StringUtil.i: utils/StringUtil.cpp.i
@@ -2101,10 +1435,7 @@ utils/StringUtil.i: utils/StringUtil.cpp.i
 
 # target to preprocess a source file
 utils/StringUtil.cpp.i:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/StringUtil.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/StringUtil.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/StringUtil.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/StringUtil.cpp.i
 .PHONY : utils/StringUtil.cpp.i
 
 utils/StringUtil.s: utils/StringUtil.cpp.s
@@ -2113,10 +1444,7 @@ utils/StringUtil.s: utils/StringUtil.cpp.s
 
 # target to generate assembly for a file
 utils/StringUtil.cpp.s:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/StringUtil.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/StringUtil.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/StringUtil.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/StringUtil.cpp.s
 .PHONY : utils/StringUtil.cpp.s
 
 utils/URLEncodeUtil.o: utils/URLEncodeUtil.cpp.o
@@ -2125,10 +1453,7 @@ utils/URLEncodeUtil.o: utils/URLEncodeUtil.cpp.o
 
 # target to build an object file
 utils/URLEncodeUtil.cpp.o:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/URLEncodeUtil.cpp.o
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/URLEncodeUtil.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/URLEncodeUtil.cpp.o
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/URLEncodeUtil.cpp.o
 .PHONY : utils/URLEncodeUtil.cpp.o
 
 utils/URLEncodeUtil.i: utils/URLEncodeUtil.cpp.i
@@ -2137,10 +1462,7 @@ utils/URLEncodeUtil.i: utils/URLEncodeUtil.cpp.i
 
 # target to preprocess a source file
 utils/URLEncodeUtil.cpp.i:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/URLEncodeUtil.cpp.i
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/URLEncodeUtil.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/URLEncodeUtil.cpp.i
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/URLEncodeUtil.cpp.i
 .PHONY : utils/URLEncodeUtil.cpp.i
 
 utils/URLEncodeUtil.s: utils/URLEncodeUtil.cpp.s
@@ -2149,10 +1471,7 @@ utils/URLEncodeUtil.s: utils/URLEncodeUtil.cpp.s
 
 # target to generate assembly for a file
 utils/URLEncodeUtil.cpp.s:
-	$(MAKE) -f CMakeFiles/utillib.dir/build.make CMakeFiles/utillib.dir/utils/URLEncodeUtil.cpp.s
-	$(MAKE) -f CMakeFiles/fileserver.dir/build.make CMakeFiles/fileserver.dir/utils/URLEncodeUtil.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/utils/URLEncodeUtil.cpp.s
-	$(MAKE) -f CMakeFiles/imgserver.dir/build.make CMakeFiles/imgserver.dir/utils/URLEncodeUtil.cpp.s
 .PHONY : utils/URLEncodeUtil.cpp.s
 
 zlib1.2.11/ZlibUtil.o: zlib1.2.11/ZlibUtil.cpp.o
@@ -2593,19 +1912,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... Polltest"
-	@echo "... jsontest"
-	@echo "... Timestamptest"
-	@echo "... utillib"
-	@echo "... netlib"
-	@echo "... AsynLogtest"
-	@echo "... jsonlib"
-	@echo "... fileserver"
 	@echo "... rebuild_cache"
-	@echo "... gtest"
+	@echo "... edit_cache"
 	@echo "... chatserver"
-	@echo "... imgserver"
+	@echo "... Timestamptest"
 	@echo "... base/AsyncLog.o"
 	@echo "... base/AsyncLog.i"
 	@echo "... base/AsyncLog.s"
@@ -2651,24 +1961,6 @@ help:
 	@echo "... chatserversrc/main.o"
 	@echo "... chatserversrc/main.i"
 	@echo "... chatserversrc/main.s"
-	@echo "... fileserversrc/FileManager.o"
-	@echo "... fileserversrc/FileManager.i"
-	@echo "... fileserversrc/FileManager.s"
-	@echo "... fileserversrc/FileServer.o"
-	@echo "... fileserversrc/FileServer.i"
-	@echo "... fileserversrc/FileServer.s"
-	@echo "... fileserversrc/FileSession.o"
-	@echo "... fileserversrc/FileSession.i"
-	@echo "... fileserversrc/FileSession.s"
-	@echo "... fileserversrc/TcpSession.o"
-	@echo "... fileserversrc/TcpSession.i"
-	@echo "... fileserversrc/TcpSession.s"
-	@echo "... fileserversrc/main.o"
-	@echo "... fileserversrc/main.i"
-	@echo "... fileserversrc/main.s"
-	@echo "... imgserversrc/main.o"
-	@echo "... imgserversrc/main.i"
-	@echo "... imgserversrc/main.s"
 	@echo "... jsoncpp1.9.0/json_reader.o"
 	@echo "... jsoncpp1.9.0/json_reader.i"
 	@echo "... jsoncpp1.9.0/json_reader.s"
@@ -2678,6 +1970,9 @@ help:
 	@echo "... jsoncpp1.9.0/json_writer.o"
 	@echo "... jsoncpp1.9.0/json_writer.i"
 	@echo "... jsoncpp1.9.0/json_writer.s"
+	@echo "... myChatserver/mysqlmgr/MysqlManager.o"
+	@echo "... myChatserver/mysqlmgr/MysqlManager.i"
+	@echo "... myChatserver/mysqlmgr/MysqlManager.s"
 	@echo "... mysqlapi/DatabaseMysql.o"
 	@echo "... mysqlapi/DatabaseMysql.i"
 	@echo "... mysqlapi/DatabaseMysql.s"
@@ -2687,18 +1982,6 @@ help:
 	@echo "... mysqlapi/QueryResult.o"
 	@echo "... mysqlapi/QueryResult.i"
 	@echo "... mysqlapi/QueryResult.s"
-	@echo "... mysqlmgr/MysqlManager.o"
-	@echo "... mysqlmgr/MysqlManager.i"
-	@echo "... mysqlmgr/MysqlManager.s"
-	@echo "... mysqlmgr/MysqlThrd.o"
-	@echo "... mysqlmgr/MysqlThrd.i"
-	@echo "... mysqlmgr/MysqlThrd.s"
-	@echo "... mysqlmgr/MysqlThrdMgr.o"
-	@echo "... mysqlmgr/MysqlThrdMgr.i"
-	@echo "... mysqlmgr/MysqlThrdMgr.s"
-	@echo "... mysqlmgr/TaskList.o"
-	@echo "... mysqlmgr/TaskList.i"
-	@echo "... mysqlmgr/TaskList.s"
 	@echo "... net/Acceptor.o"
 	@echo "... net/Acceptor.i"
 	@echo "... net/Acceptor.s"
@@ -2756,21 +2039,9 @@ help:
 	@echo "... net/TimerQueue.o"
 	@echo "... net/TimerQueue.i"
 	@echo "... net/TimerQueue.s"
-	@echo "... test/base/AsynLogtest.o"
-	@echo "... test/base/AsynLogtest.i"
-	@echo "... test/base/AsynLogtest.s"
 	@echo "... test/base/Timestamptest.o"
 	@echo "... test/base/Timestamptest.i"
 	@echo "... test/base/Timestamptest.s"
-	@echo "... test/json/jsontest.o"
-	@echo "... test/json/jsontest.i"
-	@echo "... test/json/jsontest.s"
-	@echo "... test/net/Polltest.o"
-	@echo "... test/net/Polltest.i"
-	@echo "... test/net/Polltest.s"
-	@echo "... third_party/gmock/gmock-gtest-all.o"
-	@echo "... third_party/gmock/gmock-gtest-all.i"
-	@echo "... third_party/gmock/gmock-gtest-all.s"
 	@echo "... third_party/gmock/gmock_main.o"
 	@echo "... third_party/gmock/gmock_main.i"
 	@echo "... third_party/gmock/gmock_main.s"

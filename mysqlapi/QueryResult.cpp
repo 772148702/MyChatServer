@@ -2,89 +2,89 @@
 #include "../base/AsyncLog.h"
 
 QueryResult::QueryResult(MYSQL_RES *result, uint64_t rowCount, uint32_t fieldCount)
- : m_FieldCount(fieldCount), m_RowCount(rowCount)
+ : mFieldCount(fieldCount), mRowCount(rowCount)
 {
-    m_Result = result;
-	m_CurrentRow = new Field[m_FieldCount];
+    mResult = result;
+	mCurrentRow = new Field[mFieldCount];
     //assert(mCurrentRow);
 
-    MYSQL_FIELD *fields = mysql_fetch_fields(m_Result);
+    MYSQL_FIELD *fields = mysql_fetch_fields(mResult);
 
-    for (uint32_t i = 0; i < m_FieldCount; i++)
+    for (uint32_t i = 0; i < mFieldCount; i++)
     {
         //TODO: 这个地方要不要判断为NULL？
 		if (fields[i].name != NULL)
         {
-            m_FieldNames[i] = fields[i].name;
+            mFieldNames[i] = fields[i].name;
             m_vtFieldNames.push_back(fields[i].name);
         }
         else
         {
-            m_FieldNames[i] = "";
+            mFieldNames[i] = "";
             m_vtFieldNames.push_back("");
         }
         
-        m_CurrentRow[i].setType(convertNativeType(fields[i].type));
+        mCurrentRow[i].SetType(ConvertNativeType(fields[i].type));
     }
 }
 
 QueryResult::~QueryResult(void)
 {
-    endQuery();
+    EndQuery();
 }
 
-bool QueryResult::nextRow()
+bool QueryResult::NextRow()
 {
     MYSQL_ROW row;
 
-    if (!m_Result)
+    if (!mResult)
         return false;
 
-    row = mysql_fetch_row(m_Result);
+    row = mysql_fetch_row(mResult);
     if (!row)
     {
-        endQuery();
+        EndQuery();
         return false;
     }
 
     unsigned long int *ulFieldLength;
-    ulFieldLength = mysql_fetch_lengths(m_Result);
-    for (uint32_t i = 0; i < m_FieldCount; i++)
+    ulFieldLength = mysql_fetch_lengths(mResult);
+    for (uint32_t i = 0; i < mFieldCount; i++)
     {
         if(row[i] == NULL)
         {
-            m_CurrentRow[i].m_bNULL = true;
-            m_CurrentRow[i].setValue("", 0);
+            mCurrentRow[i].m_bNULL = true;
+            mCurrentRow[i].SetValue("", 0);
         }
         else
         {
-            m_CurrentRow[i].m_bNULL = false;
-            m_CurrentRow[i].setValue(row[i], ulFieldLength[i]);
+            mCurrentRow[i].m_bNULL = false;
+           mCurrentRow[i].SetValue(row[i], ulFieldLength[i]);
         }
 
-        m_CurrentRow[i].setName(m_FieldNames[i]);
+        mCurrentRow[i].SetName(mFieldNames[i]);
     }
 
     return true;
 }
 
-void QueryResult::endQuery()
+void QueryResult::EndQuery()
 {
-    if (m_CurrentRow)
+    if (mCurrentRow)
     {
-        delete [] m_CurrentRow;
-        m_CurrentRow = 0;
+        delete [] mCurrentRow;
+        mCurrentRow = 0;
     }
 
-    if (m_Result)
+    if (mResult)
     {
 		//LOGI << "QueryResult::EndQuery, mysql_free_result";
-        mysql_free_result(m_Result);
-        m_Result = 0;
+        mysql_free_result(mResult);
+        mResult = 0;
     }
 }
 
-enum Field::DataTypes QueryResult::convertNativeType(enum_field_types mysqlType) const
+enum Field::DataTypes QueryResult::ConvertNativeType(enum_field_types mysqlType) const
 {
     switch (mysqlType)
     {

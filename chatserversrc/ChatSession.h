@@ -15,12 +15,12 @@ struct OnlineUserInfo
     std::string username;
     std::string nickname;
     std::string password;
-    int32_t     clienttype;     //客户端类型, 0未知, pc=1, android/ios=2
-    int32_t     status;         //在线状态 0离线 1在线 2忙碌 3离开 4隐身
+    int32_t     clienttype;     //閿熼叺浼欐嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷�, 0鏈煡, pc=1, android/ios=2
+    int32_t     status;         //閿熸枻鎷烽敓鏂ゆ嫹鐘舵€� 0閿熸枻鎷烽敓鏂ゆ嫹 1閿熸枻鎷烽敓鏂ゆ嫹 2蹇欑 3閿熻寮€ 4閿熸枻鎷烽敓鏂ゆ嫹
 };
 
 /**
- * 聊天会话类
+ * 閿熸枻鎷烽敓鏂ゆ嫹宄勫府鎷烽敓锟�
  */
 class ChatSession : public TcpSession
 {
@@ -31,99 +31,99 @@ public:
     ChatSession(const ChatSession& rhs) = delete;
     ChatSession& operator =(const ChatSession& rhs) = delete;
 
-    //有数据可读, 会被多个工作loop调用
-    void onRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBuffer, Timestamp receivTime);
-
-    int32_t getSessionId()
+    //閿熸枻鎷烽敓鏂ゆ嫹閿熸嵎鍙鎷�, 閿熺粨琚敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿熺担oop閿熸枻鎷烽敓鏂ゆ嫹
+    void OnRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBuffer, Timestamp receivTime);   
+    
+    int32_t GetSessionId()
     {
         return m_id;
     }
 
-    int32_t getUserId()
+    int32_t GetUserId()
     {
         return m_userinfo.userid;
     }
 
-    std::string getUsername()
+    std::string GetUsername()
     {
         return m_userinfo.username;
     }
 
-    std::string getNickname()
+    std::string GetNickname()
     {
         return m_userinfo.nickname;
     }
 
-    std::string getPassword()
+    std::string GetPassword()
     {
         return m_userinfo.password;
     }
 
-    int32_t getClientType()
+    int32_t GetClientType()
     {
         return m_userinfo.clienttype;
     }
 
-    int32_t getUserStatus()
+    int32_t GetUserStatus()
     {
         return m_userinfo.status;
     }
 
-    int32_t getUserClientType()
+    int32_t GetUserClientType()
     {
         return m_userinfo.clienttype;
     }
 
     /**
-     *@param type 取值： 1 用户上线； 2 用户下线； 3 个人昵称、头像、签名等信息更改
+     *@param type 鍙栧€奸敓鏂ゆ嫹 1 閿熺煫浼欐嫹閿熸枻鎷烽敓绔綇鎷� 2 閿熺煫浼欐嫹閿熸枻鎷烽敓绔綇鎷� 3 閿熸枻鎷烽敓鏂ゆ嫹閿熻绉扳槄鎷峰ご閿熸枻鎷风閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷锋伅閿熸枻鎷烽敓鏂ゆ嫹
      */
-    void sendUserStatusChangeMsg(int32_t userid, int type, int status = 0);
+    void SendUserStatusChangeMsg(int32_t userid, int type, int status = 0);
 
-    //让Session失效，用于被踢下线的用户的session
-    void makeSessionInvalid();
-    bool isSessionValid();
+    //閿熸枻鎷稴ession澶辨晥閿熸枻鎷烽敓鏂ゆ嫹閿熻妭鎲嬫嫹閿熸枻鎷烽敓鏂ゆ嫹閿熺纰夋嫹閿熺煫浼欐嫹閿熸枻鎷穝ession
+    void MakeSessionInvalid();
+    bool IsSessionValid();
 
-    void enableHearbeatCheck();
-    void disableHeartbeatCheck();
+    void EnableHearbeatCheck();
+    void DisableHeartbeatCheck();
 
-    //检测心跳包，如果指定时间内（现在是30秒）未收到数据包，则主动断开于客户端的连接
-    void checkHeartbeat(const std::shared_ptr<TcpConnection>& conn);
+    //閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷锋寚閿熸枻鎷锋椂閿熸枻鎷烽敓鑺傦綇鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹30閿熻锛夋湭閿熺Ц纰夋嫹閿熸枻鎷烽敓鎹峰府鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓杈冨尅鎷烽敓鑺傚浼欐嫹閿熷壙纰夋嫹閿熸枻鎷烽敓鏂ゆ嫹
+    void CheckHeartbeat(const std::shared_ptr<TcpConnection>& conn);
 
 private:
-    bool process(const std::shared_ptr<TcpConnection>& conn, const char* inbuf, size_t buflength);
+    bool Process(const std::shared_ptr<TcpConnection>& conn, const char* inbuf, size_t buflength);
+    
+    void OnHeartbeatResponse(const std::shared_ptr<TcpConnection>& conn);
+    void OnRegisterResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnLoginResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnGetFriendListResponse(const std::shared_ptr<TcpConnection>& conn);
+    void OnFindUserResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnChangeUserStatusResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnOperateFriendResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnAddGroupResponse(int32_t groupId, const std::shared_ptr<TcpConnection>& conn);
+    void OnUpdateUserInfoResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnModifyPasswordResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnCreateGroupResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnGetGroupMembersResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnChatResponse(int32_t targetid, const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnMultiChatResponse(const std::string& targets, const std::string& data, const std::shared_ptr<TcpConnection>& conn);
+    void OnScreenshotResponse(int32_t targetid, const std::string& bmpHeader, const std::string& bmpData, const std::shared_ptr<TcpConnection>& conn);
+    void OnUpdateTeamInfoResponse(int32_t operationType, const std::string& newTeamName, const std::string& oldTeamName, const std::shared_ptr<TcpConnection>& con);
+    void OnModifyMarknameResponse(int32_t friendid, const std::string& newmarkname, const std::shared_ptr<TcpConnection>& conn);
+    void OnMoveFriendToOtherTeamResponse(int32_t friendid, const std::string& newteamname, const std::string& oldteamname, const std::shared_ptr<TcpConnection>& conn);
 
-    void onHeartbeatResponse(const std::shared_ptr<TcpConnection>& conn);
-    void onRegisterResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onLoginResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onGetFriendListResponse(const std::shared_ptr<TcpConnection>& conn);
-    void onFindUserResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onChangeUserStatusResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onOperateFriendResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onAddGroupResponse(int32_t groupId, const std::shared_ptr<TcpConnection>& conn);
-    void onUpdateUserInfoResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onModifyPasswordResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onCreateGroupResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onGetGroupMembersResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onChatResponse(int32_t targetid, const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onMultiChatResponse(const std::string& targets, const std::string& data, const std::shared_ptr<TcpConnection>& conn);
-    void onScreenshotResponse(int32_t targetid, const std::string& bmpHeader, const std::string& bmpData, const std::shared_ptr<TcpConnection>& conn);
-    void onUpdateTeamInfoResponse(int32_t operationType, const std::string& newTeamName, const std::string& oldTeamName, const std::shared_ptr<TcpConnection>& con);
-    void onModifyMarknameResponse(int32_t friendid, const std::string& newmarkname, const std::shared_ptr<TcpConnection>& conn);
-    void onMoveFriendToOtherTeamResponse(int32_t friendid, const std::string& newteamname, const std::string& oldteamname, const std::shared_ptr<TcpConnection>& conn);
+    void DeleteFriend(const std::shared_ptr<TcpConnection>& conn, int32_t friendid);
 
-    void deleteFriend(const std::shared_ptr<TcpConnection>& conn, int32_t friendid);
+    //閿熸枻鎷烽敓鏂ゆ嫹閿熺煫浼欐嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷锋伅閿熸枻鎷疯搴旈敓鏂ゆ嫹閿熸枻鎷风獊閿熸枻鎷疯鏆敓鏂ゆ嫹閿熸枻鎷锋枩閿熸枻鎷烽敓杈冿拷
+    void MakeUpFriendListInfo(std::string& friendinfo, const std::shared_ptr<TcpConnection>& conn);
 
-    //根据用户分组信息组装应答给客户端的好友列表信息
-    void makeUpFriendListInfo(std::string& friendinfo, const std::shared_ptr<TcpConnection>& conn);
-
-    //将聊天消息的本地时间改成服务器时间，修改成功返回true,失败返回false。
-    bool modifyChatMsgLocalTimeToServerTime(const std::string& chatInputJson, std::string& chatOutputJson);
+    //閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹鎭敓渚ユ唻鎷烽敓鏂ゆ嫹鏃堕敓鏂ゆ嫹鏌愮厼閿熸枻鎷烽敓鏂ゆ嫹閿熺粸鎲嬫嫹娲岊剨鎷疯柗鏌愭檼閿熸枻鎷烽敓鏂ゆ嫹閿熺但rue,澶遍敓鏉板嚖鎷烽敓鏂ゆ嫹false閿熸枻鎷�
+    bool ModifyChatMsgLocalTimeToServerTime(const std::string& chatInputJson, std::string& chatOutputJson);
 
 private:
     int32_t           m_id;                 //session id
     OnlineUserInfo    m_userinfo;
-    int32_t           m_seq;                //当前Session数据包序列号
-    bool              m_isLogin;            //当前Session对应的用户是否已经登录
-    time_t            m_lastPackageTime;    //上一次收发包的时间
-    TimerId           m_checkOnlineTimerId; //检测是否在线的定时器id
+    int32_t           m_seq;                //閿熸枻鎷峰墠Session閿熸枻鎷烽敓鎹峰府鎷烽敓鏂ゆ嫹閿熷彨鐚存嫹
+    bool              m_isLogin;            //閿熸枻鎷峰墠Session閿熸枻鎷峰簲閿熸枻鎷烽敓鐭紮鎷烽敓瑙掑嚖鎷烽敓绐栨拝鎷烽敓鏂ゆ嫹褰�
+    time_t            m_lastPackageTime;    //閿熸枻鎷蜂竴閿熸枻鎷烽敓绉稿嚖鎷烽敓鏂ゆ嫹閿熸枻鎷锋椂閿熸枻鎷�
+    TimerId           m_checkOnlineTimerId; //閿熸枻鎷烽敓鏂ゆ嫹娆犻敓鏂ゆ嫹閿熸枻鎷峰彥浜╅敓缁炴唻鎷烽敓绲燿
 };

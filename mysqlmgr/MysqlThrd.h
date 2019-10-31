@@ -15,26 +15,26 @@ public:
 
 	void Run();
 
-	bool start(const std::string& host, const std::string& user, const std::string& pwd, const std::string& dbname);
-	void stop();
-    bool addTask(IMysqlTask* poTask)    
+	bool Start(const string& host, const string& user, const string& pwd, const string& dbname);
+	void Stop();
+    bool AddTask(IMysqlTask* poTask)    
     { 
-        return m_oTask.push(poTask);
+        return m_oTask.Push(poTask);
     }
 
-    IMysqlTask* getReplyTask(void)      
+    IMysqlTask* GetReplyTask(void)      
     { 
-        return m_oReplyTask.pop();
+        return m_oReplyTask.Pop();
     }
 
 protected:
-	bool init();
-	void mainLoop();
-	void uninit();
+	bool _Init();
+	void _MainLoop();
+	void _Uninit();
 
 private:
 	bool				                 m_bTerminate;
-    std::unique_ptr<std::thread>         m_pThread;
+    std::shared_ptr<std::thread>         m_pThread;
     bool                                 m_bStart;
 	CDatabaseMysql*                      m_poConn;
     CTaskList                            m_oTask;

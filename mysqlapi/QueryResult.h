@@ -16,11 +16,11 @@ class  QueryResult
         QueryResult(MYSQL_RES* result, uint64_t rowCount, uint32_t fieldCount);
         virtual ~QueryResult();
 
-        virtual bool nextRow();
+        virtual bool NextRow();
 
-        uint32_t getField_idx(const std::string& name) const
+        uint32_t GetField_idx(const std::string& name) const
         {
-            for(FieldNames::const_iterator iter = getFieldNames().begin(); iter != getFieldNames().end(); ++iter)
+            for(FieldNames::const_iterator iter = GetFieldNames().begin(); iter != GetFieldNames().end(); ++iter)
             {
                 if(iter->second == name)
                     return iter->first;
@@ -30,35 +30,35 @@ class  QueryResult
             return uint32_t(-1);
         }
 
-        Field* fetch() const { return m_CurrentRow; }
+        Field *Fetch() const { return mCurrentRow; }
 
         const Field & operator [] (int index) const 
         { 
-            return m_CurrentRow[index];
+            return mCurrentRow[index];
         }
 
-        const Field& operator [] (const std::string &name) const
+        const Field & operator [] (const std::string &name) const
         {
-            return m_CurrentRow[getField_idx(name)];
+            return mCurrentRow[GetField_idx(name)];
         }
 
-        uint32_t getFieldCount() const { return m_FieldCount; }
-        uint64_t getRowCount() const { return m_RowCount; }
-        FieldNames const& getFieldNames() const {return m_FieldNames; }
+        uint32_t GetFieldCount() const { return mFieldCount; }
+        uint64_t GetRowCount() const { return mRowCount; }
+        FieldNames const& GetFieldNames() const {return mFieldNames; }
 
-        std::vector<std::string> const& getNames() const {return m_vtFieldNames;}
+        vector<string> const& GetNames() const {return m_vtFieldNames;}
 
     private:
-        enum Field::DataTypes convertNativeType(enum_field_types mysqlType) const;
+        enum Field::DataTypes ConvertNativeType(enum_field_types mysqlType) const;
 	public:
-        void endQuery();
+        void EndQuery();
 
     protected:
-        Field *                     m_CurrentRow;
-        uint32_t                    m_FieldCount;
-        uint64_t                    m_RowCount;
-        FieldNames                  m_FieldNames;
-        std::vector<std::string>    m_vtFieldNames;
+        Field *             mCurrentRow;
+        uint32_t            mFieldCount;
+        uint64_t            mRowCount;
+        FieldNames          mFieldNames;
+        std::vector<string> m_vtFieldNames;
 
-		MYSQL_RES*                  m_Result;
+		MYSQL_RES*          mResult;
 };

@@ -26,7 +26,7 @@ CDatabaseMysql::~CDatabaseMysql(void)
 }
 
 
-bool CDatabaseMysql::initialize(const std::string& host, const std::string& user, const std::string& pwd, const std::string& dbname)
+bool CDatabaseMysql::Initialize(const string& host, const string& user, const string& pwd, const string& dbname)
 {
     //LOGI << "CDatabaseMysql::Initialize, begin...";
 
@@ -70,12 +70,12 @@ bool CDatabaseMysql::initialize(const std::string& host, const std::string& user
 }
 
 //TODO: 这个函数要区分一下空数据集和出错两种情况
-QueryResult* CDatabaseMysql::query(const char* sql)
+QueryResult* CDatabaseMysql::Query(const char* sql)
 {
     if (!m_Mysql)
     {
         //LOGI << "CDatabaseMysql::Query, mysql is disconnected!";
-        if (false == initialize(m_DBInfo.strHost, m_DBInfo.strUser,
+        if (false == Initialize(m_DBInfo.strHost, m_DBInfo.strUser,
             m_DBInfo.strPwd, m_DBInfo.strDBName))
         {
             return NULL;
@@ -99,7 +99,7 @@ QueryResult* CDatabaseMysql::query(const char* sql)
             if (CR_SERVER_GONE_ERROR == uErrno)
             {
                 //LOGI << "CDatabaseMysql::Query, mysql is disconnected!";
-                if (false == initialize(m_DBInfo.strHost, m_DBInfo.strUser,
+                if (false == Initialize(m_DBInfo.strHost, m_DBInfo.strUser,
                     m_DBInfo.strPwd, m_DBInfo.strDBName))
                 {
                     return NULL;
@@ -140,12 +140,12 @@ QueryResult* CDatabaseMysql::query(const char* sql)
 
     QueryResult* queryResult = new QueryResult(result, rowCount, fieldCount);
 
-    queryResult->nextRow();
+    queryResult->NextRow();
 
     return queryResult;
 }
 
-QueryResult* CDatabaseMysql::pquery(const char* format, ...)
+QueryResult* CDatabaseMysql::PQuery(const char* format, ...)
 {
     if (!format) return NULL;
 
@@ -161,10 +161,10 @@ QueryResult* CDatabaseMysql::pquery(const char* format, ...)
         return NULL;
     }
 
-    return query(szQuery);
+    return Query(szQuery);
 }
 
-bool CDatabaseMysql::execute(const char* sql)
+bool CDatabaseMysql::Execute(const char* sql)
 {
     if (!m_Mysql)
         return false;
@@ -178,7 +178,7 @@ bool CDatabaseMysql::execute(const char* sql)
             if (CR_SERVER_GONE_ERROR == uErrno)
             {
                 //LOGI << "CDatabaseMysql::Query, mysql is disconnected!";
-                if (false == initialize(m_DBInfo.strHost, m_DBInfo.strUser, m_DBInfo.strPwd, m_DBInfo.strDBName))
+                if (false == Initialize(m_DBInfo.strHost, m_DBInfo.strUser, m_DBInfo.strPwd, m_DBInfo.strDBName))
                 {
                     return false;
                 }
@@ -203,7 +203,7 @@ bool CDatabaseMysql::execute(const char* sql)
     return true;
 }
 
-bool CDatabaseMysql::execute(const char* sql, uint32_t& uAffectedCount, int& nErrno)
+bool CDatabaseMysql::Execute(const char* sql, uint32_t& uAffectedCount, int& nErrno)
 {
     if (!m_Mysql)
         return false;
@@ -217,7 +217,7 @@ bool CDatabaseMysql::execute(const char* sql, uint32_t& uAffectedCount, int& nEr
             if (CR_SERVER_GONE_ERROR == uErrno)
             {
                 //LOGE << "CDatabaseMysql::Query, mysql is disconnected!";
-                if (false == initialize(m_DBInfo.strHost, m_DBInfo.strUser,
+                if (false == Initialize(m_DBInfo.strHost, m_DBInfo.strUser,
                     m_DBInfo.strPwd, m_DBInfo.strDBName))
                 {
                     return false;
@@ -244,7 +244,7 @@ bool CDatabaseMysql::execute(const char* sql, uint32_t& uAffectedCount, int& nEr
     return true;
 }
 
-bool CDatabaseMysql::pexecute(const char* format, ...)
+bool CDatabaseMysql::PExecute(const char* format, ...)
 {
     if (!format)
         return false;
@@ -273,7 +273,7 @@ bool CDatabaseMysql::pexecute(const char* format, ...)
             if (CR_SERVER_GONE_ERROR == uErrno)
             {
                 //LOGE << "CDatabaseMysql::Query, mysql is disconnected!";
-                if (false == initialize(m_DBInfo.strHost, m_DBInfo.strUser,
+                if (false == Initialize(m_DBInfo.strHost, m_DBInfo.strUser,
                     m_DBInfo.strPwd, m_DBInfo.strDBName))
                 {
                     return false;
@@ -298,7 +298,7 @@ bool CDatabaseMysql::pexecute(const char* format, ...)
     return true;
 }
 
-void CDatabaseMysql::clearStoredResults()
+void CDatabaseMysql::ClearStoredResults()
 {
     if (!m_Mysql)
     {
@@ -315,12 +315,12 @@ void CDatabaseMysql::clearStoredResults()
     }
 }
 
-uint32_t CDatabaseMysql::getInsertID()
+uint32_t CDatabaseMysql::GetInsertID()
 {
     return (uint32_t)mysql_insert_id(m_Mysql);
 }
 
-int32_t CDatabaseMysql::escapeString(char* szDst, const char* szSrc, uint32_t uSize)
+int32_t CDatabaseMysql::EscapeString(char* szDst, const char* szSrc, uint32_t uSize)
 {
     if (m_Mysql == NULL)
     {

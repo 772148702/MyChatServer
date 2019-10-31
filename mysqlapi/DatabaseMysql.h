@@ -12,36 +12,36 @@ class CDatabaseMysql
 public:
 	struct DatabaseInfo
 	{
-		std::string strHost;
-        std::string strUser;
-        std::string strPwd;
-        std::string strDBName;
+		string strHost;
+		string strUser;
+		string strPwd;
+		string strDBName;
 	};
 
 public:
 	CDatabaseMysql(void);
 	~CDatabaseMysql(void);
 
-	bool initialize(const std::string& host, const std::string& user, const std::string& pwd, const std::string& dbname);
-	QueryResult* query(const char *sql);
-	QueryResult* query(const std::string& sql)
+	bool Initialize(const string& host, const string& user, const string& pwd, const string& dbname);
+	QueryResult* Query(const char *sql);
+	QueryResult* Query(const string& sql)
 	{
-	    return query(sql.c_str());
+	    return Query(sql.c_str());
     }
 
-	QueryResult* pquery(const char *format,...);
-	bool execute(const char* sql);
-	bool execute(const char* sql, uint32_t& uAffectedCount, int& nErrno);
-	bool pexecute(const char *format,...);
+	QueryResult* PQuery(const char *format,...);
+	bool Execute(const char* sql);
+	bool Execute(const char* sql, uint32_t& uAffectedCount, int& nErrno);
+	bool PExecute(const char *format,...);
 
-	uint32_t getInsertID();
+	uint32_t GetInsertID();
 
-	void clearStoredResults();
+	void ClearStoredResults();
 
-	int32_t escapeString(char* szDst, const char* szSrc, uint32_t uSize);
+	int32_t EscapeString(char* szDst, const char* szSrc, uint32_t uSize);
 
 private:
-	DatabaseInfo    m_DBInfo;
-	MYSQL*          m_Mysql;
-	bool            m_bInit;
+	DatabaseInfo m_DBInfo;
+	MYSQL *m_Mysql;
+	bool m_bInit;
 };

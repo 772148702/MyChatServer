@@ -1,8 +1,3 @@
-/**
- * TcpSession.h
- * zhangyl 2017.03.09
- **/
-
 #pragma once
 
 #include <memory>
@@ -10,7 +5,7 @@
 
 using namespace net;
 
-//ÎªÁËÈÃÒµÎñÓëÂß¼­·Ö¿ª£¬Êµ¼ÊÓ¦¸ÃĞÂÔöÒ»¸ö×ÓÀà¼Ì³Ğ×ÔTcpSession£¬ÈÃTcpSessionÖĞÖ»ÓĞÂß¼­´úÂë£¬Æä×ÓÀà´æ·ÅÒµÎñ´úÂë
+//ä¸ºäº†è®©ä¸šåŠ¡ä¸é€»è¾‘åˆ†å¼€ï¼Œå®é™…åº”è¯¥æ–°å¢ä¸€ä¸ªå­ç±»ç»§æ‰¿è‡ªTcpSessionï¼Œè®©TcpSessionä¸­åªæœ‰é€»è¾‘ä»£ç ï¼Œå…¶å­ç±»å­˜æ”¾ä¸šåŠ¡ä»£ç 
 class TcpSession
 {
 public:
@@ -20,7 +15,7 @@ public:
     TcpSession(const TcpSession& rhs) = delete;
     TcpSession& operator =(const TcpSession& rhs) = delete;
 
-    std::shared_ptr<TcpConnection> getConnectionPtr()
+    std::shared_ptr<TcpConnection> GetConnectionPtr()
     {
         if (tmpConn_.expired())
             return NULL;
@@ -28,16 +23,16 @@ public:
         return tmpConn_.lock();
     }
 
-    void send(int32_t cmd, int32_t seq, const std::string& data);
-    void send(int32_t cmd, int32_t seq, const char* data, int32_t dataLength);
-    void send(const std::string& p);
-    void send(const char* p, int32_t length);
+    void Send(int32_t cmd, int32_t seq, const std::string& data);
+    void Send(int32_t cmd, int32_t seq, const char* data, int32_t dataLength);
+    void Send(const std::string& p);
+    void Send(const char* p, int32_t length);
 
 private:
-    void sendPackage(const char* p, int32_t length);
+    void SendPackage(const char* p, int32_t length);
 
 protected:
-    //TcpSessionÒıÓÃTcpConnectionÀà±ØĞëÊÇÈõÖ¸Õë£¬ÒòÎªTcpConnection¿ÉÄÜ»áÒòÍøÂç³ö´í×Ô¼ºÏú»Ù£¬´ËÊ±TcpSessionÓ¦¸ÃÒ²ÒªÏú»Ù
+    //TcpSessionå¼•ç”¨TcpConnectionç±»å¿…é¡»æ˜¯å¼±æŒ‡é’ˆï¼Œå› ä¸ºTcpConnectionå¯èƒ½ä¼šå› ç½‘ç»œå‡ºé”™è‡ªå·±é”€æ¯ï¼Œæ­¤æ—¶TcpSessionåº”è¯¥ä¹Ÿè¦é”€æ¯
     std::weak_ptr<TcpConnection>    tmpConn_;
     //std::shared_ptr<TcpConnection>    tmpConn_;
 };

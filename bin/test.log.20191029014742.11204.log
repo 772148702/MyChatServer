@@ -1,3 +1,0 @@
-[INFO][[2019-10-29 01:47:47]][139687795419008][/home/lzy/MyChatAppServer/test/base/AsynLogtest.cpp:12]start log info
-[ERROR][[2019-10-29 01:47:47]][139687795419008][/home/lzy/MyChatAppServer/test/base/AsynLogtest.cpp:13]error 10 a dsad
-[WARN][[2019-10-29 01:47:48]][139687795419008][/home/lzy/MyChatAppServer/test/base/AsynLogtest.cpp:14]warnning

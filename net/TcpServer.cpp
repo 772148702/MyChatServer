@@ -14,18 +14,18 @@
 using namespace net;
 
 TcpServer::TcpServer(EventLoop* loop,
-                     const InetAddress& listenAddr,
-                     const std::string& nameArg,
-                     Option option)
-        : loop_(loop),
-          hostport_(listenAddr.toIpPort()),
-          name_(nameArg),
-          acceptor_(new Acceptor(loop, listenAddr, option == kReusePort)),
-        //threadPool_(new EventLoopThreadPool(loop, name_)),
-          connectionCallback_(defaultConnectionCallback),
-          messageCallback_(defaultMessageCallback),
-          started_(0),
-          nextConnId_(1)
+    const InetAddress& listenAddr,
+    const std::string& nameArg,
+    Option option)
+    : loop_(loop),
+    hostport_(listenAddr.toIpPort()),
+    name_(nameArg),
+    acceptor_(new Acceptor(loop, listenAddr, option == kReusePort)),
+    //threadPool_(new EventLoopThreadPool(loop, name_)),
+    connectionCallback_(defaultConnectionCallback),
+    messageCallback_(defaultMessageCallback),
+    started_(0),
+    nextConnId_(1)
 {
     acceptor_->setNewConnectionCallback(std::bind(&TcpServer::newConnection, this, std::placeholders::_1, std::placeholders::_2));
 }
@@ -51,7 +51,7 @@ void TcpServer::start(int workerThreadCount/* = 4*/)
         eventLoopThreadPool_.reset(new EventLoopThreadPool());
         eventLoopThreadPool_->Init(loop_, workerThreadCount);
         eventLoopThreadPool_->start();
-
+        
         //threadPool_->start(threadInitCallback_);
         //assert(!acceptor_->listenning());
         loop_->runInLoop(std::bind(&Acceptor::listen, acceptor_.get()));
@@ -97,7 +97,7 @@ void TcpServer::newConnection(int sockfd, const InetAddress& peerAddr)
     conn->setMessageCallback(messageCallback_);
     conn->setWriteCompleteCallback(writeCompleteCallback_);
     conn->setCloseCallback(std::bind(&TcpServer::removeConnection, this, std::placeholders::_1)); // FIXME: unsafe
-    //è¯¥çº¿ç¨‹åˆ†ç¦»å®Œioäº‹ä»¶åï¼Œç«‹å³è°ƒç”¨TcpConnection::connectEstablished
+    //¸ÃÏß³Ì·ÖÀëÍêioÊÂ¼şºó£¬Á¢¼´µ÷ÓÃTcpConnection::connectEstablished
     ioLoop->runInLoop(std::bind(&TcpConnection::connectEstablished, conn));
 }
 
@@ -116,7 +116,7 @@ void TcpServer::removeConnectionInLoop(const TcpConnectionPtr& conn)
     //assert(n == 1);
     if (n != 1)
     {
-        //å‡ºç°è¿™ç§æƒ…å†µï¼Œæ˜¯TcpConneactionå¯¹è±¡åœ¨åˆ›å»ºè¿‡ç¨‹ä¸­ï¼Œå¯¹æ–¹å°±æ–­å¼€è¿æ¥äº†ã€‚
+        //³öÏÖÕâÖÖÇé¿ö£¬ÊÇTcpConneaction¶ÔÏóÔÚ´´½¨¹ı³ÌÖĞ£¬¶Ô·½¾Í¶Ï¿ªÁ¬½ÓÁË¡£
         LOGD("TcpServer::removeConnectionInLoop [%s] - connection %s, connection does not exist.", name_.c_str(), conn->name().c_str());
         return;
     }

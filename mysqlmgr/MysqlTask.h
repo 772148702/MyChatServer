@@ -17,9 +17,9 @@ public:
     virtual ~IMysqlTask(void) {};
 
 public:
-	virtual void execute(CDatabaseMysql* poConn) = 0;
-    virtual void reply() = 0;
-    virtual void release() { delete this; };
+	virtual void Execute(CDatabaseMysql* poConn) = 0;
+    virtual void Reply() = 0;
+    virtual void Release() { delete this; };
 };
 
 
