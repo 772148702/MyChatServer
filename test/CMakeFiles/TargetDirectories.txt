@@ -1,0 +1,2 @@
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/test/CMakeFiles/rebuild_cache.dir
+/mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/test/CMakeFiles/edit_cache.dir

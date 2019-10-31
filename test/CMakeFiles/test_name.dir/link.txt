@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test_name.dir/base/Timestamptest.cpp.o  -o test_name ../base/libmuduo_base.a libgtest.a -lpthread 
