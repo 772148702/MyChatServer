@@ -61,8 +61,8 @@ CMysqlManager::CMysqlManager(void)
         info.m_mapField["f_user_id2"] = { "f_user_id2", "bigint(20) NOT NULL COMMENT '用户ID'", "bigint(20)" };
         info.m_mapField["f_user1_teamname"] = { "f_user1_teamname", "VARCHAR(32) NOT NULL DEFAULT 'My Friends' COMMENT '用户2在用户1的好友分组名称'", "VARCHAR(32)" };
         info.m_mapField["f_user2_teamname"] = { "f_user2_teamname", "VARCHAR(32) NOT NULL DEFAULT 'My Friends' COMMENT '用户1在用户2的好友分组名称'", "VARCHAR(32)" };
-        info.m_mapField["f_user1_markname"] = { "f_user1_markname", "VARCHAR(32) COMMENT '用户2在用户1的备注名称'", "VARCHAR(32)" },
-        info.m_mapField["f_user2_markname"] = { "f_user2_markname", "VARCHAR(32) COMMENT '用户1在用户2的备注名称'", "VARCHAR(32)" },
+        info.m_mapField["f_user1_markname"] = { "f_user1_markname", "VARCHAR(32) COMMENT '用户2在用户1的备注名称'", "VARCHAR(32)" };
+        info.m_mapField["f_user2_markname"] = { "f_user2_markname", "VARCHAR(32) COMMENT '用户1在用户2的备注名称'", "VARCHAR(32)" };
         info.m_mapField["f_remark"] = { "f_remark", "varchar(64) NULL COMMENT '备注'", "varchar(64)" };
         info.m_mapField["f_update_time"] = { "f_update_time", "timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'", "timestamp" };
 

@@ -6,6 +6,7 @@
 #include "mysqlapi/DatabaseMysql.h"
 #include <vector>
 #include <map>
+#include <memory>
 
 struct STableFiled
 {
@@ -21,7 +22,7 @@ struct STableInfo
     STableInfo() {}
     STableInfo(std::string strName):m_strName(strName){}
     std::string m_strName;
-    std::map<std::string, STableFiled> m_MapFields;
+    std::map<std::string, STableFiled> m_mapField;
     std::string m_strPriKey;
 };
 
@@ -32,6 +33,9 @@ class CMysqlManager {
 public:
     CMysqlManager();
 
+    virtual ~CMysqlManager();
+
+    bool Init(const char* host, const char* user, const char* pwd, const char* dbname);
 
 public:
     const string &getMStrHost() const;
@@ -44,7 +48,11 @@ public:
 
     const string &getMStrCharacterSet() const;
 
-
+    bool _IsDBExist();
+    bool _CreateDB();
+    bool _CheckTable(const STableInfo& table);
+    bool _CreateTable(const STableInfo& table);
+    bool _UpdateTable(const STableInfo& table);
 protected:
 
     std::shared_ptr<CDatabaseMysql> m_ptrConn;
