@@ -48,10 +48,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
+CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
+CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles /home/lzy/MyChatAppServer/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/myChatServer/MyChatServer/CMakeFiles /home/lzy/myChatServer/MyChatServer/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/myChatServer/MyChatServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -634,6 +634,33 @@ jsoncpp1.9.0/json_writer.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.s
 .PHONY : jsoncpp1.9.0/json_writer.cpp.s
 
+myChatserver/mysqlmgr/MysqlManager.o: myChatserver/mysqlmgr/MysqlManager.cpp.o
+
+.PHONY : myChatserver/mysqlmgr/MysqlManager.o
+
+# target to build an object file
+myChatserver/mysqlmgr/MysqlManager.cpp.o:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o
+.PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.o
+
+myChatserver/mysqlmgr/MysqlManager.i: myChatserver/mysqlmgr/MysqlManager.cpp.i
+
+.PHONY : myChatserver/mysqlmgr/MysqlManager.i
+
+# target to preprocess a source file
+myChatserver/mysqlmgr/MysqlManager.cpp.i:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.i
+.PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.i
+
+myChatserver/mysqlmgr/MysqlManager.s: myChatserver/mysqlmgr/MysqlManager.cpp.s
+
+.PHONY : myChatserver/mysqlmgr/MysqlManager.s
+
+# target to generate assembly for a file
+myChatserver/mysqlmgr/MysqlManager.cpp.s:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.s
+.PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.s
+
 mysqlapi/DatabaseMysql.o: mysqlapi/DatabaseMysql.cpp.o
 
 .PHONY : mysqlapi/DatabaseMysql.o
@@ -714,114 +741,6 @@ mysqlapi/QueryResult.s: mysqlapi/QueryResult.cpp.s
 mysqlapi/QueryResult.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/QueryResult.cpp.s
 .PHONY : mysqlapi/QueryResult.cpp.s
-
-mysqlmgr/MysqlManager.o: mysqlmgr/MysqlManager.cpp.o
-
-.PHONY : mysqlmgr/MysqlManager.o
-
-# target to build an object file
-mysqlmgr/MysqlManager.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.o
-.PHONY : mysqlmgr/MysqlManager.cpp.o
-
-mysqlmgr/MysqlManager.i: mysqlmgr/MysqlManager.cpp.i
-
-.PHONY : mysqlmgr/MysqlManager.i
-
-# target to preprocess a source file
-mysqlmgr/MysqlManager.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.i
-.PHONY : mysqlmgr/MysqlManager.cpp.i
-
-mysqlmgr/MysqlManager.s: mysqlmgr/MysqlManager.cpp.s
-
-.PHONY : mysqlmgr/MysqlManager.s
-
-# target to generate assembly for a file
-mysqlmgr/MysqlManager.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.s
-.PHONY : mysqlmgr/MysqlManager.cpp.s
-
-mysqlmgr/MysqlThrd.o: mysqlmgr/MysqlThrd.cpp.o
-
-.PHONY : mysqlmgr/MysqlThrd.o
-
-# target to build an object file
-mysqlmgr/MysqlThrd.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.o
-.PHONY : mysqlmgr/MysqlThrd.cpp.o
-
-mysqlmgr/MysqlThrd.i: mysqlmgr/MysqlThrd.cpp.i
-
-.PHONY : mysqlmgr/MysqlThrd.i
-
-# target to preprocess a source file
-mysqlmgr/MysqlThrd.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.i
-.PHONY : mysqlmgr/MysqlThrd.cpp.i
-
-mysqlmgr/MysqlThrd.s: mysqlmgr/MysqlThrd.cpp.s
-
-.PHONY : mysqlmgr/MysqlThrd.s
-
-# target to generate assembly for a file
-mysqlmgr/MysqlThrd.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.s
-.PHONY : mysqlmgr/MysqlThrd.cpp.s
-
-mysqlmgr/MysqlThrdMgr.o: mysqlmgr/MysqlThrdMgr.cpp.o
-
-.PHONY : mysqlmgr/MysqlThrdMgr.o
-
-# target to build an object file
-mysqlmgr/MysqlThrdMgr.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.o
-.PHONY : mysqlmgr/MysqlThrdMgr.cpp.o
-
-mysqlmgr/MysqlThrdMgr.i: mysqlmgr/MysqlThrdMgr.cpp.i
-
-.PHONY : mysqlmgr/MysqlThrdMgr.i
-
-# target to preprocess a source file
-mysqlmgr/MysqlThrdMgr.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.i
-.PHONY : mysqlmgr/MysqlThrdMgr.cpp.i
-
-mysqlmgr/MysqlThrdMgr.s: mysqlmgr/MysqlThrdMgr.cpp.s
-
-.PHONY : mysqlmgr/MysqlThrdMgr.s
-
-# target to generate assembly for a file
-mysqlmgr/MysqlThrdMgr.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.s
-.PHONY : mysqlmgr/MysqlThrdMgr.cpp.s
-
-mysqlmgr/TaskList.o: mysqlmgr/TaskList.cpp.o
-
-.PHONY : mysqlmgr/TaskList.o
-
-# target to build an object file
-mysqlmgr/TaskList.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.o
-.PHONY : mysqlmgr/TaskList.cpp.o
-
-mysqlmgr/TaskList.i: mysqlmgr/TaskList.cpp.i
-
-.PHONY : mysqlmgr/TaskList.i
-
-# target to preprocess a source file
-mysqlmgr/TaskList.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.i
-.PHONY : mysqlmgr/TaskList.cpp.i
-
-mysqlmgr/TaskList.s: mysqlmgr/TaskList.cpp.s
-
-.PHONY : mysqlmgr/TaskList.s
-
-# target to generate assembly for a file
-mysqlmgr/TaskList.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.s
-.PHONY : mysqlmgr/TaskList.cpp.s
 
 net/Acceptor.o: net/Acceptor.cpp.o
 
@@ -2051,6 +1970,9 @@ help:
 	@echo "... jsoncpp1.9.0/json_writer.o"
 	@echo "... jsoncpp1.9.0/json_writer.i"
 	@echo "... jsoncpp1.9.0/json_writer.s"
+	@echo "... myChatserver/mysqlmgr/MysqlManager.o"
+	@echo "... myChatserver/mysqlmgr/MysqlManager.i"
+	@echo "... myChatserver/mysqlmgr/MysqlManager.s"
 	@echo "... mysqlapi/DatabaseMysql.o"
 	@echo "... mysqlapi/DatabaseMysql.i"
 	@echo "... mysqlapi/DatabaseMysql.s"
@@ -2060,18 +1982,6 @@ help:
 	@echo "... mysqlapi/QueryResult.o"
 	@echo "... mysqlapi/QueryResult.i"
 	@echo "... mysqlapi/QueryResult.s"
-	@echo "... mysqlmgr/MysqlManager.o"
-	@echo "... mysqlmgr/MysqlManager.i"
-	@echo "... mysqlmgr/MysqlManager.s"
-	@echo "... mysqlmgr/MysqlThrd.o"
-	@echo "... mysqlmgr/MysqlThrd.i"
-	@echo "... mysqlmgr/MysqlThrd.s"
-	@echo "... mysqlmgr/MysqlThrdMgr.o"
-	@echo "... mysqlmgr/MysqlThrdMgr.i"
-	@echo "... mysqlmgr/MysqlThrdMgr.s"
-	@echo "... mysqlmgr/TaskList.o"
-	@echo "... mysqlmgr/TaskList.i"
-	@echo "... mysqlmgr/TaskList.s"
 	@echo "... net/Acceptor.o"
 	@echo "... net/Acceptor.i"
 	@echo "... net/Acceptor.s"

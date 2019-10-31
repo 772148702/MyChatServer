@@ -100,6 +100,13 @@ chatserversrc/HttpSession.cpp
 chatserversrc/HttpServer.cpp
 chatserversrc/BussinessLogic.cpp)
 
+set(mymysqlapi_srcs
+		myChatserve/mysqlapi/DatabaseMysql.cpp
+		myChatserve/mysqlapi/Field.cpp
+		myChatserve/mysqlapi/QueryResult.cpp
+		)
+set(mysqlmgr_srcs
+		myChatserver/mysqlmgr/MysqlManager.cpp)
 
 add_executable(chatserver ${net_srcs} ${json_srcs}  ${chatserver_srcs} ${mysqlapi_srcs} ${mysqlmgr_srcs} ${zlib_srcs} ${utils_srcs})
 #光包含库目录是没用的，还必须使用TARGET_LINK_LIBRARIES链接该库
