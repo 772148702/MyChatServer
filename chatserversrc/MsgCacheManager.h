@@ -1,3 +1,7 @@
+/** 
+ *  消息缓存类， MsgCacheManager.h
+ *  zhangyl 2017.03.16
+ **/
 #pragma once
 #include <list>
 #include <stdint.h>
@@ -6,13 +10,13 @@
 
 struct NotifyMsgCache
 {
-    int32_t userid;
-    std::string notifymsg;
+    int32_t     userid;
+    std::string notifymsg;  
 };
 
 struct ChatMsgCache
 {
-    int32_t userid;
+    int32_t     userid;
     std::string chatmsg;
 };
 
@@ -23,16 +27,18 @@ public:
     ~MsgCacheManager();
 
     MsgCacheManager(const MsgCacheManager& rhs) = delete;
-    MsgCacheManager& operator=(const MsgCacheManager& rhs) = delete;
+    MsgCacheManager& operator =(const MsgCacheManager& rhs) = delete;
 
-    bool AddNotifyMsgCache(int32_t userid,const std::string& cache);
-    void GetNotifyMsgCache(int32_t userid,std::list<NotifyMsgCache>& cached);
+    bool addNotifyMsgCache(int32_t userid, const std::string& cache);
+    void getNotifyMsgCache(int32_t userid, std::list<NotifyMsgCache>& cached);
 
-    bool AddChatMsgCache(int32_t userid,const std::string& cache);
-    void GetChatMsgCache(int32_t userid,std::list<ChatMsgCache>& cached);
+    bool addChatMsgCache(int32_t userid, const std::string& cache);
+    void getChatMsgCache(int32_t userid, std::list<ChatMsgCache>& cached);
+
+
 private:
-    std::list<NotifyMsgCache> m_listNotifyMsgCache;
-    std::mutex                m_mtNotifyMsgCache;
-    std::list<ChatMsgCache>    m_listChatMsgCache;
-    std::mutex                m_mtChatMsgCache;
+    std::list<NotifyMsgCache>       m_listNotifyMsgCache;    //通知类消息缓存，比如加好友消息
+    std::mutex                      m_mtNotifyMsgCache;
+    std::list<ChatMsgCache>         m_listChatMsgCache;      //聊天消息缓存
+    std::mutex                      m_mtChatMsgCache;
 };

@@ -1,4 +1,7 @@
-
+/**
+ * ÁÄÌì·şÎñÖ§³ÖhttpÇëÇó, HttpServer.cpp
+ * zhangyl 2018.05.16
+ */
 #include "HttpServer.h"
 #include "../net/InetAddress.h"
 #include "../base/AsyncLog.h"
@@ -9,30 +12,30 @@
 #include "HttpSession.h"
 #include "HttpServer.h"
 
-bool HttpServer::Init(const char* ip, short port, EventLoop* loop)
+bool HttpServer::init(const char* ip, short port, EventLoop* loop)
 {
     InetAddress addr(ip, port);
     m_server.reset(new TcpServer(loop, addr, "ZYL-MYHTTPSERVER", TcpServer::kReusePort));
-    m_server->setConnectionCallback(std::bind(&HttpServer::OnConnection, this, std::placeholders::_1));
-    //é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
+    m_server->setConnectionCallback(std::bind(&HttpServer::onConnected, this, std::placeholders::_1));
+    //Æô¶¯ÕìÌı
     m_server->start();
 
     return true;
 }
 
-void HttpServer::Uninit()
+void HttpServer::uninit()
 {
     if (m_server)
         m_server->stop();
 }
 
-//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ¥ç¢‰æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”ŸçŸ«ä¼™æ‹·é”Ÿæ–¤æ‹·é”Ÿæ¥æ–­åŒ¡æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·è¦é€šé”Ÿæ–¤æ‹·conn->connected()é”Ÿæ–¤æ‹·é”Ÿå«æ–­ï½æ‹·ä¸€é”Ÿæ–¤æ‹·åªé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·loopé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
-void HttpServer::OnConnection(std::shared_ptr<TcpConnection> conn)
+//ĞÂÁ¬½Óµ½À´µ÷ÓÃ»òÁ¬½Ó¶Ï¿ª£¬ËùÒÔĞèÒªÍ¨¹ıconn->connected()À´ÅĞ¶Ï£¬Ò»°ãÖ»ÔÚÖ÷loopÀïÃæµ÷ÓÃ
+void HttpServer::onConnected(std::shared_ptr<TcpConnection> conn)
 {
     if (conn->connected())
     {
         std::shared_ptr<HttpSession> spSession(new HttpSession(conn));
-        conn->setMessageCallback(std::bind(&HttpSession::OnRead, spSession.get(), std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+        conn->setMessageCallback(std::bind(&HttpSession::onRead, spSession.get(), std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
 
         {
             std::lock_guard<std::mutex> guard(m_sessionMutex);
@@ -41,25 +44,25 @@ void HttpServer::OnConnection(std::shared_ptr<TcpConnection> conn)
     }
     else
     {
-        OnClose(conn);
+        onDisconnected(conn);
     }
 }
 
-//é”Ÿæ–¤æ‹·é”Ÿæ¥æ–­åŒ¡æ‹·
-void HttpServer::OnClose(const std::shared_ptr<TcpConnection>& conn)
+//Á¬½Ó¶Ï¿ª
+void HttpServer::onDisconnected(const std::shared_ptr<TcpConnection>& conn)
 {
-    //TODO: é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿä¾¥è¾¾æ‹·é”Ÿæ–¤æ‹·é”Ÿç«­ç¡·æ‹·å¤ªé”Ÿæ–¤æ‹·é”Ÿæ­ï½æ‹·é”Ÿæ–¤æ‹·è¦é”Ÿè„šä¼™æ‹·
+    //TODO: ÕâÑùµÄ´úÂëÂß¼­Ì«»ìÂÒ£¬ĞèÒªÓÅ»¯
     std::lock_guard<std::mutex> guard(m_sessionMutex);
     for (auto iter = m_sessions.begin(); iter != m_sessions.end(); ++iter)
     {
-        if ((*iter)->GetConnectionPtr() == NULL)
+        if ((*iter)->getConnectionPtr() == NULL)
         {
             LOGE("connection is NULL");
             break;
         }
 
-        //é€šé”Ÿæ–¤æ‹·é”Ÿé¥ºè®¹æ‹·connectioné”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ­ç¢‰æ‹·é”Ÿæ–¤æ‹·åº”é”Ÿæ–¤æ‹·session
-        if ((*iter)->GetConnectionPtr() == conn)
+        //Í¨¹ı±È¶Ôconnection¶ÔÏóÕÒµ½¶ÔÓ¦µÄsession
+        if ((*iter)->getConnectionPtr() == conn)
         {
             m_sessions.erase(iter);
             LOGI("monitor client disconnected: %s", conn->peerAddress().toIpPort().c_str());

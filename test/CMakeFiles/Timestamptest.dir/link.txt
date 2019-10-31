@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++0x -g -Wall -O0 -Wno-unused-variable -pthread    -rdynamic CMakeFiles/Timestamptest.dir/base/Timestamptest.cpp.o  -o Timestamptest  -L/home/lzy/MyChatAppServer/lib  -L/usr/lib64/mysql -Wl,-rpath,/home/lzy/MyChatAppServer/lib:/usr/lib64/mysql -lmuduo_base libgtest.a -lpthread 

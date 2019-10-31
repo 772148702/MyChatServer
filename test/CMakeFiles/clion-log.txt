@@ -1,4 +1,0 @@
-Cannot generate into /home/lzy/MyChatAppServer/test
-It is already used for project /mnt/g/onedrive1/OneDrive - office.ac.id/project_git/MyChatApp/MyChatAppServer/test
-
-Please either delete it manually or select another generation directory

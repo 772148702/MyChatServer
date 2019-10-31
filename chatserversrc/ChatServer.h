@@ -1,5 +1,5 @@
 /** 
- *  æœåŠ¡å™¨ä¸»æœåŠ¡ç±»ï¼ŒIMServer.h
+ *  ·şÎñÆ÷Ö÷·şÎñÀà£¬IMServer.h
  *  zhangyl 2017.03.09
  **/
 #pragma once
@@ -40,35 +40,34 @@ public:
     ChatServer(const ChatServer& rhs) = delete;
     ChatServer& operator =(const ChatServer& rhs) = delete;
 
-    bool Init(const char* ip, short port, EventLoop* loop);
-    void Uninit();
+    bool init(const char* ip, short port, EventLoop* loop);
+    void uninit();
 
-    void EnableLogPackageBinary(bool enable);
-    bool IsLogPackageBinaryEnabled();
+    void enableLogPackageBinary(bool enable);
+    bool isLogPackageBinaryEnabled();
 
-    void GetSessions(std::list<std::shared_ptr<ChatSession>>& sessions);
-    //ç”¨æˆ·idå’Œclienttypeä¼šå”¯ä¸€ç¡®å®šä¸€ä¸ªsession
-    bool GetSessionByUserIdAndClientType(std::shared_ptr<ChatSession>& session, int32_t userid, int32_t clientType);
+    void getSessions(std::list<std::shared_ptr<ChatSession>>& sessions);
+    //ÓÃ»§idºÍclienttype»áÎ¨Ò»È·¶¨Ò»¸ösession
+    bool getSessionByUserIdAndClientType(std::shared_ptr<ChatSession>& session, int32_t userid, int32_t clientType);
 
-    bool GetSessionsByUserId(std::list<std::shared_ptr<ChatSession>>& sessions, int32_t userid);
+    bool getSessionsByUserId(std::list<std::shared_ptr<ChatSession>>& sessions, int32_t userid);
 
-    //è·å–ç”¨æˆ·çŠ¶æ€ï¼Œè‹¥è¯¥ç”¨æˆ·ä¸å­˜åœ¨ï¼Œåˆ™è¿”å›0
-    int32_t GetUserStatusByUserId(int32_t userid);
-    //è·å–ç”¨æˆ·å®¢æˆ·ç«¯ç±»å‹ï¼Œå¦‚æœè¯¥ç”¨æˆ·ä¸å­˜åœ¨ï¼Œåˆ™è¿”å›0
-    int32_t GetUserClientTypeByUserId(int32_t userid);
+    //»ñÈ¡ÓÃ»§×´Ì¬£¬Èô¸ÃÓÃ»§²»´æÔÚ£¬Ôò·µ»Ø0
+    int32_t getUserStatusByUserId(int32_t userid);
+    //»ñÈ¡ÓÃ»§¿Í»§¶ËÀàĞÍ£¬Èç¹û¸ÃÓÃ»§²»´æÔÚ£¬Ôò·µ»Ø0
+    int32_t getUserClientTypeByUserId(int32_t userid);
 
 private:
-    //æ–°è¿æ¥åˆ°æ¥è°ƒç”¨æˆ–è¿æ¥æ–­å¼€ï¼Œæ‰€ä»¥éœ€è¦é€šè¿‡conn->connected()æ¥åˆ¤æ–­ï¼Œä¸€èˆ¬åªåœ¨ä¸»loopé‡Œé¢è°ƒç”¨
-    void OnConnection(std::shared_ptr<TcpConnection> conn);  
-    //è¿æ¥æ–­å¼€
-    void OnClose(const std::shared_ptr<TcpConnection>& conn);
+    //ĞÂÁ¬½Óµ½À´µ÷ÓÃ»òÁ¬½Ó¶Ï¿ª£¬ËùÒÔĞèÒªÍ¨¹ıconn->connected()À´ÅĞ¶Ï£¬Ò»°ãÖ»ÔÚÖ÷loopÀïÃæµ÷ÓÃ
+    void onConnected(std::shared_ptr<TcpConnection> conn);  
+    //Á¬½Ó¶Ï¿ª
+    void onDisconnected(const std::shared_ptr<TcpConnection>& conn);
    
-
 private:
-    std::shared_ptr<TcpServer>                     m_server;
+    std::unique_ptr<TcpServer>                     m_server;
     std::list<std::shared_ptr<ChatSession>>        m_sessions;
-    std::mutex                                     m_sessionMutex;      //å¤šçº¿ç¨‹ä¹‹é—´ä¿æŠ¤m_sessions
+    std::mutex                                     m_sessionMutex;      //¶àÏß³ÌÖ®¼ä±£»¤m_sessions
     std::atomic_int                                m_sessionId{};
-    std::mutex                                     m_idMutex;           //å¤šçº¿ç¨‹ä¹‹é—´ä¿æŠ¤m_baseUserId
-    std::atomic_bool                               m_logPackageBinary;  //æ˜¯å¦æ—¥å¿—æ‰“å°å‡ºåŒ…çš„äºŒè¿›åˆ¶æ•°æ®
+    std::mutex                                     m_idMutex;           //¶àÏß³ÌÖ®¼ä±£»¤m_baseUserId
+    std::atomic_bool                               m_logPackageBinary;  //ÊÇ·ñÈÕÖ¾´òÓ¡³ö°üµÄ¶ş½øÖÆÊı¾İ
 };

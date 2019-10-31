@@ -1,7 +1,12 @@
+/** 
+ * ÁÄÌìĞ­ÒéÀàĞÍ¶¨Òå,Msg.h
+ * zhangyl 2017.03.02
+ **/
 #pragma once
 
-#include<stdint.h>
+#include <stdint.h>
 
+//°üÊÇ·ñÑ¹Ëõ¹ı
 enum
 {
     PACKAGE_UNCOMPRESSED,
@@ -11,81 +16,98 @@ enum
 enum msg_type
 {
     msg_type_unknown,
-    msg_type_heartbeat = 1000,     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-    msg_type_register,             //×¢ï¿½ï¿½
-    msg_type_login,                //ï¿½ï¿½Â½
-    msg_type_getofriendlist,       //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½
-    msg_type_finduser,             //ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½
-    msg_type_operatefriend,        //ï¿½ï¿½ï¿½Ó¡ï¿½É¾ï¿½ï¿½ï¿½Èºï¿½ï¿½Ñ²ï¿½ï¿½ï¿½
-    msg_type_userstatuschange,     //ï¿½Ã»ï¿½ï¿½ï¿½Ï¢ï¿½Ä±ï¿½Í¨Öª
-    msg_type_updateuserinfo,       //ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï¢
-    msg_type_modifypassword,       //ï¿½Ş¸Äµï¿½Â½ï¿½ï¿½ï¿½ï¿½
-    msg_type_creategroup,          //ï¿½ï¿½ï¿½ï¿½Èºï¿½ï¿½
-    msg_type_getgroupmembers,      //ï¿½ï¿½È¡Èºï¿½ï¿½ï¿½Ô±ï¿½Ğ±ï¿½
-    msg_type_chat   = 1100,        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
-    msg_type_multichat,            //Èºï¿½ï¿½ï¿½ï¿½Ï¢
-    msg_type_kickuser,             //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-    msg_type_remotedesktop,        //Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-    msg_type_updateteaminfo,       //ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
-    msg_type_modifyfriendmarkname, //ï¿½ï¿½ï¿½Âºï¿½ï¿½Ñ±ï¿½×¢ï¿½ï¿½Ï¢
-    msg_type_movefriendtootherteam, //ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    msg_type_heartbeat = 1000,     //ĞÄÌø°ü
+    msg_type_register,             //×¢²á
+    msg_type_login,                //µÇÂ½
+    msg_type_getofriendlist,       //»ñÈ¡ºÃÓÑÁĞ±í
+    msg_type_finduser,             //²éÕÒÓÃ»§
+    msg_type_operatefriend,        //Ìí¼Ó¡¢É¾³ıµÈºÃÓÑ²Ù×÷
+    msg_type_userstatuschange,     //ÓÃ»§ĞÅÏ¢¸Ä±äÍ¨Öª
+    msg_type_updateuserinfo,       //¸üĞÂÓÃ»§ĞÅÏ¢
+    msg_type_modifypassword,       //ĞŞ¸ÄµÇÂ½ÃÜÂë
+    msg_type_creategroup,          //´´½¨Èº×é
+    msg_type_getgroupmembers,      //»ñÈ¡Èº×é³ÉÔ±ÁĞ±í
+    msg_type_chat   = 1100,        //µ¥ÁÄÏûÏ¢
+    msg_type_multichat,            //Èº·¢ÏûÏ¢
+    msg_type_kickuser,             //±»ÌßÏÂÏß
+    msg_type_remotedesktop,        //Ô¶³Ì×ÀÃæ
+    msg_type_updateteaminfo,       //¸üĞÂÓÃ»§ºÃÓÑ·Ö×éĞÅÏ¢
+    msg_type_modifyfriendmarkname, //¸üĞÂºÃÓÑ±¸×¢ĞÅÏ¢
+    msg_type_movefriendtootherteam, //ÒÆ¶¯ºÃÓÑÖÁ
 };
 
+//ÔÚÏßÀàĞÍ
 enum online_type{
-    online_type_offline         = 0,    //ï¿½ï¿½ï¿½ï¿½
-    online_type_pc_online       = 1,    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-    online_type_pc_invisible    = 2,    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-    online_type_android_cellular= 3,    //android 3G/4G/5Gï¿½ï¿½ï¿½ï¿½
-    online_type_android_wifi    = 4,    //android wifiï¿½ï¿½ï¿½ï¿½
-    online_type_ios             = 5,    //ios ï¿½ï¿½ï¿½ï¿½
-    online_type_mac             = 6     //MACï¿½ï¿½ï¿½ï¿½
+    online_type_offline         = 0,    //ÀëÏß
+    online_type_pc_online       = 1,    //µçÄÔÔÚÏß
+    online_type_pc_invisible    = 2,    //µçÄÔÒşÉí
+    online_type_android_cellular= 3,    //android 3G/4G/5GÔÚÏß
+    online_type_android_wifi    = 4,    //android wifiÔÚÏß
+    online_type_ios             = 5,    //ios ÔÚÏß
+    online_type_mac             = 6     //MACÔÚÏß
 };
-
 
 #pragma pack(push, 1)
-
-struct msg
+//Ğ­ÒéÍ·
+struct chat_msg_header
 {
-    char     compressflag;     //Ñ¹ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½Îª1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½
-    int32_t  originsize;       //ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½Ç°ï¿½ï¿½Ğ¡
-    int32_t  compresssize;     //ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡
+    char     compressflag;     //Ñ¹Ëõ±êÖ¾£¬Èç¹ûÎª1£¬ÔòÆôÓÃÑ¹Ëõ£¬·´Ö®²»ÆôÓÃÑ¹Ëõ
+    int32_t  originsize;       //°üÌåÑ¹ËõÇ°´óĞ¡
+    int32_t  compresssize;     //°üÌåÑ¹Ëõºó´óĞ¡
     char     reserved[16];
 };
 
 #pragma pack(pop)
 
+//typeÎª1·¢³ö¼ÓºÃÓÑÉêÇë 2 ÊÕµ½¼ÓºÃÓÑÇëÇó(½ö¿Í»§¶ËÊ¹ÓÃ) 3Ó¦´ğ¼ÓºÃÓÑ 4É¾³ıºÃÓÑÇëÇó 5Ó¦´ğÉ¾³ıºÃÓÑ
+//µ±type=3Ê±£¬acceptÊÇ±ØĞë×Ö¶Î£¬0¶Ô·½¾Ü¾ø£¬1¶Ô·½½ÓÊÜ
 enum friend_operation_type
 {
-    //ï¿½ï¿½ï¿½Í¼Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //·¢ËÍ¼ÓºÃÓÑÉêÇë
     friend_operation_send_add_apply      = 1,
-    //ï¿½ï¿½ï¿½Õµï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½)
+    //½ÓÊÕµ½¼ÓºÃÓÑÉêÇë(½ö¿Í»§¶ËÊ¹ÓÃ)
     friend_operation_recv_add_apply,
-    //Ó¦ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //Ó¦´ğ¼ÓºÃÓÑÉêÇë
     friend_operation_reply_add_apply,
-    //É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //É¾³ıºÃÓÑÉêÇë
     friend_operation_send_delete_apply,
-    //Ó¦ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //Ó¦´ğÉ¾ºÃÓÑÉêÇë
     friend_operation_recv_delete_apply
 };
 
 enum friend_operation_apply_type
 {
-    //ï¿½Ü¾ï¿½ï¿½Óºï¿½ï¿½ï¿½
+    //¾Ü¾ø¼ÓºÃÓÑ
     friend_operation_apply_refuse,
-    //ï¿½ï¿½ï¿½Ü¼Óºï¿½ï¿½ï¿½
+    //½ÓÊÜ¼ÓºÃÓÑ
     friend_operation_apply_accept
 };
 
-
 enum updateteaminfo_operation_type
 {
-    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ĞÂÔö·Ö×é
     updateteaminfo_operation_add,
-    //É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //É¾³ı·Ö×é
     updateteaminfo_operation_delete,
-    //ï¿½Ş¸Ä·ï¿½ï¿½ï¿½
+    //ĞŞ¸Ä·Ö×é
     updateteaminfo_operation_modify
 };
+
+/** 
+ *  ´íÎóÂë
+ *  0   ³É¹¦
+ *  1   Î´ÖªÊ§°Ü
+ *  2   ÓÃ»§Î´µÇÂ¼
+ *  100 ×¢²áÊ§°Ü
+ *  101 ÒÑ×¢²á
+ *  102 Î´×¢²á
+ *  103 ÃÜÂë´íÎó
+ *  104 ¸üĞÂÓÃ»§ĞÅÏ¢Ê§°Ü
+ *  105 ĞŞ¸ÄÃÜÂëÊ§°Ü
+ *  106 ´´½¨ÈºÊ§°Ü
+ *  107 ¿Í»§¶Ë°æ±¾Ì«¾É£¬ĞèÒªÉı¼¶³ÉĞÂ°æ±¾
+ */
+//TODO: ÆäËûµÄµØ·½¸Ä³ÉÕâ¸ö´íÎóÂë
 enum error_code
 {
     error_code_ok                   = 0,
@@ -100,5 +122,262 @@ enum error_code
     error_code_creategroupfail      = 106,
     error_code_toooldversion        = 107,
     error_code_modifymarknamefail   = 108,
-    error_code_teamname_exsit       = 109, //ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½
+    error_code_teamname_exsit       = 109, //·Ö×éÒÑ¾­´æÔÚ
 };
+
+/**
+ *  ĞÄÌø°üĞ­Òé
+ **/
+/*
+    cmd = 1000, seq = 0
+    cmd = 1000, seq = 0
+ **/
+
+/**
+ *  ×¢²áĞ­Òé
+ **/
+/*
+    cmd = 1001, seq = 0,  {"username": "13917043329", "nickname": "balloon", "password": "123"}
+    cmd = 1001, seq = 0,  {"code": 0, "msg": "ok"}
+ **/
+
+/**
+ *  µÇÂ¼Ğ­Òé
+ **/
+/*
+    //status: ÔÚÏß×´Ì¬ 0ÀëÏß 1ÔÚÏß 2Ã¦Âµ 3Àë¿ª 4ÒşÉí
+    //clienttype: ¿Í»§¶ËÀàĞÍ,pc=1, android=2, ios=3
+    cmd = 1002, seq = 0, {"username": "13917043329", "password": "123", "clienttype": 1, "status": 1}
+    cmd = 1002, seq = 0, {"code": 0, "msg": "ok", "userid": 8, "username": "13917043320", "nickname": "zhangyl",
+                          "facetype": 0, "customface":"ÎÄ¼şmd5", "gender":0, "birthday":19891208, "signature":"¹ş¹ş£¬ÖÕÓÚ³É¹¦ÁË",
+                          "address":"ÉÏº£ÊĞ¶«·½Â·3261ºÅ", "phonenumber":"021-389456", "mail":"balloonwj@qq.com"}
+ **/
+
+/** 
+ * »ñÈ¡ÓÃ»§ÁĞ±í
+ **/
+/*
+    cmd = 1003, seq = 0
+    cmd = 1003, seq = 0,  
+    {
+    "code": 0,
+    "msg": "ok",
+    "userinfo": [
+        {            
+            "teamname": "ÎÒµÄºÃÓÑ",
+            "members": [
+                {
+                    "userid": 2,
+                    "username": "qqq",
+                    "nickname": "qqq123",
+                    "facetype": 0,
+                    "customface": "466649b507cdf7443c4e88ba44611f0c",
+                    "gender": 1,
+                    "birthday": 19900101,
+                    "signature": "Éú»îĞèÒªºÜ¶àµÄÁ¦ÆøÑ½¡£xx",
+                    "address": "",
+                    "phonenumber": "",
+                    "mail": "",
+                    "clienttype": 1,
+                    "status": 1,
+                    "markname": "qq²âÊÔºÅ"
+                },
+                {
+                    "userid": 3,
+                    "username": "hujing",
+                    "nickname": "hujingx",
+                    "facetype": 0,
+                    "customface": "",
+                    "gender": 0,
+                    "birthday": 19900101,
+                    "signature": "",
+                    "address": "",
+                    "phonenumber": "",
+                    "mail": "",
+                    "clienttype": 1,
+                    "status": 0
+                }
+            ]
+        },
+        {
+            "teamname": "ÎÒµÄÍ¬Ñ§",
+            "members": [
+                {
+                    "userid": 4,
+                    "username": "qqq",
+                    "nickname": "qqq123",
+                    "facetype": 0,
+                    "customface": "466649b507cdf7443c4e88ba44611f0c",
+                    "gender": 1,
+                    "birthday": 19900101,
+                    "signature": "Éú»îĞèÒªºÜ¶àµÄÁ¦ÆøÑ½¡£xx",
+                    "address": "",
+                    "phonenumber": "",
+                    "mail": "",
+                    "clienttype": 1,
+                    "status": 1
+                },
+                {
+                    "userid": 5,
+                    "username": "hujing",
+                    "nickname": "hujingx",
+                    "facetype": 0,
+                    "customface": "",
+                    "gender": 0,
+                    "birthday": 19900101,
+                    "signature": "",
+                    "address": "",
+                    "phonenumber": "",
+                    "mail": "",
+                    "clienttype": 1,
+                    "status": 0,
+                    "markname": "qq²âÊÔºÅ"
+                }
+            ]
+        }
+    ]
+}
+    
+**/
+
+/** 
+ * ²éÕÒÓÃ»§
+ **/
+/*
+    //type²éÕÒÀàĞÍ 0ËùÓĞ£¬ 1²éÕÒÓÃ»§ 2²éÕÒÈº
+    cmd = 1004, seq = 0, {"type": 1, "username": "zhangyl"}
+    cmd = 1004, seq = 0, { "code": 0, "msg": "ok", "userinfo": [{"userid": 2, "username": "qqq", "nickname": "qqq123", "facetype":0}] } 
+**/
+
+/** 
+ *  ²Ù×÷ºÃÓÑ£¬°üÀ¨¼ÓºÃÓÑ¡¢É¾³ıºÃÓÑ
+ **/
+/* 
+    //typeÎª1·¢³ö¼ÓºÃÓÑÉêÇë 2 ÊÕµ½¼ÓºÃÓÑÇëÇó(½ö¿Í»§¶ËÊ¹ÓÃ) 3Ó¦´ğ¼ÓºÃÓÑ 4É¾³ıºÃÓÑÇëÇó 5Ó¦´ğÉ¾³ıºÃÓÑ
+    //µ±type=3Ê±£¬acceptÊÇ±ØĞë×Ö¶Î£¬0¶Ô·½¾Ü¾ø£¬1¶Ô·½½ÓÊÜ
+    cmd = 1005, seq = 0, {"userid": 9, "type": 1}
+    cmd = 1005, seq = 0, {"userid": 9, "type": 2, "username": "xxx"}
+    cmd = 1005, seq = 0, {"userid": 9, "type": 3, "username": "xxx", "accept": 1}
+
+    //·¢ËÍ
+    cmd = 1005, seq = 0, {"userid": 9, "type": 4}
+    //Ó¦´ğ
+    cmd = 1005, seq = 0, {"userid": 9, "type": 5, "username": "xxx"}
+ **/
+
+/**
+ *  ÓÃ»§×´Ì¬¸Ä±ä
+ **/
+/*
+    //type 1ÓÃ»§ÔÚÏß×´Ì¬¸Ä±ä 2ÀëÏß 3ÓÃ»§Ç©Ãû¡¢Í·Ïñ¡¢êÇ³Æ·¢Éú±ä»¯
+    //onlinestatusÈ¡Öµ£º 0ÀëÏß 1ÉÏÏß 2ÒşÉí 3Ã¦Âµ 4Àë¿ª 5ÒÆ¶¯°æÔÚÏß 6ÒÆ¶¯°æÏÂÏß 7ÊÖ»úºÍµçÄÔÍ¬Ê±ÔÚÏß,
+    cmd = 1006, seq = 0, {"type": 1, "onlinestatus": 1, "clienttype": 1},  targetid(×´Ì¬¸Ä±äµÄÓÃ»§ĞÅÏ¢)
+    cmd = 1006, seq = 0, {"type": 3}, targetid(×´Ì¬¸Ä±äµÄÓÃ»§ĞÅÏ¢)
+**/
+
+/**
+ *  ¸üĞÂÓÃ»§ĞÅÏ¢
+ **/
+/*
+    cmd = 1007, seq = 0, ÓÃ»§ĞÅÏ¢: {"nickname": "xx", "facetype": 0,"customface":"ÎÄ¼şmd5", "gender":0, "birthday":19891208, "signature":"¹ş¹ş£¬ÖÕÓÚ³É¹¦ÁË",
+                                                                "address":"ÉÏº£ÊĞ¶«·½Â·3261ºÅ", "phonenumber":"021-389456", "mail":"balloonwj@qq.com"}
+    cmd = 1007, seq = 0, {"code": 0, "msg": "ok", "userid": 9, "username": "xxxx", "nickname": "xx", "facetype": 0,
+                                                                "customface":"ÎÄ¼şmd5", "gender":0, "birthday":19891208, "signature":"¹ş¹ş£¬ÖÕÓÚ³É¹¦ÁË",
+                                                                "address":"ÉÏº£ÊĞ¶«·½Â·3261ºÅ", "phonenumber":"021-389456", "mail":"balloonwj@qq.com"}
+**/
+
+/**
+ *  ĞŞ¸ÄÃÜÂë
+ **/
+/*
+    cmd = 1008, seq = 0, {"oldpassword": "xxx", "newpassword": "yyy"}
+    cmd = 1008, seq = 0, {"code":0, "msg": "ok"}
+**/
+
+/**
+ *  ´´½¨Èº
+ **/
+/*
+    cmd = 1009, seq = 0, {"groupname": "ÎÒµÄÈºÃû³Æ", "type": 0}
+    cmd = 1009, seq = 0, {"code":0, "msg": "ok", "groupid": 12345678, "groupname": "ÎÒµÄÈºÃû³Æ"}, ÓÃ»§idºÍÈºid¶¼ÊÇ4×Ö½ÚÕûĞÍ£¬32Î»£¬ÈºidµÄ¸ßÎ»µÚÆßÎ»Îª1
+**/
+
+/**
+ *  »ñÈ¡Èº³ÉÔ±
+ **/
+/*
+cmd = 1010, seq = 0, {"groupid": Èºid}
+cmd = 1010, seq = 0, {"code":0, "msg": "ok", "groupid": 12345678, 
+                    "members": [{"userid": 1, "username": xxxx, "nickname": yyyy, "facetype": 1, "customface": "ddd", "status": 1, "clienttype": 1},
+                    {"userid": 1, "username": xxxx, "nickname": yyyy, "facetype": 1, "customface": "ddd", "status": 1, "clienttype": 1},
+                    {"userid": 1, "username": xxxx, "nickname": yyyy, "facetype": 1, "customface": "ddd", "status": 1, "clienttype": 1}]}
+**/
+
+/**
+ *  ÁÄÌìĞ­Òé
+ **/
+/* 
+    cmd = 1100, seq = 0, data:ÁÄÌìÄÚÈİ targetid(ÏûÏ¢½ÓÊÜÕß)
+    cmd = 1100, seq = 0, data:ÁÄÌìÄÚÈİ senderid(ÏûÏ¢½ÓÊÜÕß), targetid(ÏûÏ¢·¢ËÍÕß)
+ **/
+
+/**
+ *  Èº·¢Ğ­Òé
+ **/
+/*
+    cmd = 1101, seq = 0, data:ÁÄÌìÄÚÈİ targetid(ÏûÏ¢½ÓÊÜÕß)
+    cmd = 1101, seq = 0, data:ÁÄÌìÄÚÈİ, {"targets": [1, 2, 3]}(ÏûÏ¢½ÓÊÕÕß)
+**/
+
+/**
+ *  ±»ÌßÏÂÏß
+ **/
+/*
+    cmd = 1102, seq = 0, data: 
+**/
+
+/**
+ * ÆÁÄ»½ØÆÁÊı¾İ
+ **/
+/*
+    cmd = 1103, seq = 0, string: Î»Í¼Í·²¿ĞÅÏ¢£¬ Î»Í¼ĞÅÏ¢£¬targetId
+**/
+
+/**
+ * ¸üĞÂÓÃ»§ºÃÓÑ·Ö×éĞÅÏ¢
+ **/
+/*
+    ¿Í»§¶ËÇëÇó£º cmd = 1104, seq = 0, data(±ØÌî£¬¿Õ×Ö·û´®), int(²Ù×÷ÀàĞÍ£º0Ôö 1É¾ 2¸Ä), string(ĞÂµÄ·Ö×éÃû³Æ), string(¾ÉµÄ·Ö×éÃû)
+    ·şÎñÆ÷Ó¦´ğ£º cmd = 1003, seq = 0,  
+**/
+
+/** 
+ *  ¸üĞÂºÃÓÑ±¸×¢ĞÅÏ¢
+ */
+/*
+    ¿Í»§¶ËÇëÇó£º cmd = 1105, seq = 0, data: ×é×°ºóµÄjson, friendid, newmarkname
+    ·şÎñÆ÷Ó¦´ğ£º cmd = 1003, seq = 0, data: {"code": 0, "msg": ok}
+*/
+
+/**
+*   ÒÆ¶¯ºÃÓÑÖÁÆäËû·Ö×é
+*/
+/*
+    ¿Í»§¶ËÇëÇó£º cmd = 1105, seq = 0, data(±ØÌî£¬¿Õ×Ö·û´®), friendid(int32, ²Ù×÷µÄºÃÓÑid), newteamname(string, ĞÂ·Ö×éÃû), oldteamname(string, ¾É·Ö×éÃû)
+    ·şÎñÆ÷Ó¦´ğ£º cmd = 1003, seq = 0, data: {"code": 0, "msg": ok}
+*/
+
+
+
+////////////////////////
+//¶¨ÖÆĞÅÏ¢
+////////////////////////
+/* ÉÏ´«Éè±¸ĞÅÏ¢
+    cmd = 2000, seq = 0, data(Éè±¸ĞÅÏ¢json), Éè±¸id(int32)£¬ĞÅÏ¢ÀàĞÍclasstype(int32), ÉÏ´«Ê±¼ä(int64£¬ UTCÊ±¼ä)
+    cmd = 2000, seq = 0, data: {"code": 0, "msg": "ok"}    
+**/
+
+/*
+    cmd = 2001, seq = 0, data(¿Õ)£¬Éè±¸id(int32)£¬ĞÅÏ¢ÀàĞÍclasstype(int32), ÉÏ´«Ê±¼ä(int64, UTCÊ±¼ä)
+    cmd = 2001, seq = 0, data: {¾ßÌåµÄÉè±¸ĞÅÏ¢json}
+**/

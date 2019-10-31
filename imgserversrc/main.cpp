@@ -1,4 +1,7 @@
-
+/**
+ *  ÁÄÌìÍ¼Æ¬·şÎñ³ÌĞòÈë¿Úº¯Êı
+ *  zhangyl 2017.03.09
+ **/
 #include <iostream>
 #include <stdlib.h>
 
@@ -18,7 +21,7 @@
 using namespace net;
 
 #ifdef WIN32
-//åˆå§‹åŒ–Windows socketåº“
+//³õÊ¼»¯Windows socket¿â
 NetworkInitializer windowsNetworkInitializer;
 #endif
 
@@ -29,7 +32,7 @@ void prog_exit(int signo)
 {
     std::cout << "program recv signal [" << signo << "] to exit." << std::endl;
 
-    Singleton<FileServer>::Instance().Uninit();
+    Singleton<FileServer>::Instance().uninit();
     g_mainLoop.quit();
 }
 #endif
@@ -37,7 +40,7 @@ void prog_exit(int signo)
 int main(int argc, char* argv[])
 {
 #ifndef WIN32
-    //è®¾ç½®ä¿¡å·å¤„ç†
+    //ÉèÖÃĞÅºÅ´¦Àí
     signal(SIGCHLD, SIG_DFL);
     signal(SIGPIPE, SIG_IGN);
     signal(SIGINT, prog_exit);
@@ -69,14 +72,14 @@ int main(int argc, char* argv[])
     std::string logFileFullPath;
 
 #ifndef WIN32
-    const char* logfilepath = config.GetConfigName("logfiledir");
+    const char* logfilepath = config.getConfigName("logfiledir");
     if (logfilepath == NULL)
     {
         LOGF("logdir is not set in config file");
         return 1;
     }
 
-    //å¦‚æœlogç›®å½•ä¸å­˜åœ¨åˆ™åˆ›å»ºä¹‹
+    //Èç¹ûlogÄ¿Â¼²»´æÔÚÔò´´½¨Ö®
     DIR* dp = opendir(logfilepath);
     if (dp == NULL)
     {
@@ -91,17 +94,17 @@ int main(int argc, char* argv[])
     logFileFullPath = logfilepath;
 #endif
 
-    const char* logfilename = config.GetConfigName("logfilename");
+    const char* logfilename = config.getConfigName("logfilename");
     logFileFullPath += logfilename;
 
-    CAsyncLog::Init(logFileFullPath.c_str());
+    CAsyncLog::init(logFileFullPath.c_str());
 
-    const char* filecachedir = config.GetConfigName("imgcachedir");
-    Singleton<FileManager>::Instance().Init(filecachedir);
+    const char* filecachedir = config.getConfigName("imgcachedir");
+    Singleton<FileManager>::Instance().init(filecachedir);
 
-    const char* listenip = config.GetConfigName("listenip");
-    short listenport = (short)atol(config.GetConfigName("listenport"));
-    Singleton<FileServer>::Instance().Init(listenip, listenport, &g_mainLoop, filecachedir);
+    const char* listenip = config.getConfigName("listenip");
+    short listenport = (short)atol(config.getConfigName("listenport"));
+    Singleton<FileServer>::Instance().init(listenip, listenport, &g_mainLoop, filecachedir);
 
     LOGI("imgserver initialization complete, now you can use client to connect it.");
     

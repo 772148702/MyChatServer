@@ -1,4 +1,13 @@
-/home/lzy/myChatServer/MyChatServer/CMakeFiles/rebuild_cache.dir
-/home/lzy/myChatServer/MyChatServer/CMakeFiles/edit_cache.dir
-/home/lzy/myChatServer/MyChatServer/CMakeFiles/chatserver.dir
-/home/lzy/myChatServer/MyChatServer/CMakeFiles/Timestamptest.dir
+/home/lzy/MyChatAppServer/CMakeFiles/edit_cache.dir
+/home/lzy/MyChatAppServer/CMakeFiles/Polltest.dir
+/home/lzy/MyChatAppServer/CMakeFiles/jsontest.dir
+/home/lzy/MyChatAppServer/CMakeFiles/Timestamptest.dir
+/home/lzy/MyChatAppServer/CMakeFiles/utillib.dir
+/home/lzy/MyChatAppServer/CMakeFiles/netlib.dir
+/home/lzy/MyChatAppServer/CMakeFiles/AsynLogtest.dir
+/home/lzy/MyChatAppServer/CMakeFiles/jsonlib.dir
+/home/lzy/MyChatAppServer/CMakeFiles/fileserver.dir
+/home/lzy/MyChatAppServer/CMakeFiles/rebuild_cache.dir
+/home/lzy/MyChatAppServer/CMakeFiles/gtest.dir
+/home/lzy/MyChatAppServer/CMakeFiles/chatserver.dir
+/home/lzy/MyChatAppServer/CMakeFiles/imgserver.dir

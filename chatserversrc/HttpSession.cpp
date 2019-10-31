@@ -1,5 +1,5 @@
 /**
- * Httpï¿½á»°ï¿½ï¿½, HttpSession.cpp
+ * Http»á»°Àà, HttpSession.cpp
  * zhangyl 2018.05.16
  */
 #include "HttpSession.h"
@@ -23,19 +23,19 @@ HttpSession::HttpSession(std::shared_ptr<TcpConnection>& conn) : m_tmpConn(conn)
 
 }
 
-void HttpSession::OnRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBuffer, Timestamp receivTime)
+void HttpSession::onRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBuffer, Timestamp receivTime)
 {
     //LOGI << "Recv a http request from " << conn->peerAddress().toIpPort();
     
     string inbuf;
-    //ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+    //ÏÈ°ÑËùÓÐÊý¾Ý¶¼È¡³öÀ´
     inbuf.append(pBuffer->peek(), pBuffer->readableBytes());
-    //ï¿½ï¿½ÎªÒ»ï¿½ï¿½httpï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n\r\nï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½Ö·ï¿½
-    //Ð¡ï¿½Úµï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ê£¬ï¿½Ë³ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡
+    //ÒòÎªÒ»¸öhttp°üÍ·µÄÊý¾ÝÖÁÉÙ\r\n\r\n£¬ËùÒÔ´óÓÚ4¸ö×Ö·û
+    //Ð¡ÓÚµÈÓÚ4¸ö×Ö·û£¬ËµÃ÷Êý¾ÝÎ´ÊÕÍê£¬ÍË³ö£¬µÈ´ýÍøÂçµ×²ã½Ó×ÅÊÕÈ¡
     if (inbuf.length() <= 4)
         return;
 
-    //ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½GETï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý°ï¿½Ò»ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Â£ï¿½
+    //ÎÒÃÇÊÕµ½µÄGETÇëÇóÊý¾Ý°üÒ»°ã¸ñÊ½ÈçÏÂ£º
     /*
     GET /register.do?p={%22username%22:%20%2213917043329%22,%20%22nickname%22:%20%22balloon%22,%20%22password%22:%20%22123%22} HTTP/1.1\r\n
     Host: 120.55.94.78:12345\r\n
@@ -46,20 +46,20 @@ void HttpSession::OnRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBu
     Accept-Language: zh-CN, zh; q=0.9, en; q=0.8\r\n
     \r\n
      */
-    //ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½\r\n\r\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½
+    //¼ì²éÊÇ·ñÒÔ\r\n\r\n½áÊø£¬Èç¹û²»ÊÇËµÃ÷°üÍ·²»ÍêÕû£¬ÍË³ö
     string end = inbuf.substr(inbuf.length() - 4);
     if (end != "\r\n\r\n")
         return;
-    //ï¿½ï¿½ï¿½ï¿½2048ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½\r\n\r\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ç·Ç·ï¿½ï¿½ï¿½ï¿½ï¿½
+    //³¬¹ý2048¸ö×Ö·û£¬ÇÒ²»º¬\r\n\r\n£¬ÎÒÃÇÈÏÎªÊÇ·Ç·¨ÇëÇó
     else if (inbuf.length() >= MAX_URL_LENGTH)
     {
         conn->forceClose();
         return;
     }
 
-    //ï¿½ï¿½\r\nï¿½Ö¸ï¿½Ã¿Ò»ï¿½ï¿½
+    //ÒÔ\r\n·Ö¸îÃ¿Ò»ÐÐ
     std::vector<string> lines;
-    StringUtil::Split(inbuf, lines, "\r\n");
+    StringUtil::split(inbuf, lines, "\r\n");
     if (lines.size() < 1 || lines[0].empty())
     {
         conn->forceClose();
@@ -67,8 +67,8 @@ void HttpSession::OnRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBu
     }
 
     std::vector<string> chunk;
-    StringUtil::Split(lines[0], chunk, " ");
-    //chunkï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½GET+url+HTTPï¿½æ±¾ï¿½ï¿½
+    StringUtil::split(lines[0], chunk, " ");
+    //chunkÖÐÖÁÉÙÓÐÈý¸ö×Ö·û´®£ºGET+url+HTTP°æ±¾ºÅ
     if (chunk.size() < 3)
     {
         conn->forceClose();
@@ -78,9 +78,9 @@ void HttpSession::OnRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBu
     LOGI("url: %s  from %s", chunk[1].c_str(), conn->peerAddress().toIpPort().c_str());
     //inbuf = /register.do?p={%22username%22:%20%2213917043329%22,%20%22nickname%22:%20%22balloon%22,%20%22password%22:%20%22123%22}
     std::vector<string> part;
-    //Í¨ï¿½ï¿½?ï¿½Ö¸ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½Ç°ï¿½ï¿½ï¿½ï¿½urlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½
-    StringUtil::Split(chunk[1], part, "?");
-    //chunkï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½GET+url+HTTPï¿½æ±¾ï¿½ï¿½
+    //Í¨¹ý?·Ö¸î³ÉÇ°ºóÁ½¶Ë£¬Ç°ÃæÊÇurl£¬ºóÃæÊÇ²ÎÊý
+    StringUtil::split(chunk[1], part, "?");
+    //chunkÖÐÖÁÉÙÓÐÈý¸ö×Ö·û´®£ºGET+url+HTTP°æ±¾ºÅ
     if (part.size() < 2)
     {
         conn->forceClose();
@@ -90,16 +90,16 @@ void HttpSession::OnRead(const std::shared_ptr<TcpConnection>& conn, Buffer* pBu
     string url = part[0];
     string param = part[1].substr(2);
         
-    if (!Process(conn, url, param))
+    if (!process(conn, url, param))
     {
         LOGE("handle http request error, from: %s, request: %s", conn->peerAddress().toIpPort().c_str(), pBuffer->retrieveAllAsString().c_str());
     }
 
-    //ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
+    //¶ÌÁ¬½Ó£¬´¦ÀíÍê¹Ø±ÕÁ¬½Ó
     conn->forceClose();
 }
 
-void HttpSession::Send(const char* data, size_t length)
+void HttpSession::send(const char* data, size_t length)
 {
     if (!m_tmpConn.expired())
     {
@@ -108,18 +108,18 @@ void HttpSession::Send(const char* data, size_t length)
     }
 }
 
-bool HttpSession::Process(const std::shared_ptr<TcpConnection>& conn, const std::string& url, const std::string& param)
+bool HttpSession::process(const std::shared_ptr<TcpConnection>& conn, const std::string& url, const std::string& param)
 {
     if (url.empty())
         return false;
 
     if (url == "/register.do")
     {
-        OnRegisterResponse(param, conn);
+        onRegisterResponse(param, conn);
     }
     else if (url == "/login.do")
     {
-        OnLoginResponse(param, conn);
+        onLoginResponse(param, conn);
     }
     else if (url == "/getfriendlist.do")
     {
@@ -136,7 +136,7 @@ bool HttpSession::Process(const std::shared_ptr<TcpConnection>& conn, const std:
     return true;
 }
 
-//ï¿½ï¿½×°httpÐ­ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½
+//×é×°httpÐ­ÒéÓ¦´ð°ü
 /* 
     HTTP/1.1 200 OK\r\n
     Content-Type: text/html\r\n   
@@ -145,7 +145,7 @@ bool HttpSession::Process(const std::shared_ptr<TcpConnection>& conn, const std:
     \r\n\
     {"code": 0, "msg": ok}
 */
-void HttpSession::MakeupResponse(const std::string& input, std::string& output)
+void HttpSession::makeupResponse(const std::string& input, std::string& output)
 { 
     std::ostringstream os;
     os << "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nContent-Length:"
@@ -155,24 +155,24 @@ void HttpSession::MakeupResponse(const std::string& input, std::string& output)
     output = os.str();
 }
 
-void HttpSession::OnRegisterResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn)
+void HttpSession::onRegisterResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn)
 {
     string retData;
     string decodeData;
-    URLEncodeUtil::Decode(data, decodeData);
-    BussinessLogic::RegisterUser(decodeData, conn, false, retData);
+    URLEncodeUtil::decode(data, decodeData);
+    BussinessLogic::registerUser(decodeData, conn, false, retData);
     if (!retData.empty())
     {
         std::string response;
-        URLEncodeUtil::Encode(retData, response);
-        MakeupResponse(retData, response);
+        URLEncodeUtil::encode(retData, response);
+        makeupResponse(retData, response);
         conn->send(response);
 
         LOGI("Response to client: cmd=msg_type_register, data: %s, client: %s", retData.c_str(), conn->peerAddress().toIpPort().c_str());
     }
 }
 
-void HttpSession::OnLoginResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn)
+void HttpSession::onLoginResponse(const std::string& data, const std::shared_ptr<TcpConnection>& conn)
 {
 
 }

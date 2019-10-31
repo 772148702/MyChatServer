@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 2.8)
 
 project(SERVER)
 include_directories(${PROJECT_SOURCE_DIR})
-include_directories(${PROJECT_SOURCE_DIR}/third_party/gmock)
-
+include_directories(${PROJECT_SOURCE_DIR}/third_party/gmock/gmock/)
+include_directories(${PROJECT_SOURCE_DIR}/third_party/gmock/gtest/)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -g -Wall -O0 -Wno-unused-variable -pthread")
 
 link_directories(
@@ -16,7 +16,7 @@ find_library(MYSQL_LIB libmysqlclient.so /usr/lib64/mysql/)
 #add_subdirectory(test)
 
 
-set(net_srcs 
+set(net_srcs
 base/AsyncLog.cpp
 base/ConfigFileReader.cpp
 base/Platform.cpp
@@ -89,6 +89,7 @@ utils/DaemonRun.cpp
 
 set(chatserver_srcs
 chatserversrc/main.cpp
+chatserversrc/BussinessLogic.cpp
 chatserversrc/ChatServer.cpp
 chatserversrc/ChatSession.cpp
 chatserversrc/UserManager.cpp
@@ -98,30 +99,47 @@ chatserversrc/MonitorSession.cpp
 chatserversrc/MonitorServer.cpp
 chatserversrc/HttpSession.cpp
 chatserversrc/HttpServer.cpp
-chatserversrc/BussinessLogic.cpp)
+)
 
-set(mymysqlapi_srcs
-		myChatserve/mysqlapi/DatabaseMysql.cpp
-		myChatserve/mysqlapi/Field.cpp
-		myChatserve/mysqlapi/QueryResult.cpp
-		)
-set(mysqlmgr_srcs
-		myChatserver/mysqlmgr/MysqlManager.cpp)
+set(fileserver_srcs
+		fileserversrc/FileManager.cpp
+		fileserversrc/FileServer.cpp
+		fileserversrc/FileSession.cpp
+		fileserversrc/TcpSession.cpp
+		fileserversrc/main.cpp)
 
+set(imageserver_srcs
+imgserversrc/main.cpp
+fileserversrc/FileServer.cpp
+fileserversrc/FileSession.cpp
+fileserversrc/FileManager.cpp
+fileserversrc/TcpSession.cpp)
+
+add_library(netlib ${net_srcs})
+add_library(utillib ${utils_srcs})
+add_library(jsonlib ${json_srcs})
 add_executable(chatserver ${net_srcs} ${json_srcs}  ${chatserver_srcs} ${mysqlapi_srcs} ${mysqlmgr_srcs} ${zlib_srcs} ${utils_srcs})
 #光包含库目录是没用的，还必须使用TARGET_LINK_LIBRARIES链接该库
 TARGET_LINK_LIBRARIES(chatserver mysqlclient)
 
+add_executable(fileserver ${net_srcs} ${json_srcs}  ${fileserver_srcs}  ${utils_srcs})
+TARGET_LINK_LIBRARIES(fileserver)
+add_executable(imgserver ${net_srcs} ${json_srcs}  ${imageserver_srcs}    ${utils_srcs})
 
-set(testutils_srcs
-		third_party/gmock/gmock_main.cc
-		third_party/gmock/gmock_main.cc)
+TARGET_LINK_LIBRARIES(imgserver)
+
+set(GMOCK_DIR  "${PROJECT_SOURCE_DIR}/third_party/gmock")
+file(GLOB gmock_srcs  ${GMOCK_DIR}/*.cc)
+include_directories(SYSTEM ${GMOCK_DIR})
+add_library(gtest EXCLUDE_FROM_ALL ${gmock_srcs})
+target_link_libraries(gtest ${CMAKE_THREAD_LIBS_INIT})
 
 file(GLOB temp_src_temp ${PROJECT_SOURCE_DIR}/test/*/*test.cpp)
+set(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/bin")
 foreach(test_src_temp ${temp_src_temp})
 	get_filename_component(test_bare_name ${test_src_temp} NAME)
 	string(REPLACE ".cpp" "" test_bare_name_without_extension ${test_bare_name})
 	string(REPLACE "\"" "" test_name ${test_bare_name_without_extension})
-
-	add_executable(${test_name} ${net_srcs} ${testutils_srcs} ${test_src_temp} )
-endforeach(test_src_temp ${temp_src_temp})
+	add_executable(${test_name}  ${test_src_temp} )
+	target_link_libraries( ${test_name} netlib  gtest jsonlib )
+endforeach(test_src_temp ${temp_src_temp} )
