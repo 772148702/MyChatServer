@@ -10,6 +10,9 @@
 #include <list>
 #include <atomic>
 #include <ostream>
+#include <vector>
+#include <memory>
+#include <mysqlapi/DatabaseMysql.h>
 
 #define GROUPID_BOUBDARY   0x0FFFFFFF
 
@@ -54,10 +57,17 @@ public:
     UserManager(const UserManager& rhs) = delete;
     UserManager& operator=(const UserManager& rhs) = delete;
 
-    bool addUser(User& u);
-    bool getUserInfoByUserId(int32_t userid, User& u);
+    bool addUser(User u);
+    bool getUserInfoByUserIdInMemory(int32_t userid, User& u);
+    bool getUserInfoByUserIdInDb(int32_t userid, User& u);
     bool LoadUsersFromDb();
 
+    bool addFriendInfoDb(int32_t smallUserid, int32_t bigUserid, string smallMarkName, string BiMarkName, string smallTeamName=DEFAULT_TEAMNAME,string BigTeamName=DEFAULT_TEAMNAME);
+    bool updateFriendInfo(int32_t smallUserid,int32_t bigUserid,string markname, string teamname,bool isSwap);
+    bool getFriendInfo(int32_t userid,vector<FriendInfo>& users);
+
+
+    bool getMysqlDatabasePtr( std::unique_ptr<CDatabaseMysql>& pConn,string functionName);
 private:
     std::atomic_int    m_baseUserId{0};
     std::atomic<int>   m_baseGroupId{0x0FFFFFFF};
@@ -66,6 +76,11 @@ private:
     string m_strDbUserName;
     string m_strDbPassword;
     string m_strDbName;
+public:
+    const shared_ptr<std::list<User>> &getMPtrListUsers() const;
+
+private:
+    std::shared_ptr<std::list<User>> m_ptrListUsers;
 };
 
 
