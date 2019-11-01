@@ -68,7 +68,7 @@ void CMysqlThrd::mainLoop() {
     {
         if(NULL!=(pTask=m_oTask.pop()))
         {
-            pTask->Execute(m_poConn);
+            pTask->execute(m_poConn);
             m_oReplyTask.push(pTask);
             continue;
         }

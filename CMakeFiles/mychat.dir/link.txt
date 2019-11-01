@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmychat.a  CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.o
+/usr/bin/ranlib libmychat.a

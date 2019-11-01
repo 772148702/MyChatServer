@@ -38,6 +38,7 @@ CMysqlManager::CMysqlManager() {
         info.m_mapField["f_username"] = { "f_username", "varchar(64) NOT NULL COMMENT '用户名'", "varchar(64)" };
         info.m_mapField["f_nickname"] = { "f_nickname", "varchar(64) NOT NULL COMMENT '用户昵称'", "varchar(64)" };
         info.m_mapField["f_password"] = { "f_password", "varchar(64) NOT NULL COMMENT '用户密码'", "varchar(64)" };
+        info.m_mapField["f_register_time"] = { "f_register_time", "datetime NOT NULL COMMENT '注册时间'", "datetime" };
         info.m_strPriKey = "PRIMARY KEY (f_user_id), INDEX f_user_id (f_user_id), KEY  f_id  ( f_id )";
         m_vecTables.push_back(info);
     }
@@ -235,8 +236,9 @@ bool CMysqlManager::_CreateTable(const STableInfo &table) {
           if(i!=0)
           {
               ss<<" , ";
-              i++;
+
           }
+            i++;
           STableFiled field = it.second;
           ss<< field.m_strName<<"  "<<field.m_strType;
 
@@ -245,7 +247,8 @@ bool CMysqlManager::_CreateTable(const STableInfo &table) {
         {
             ss<<", "<<table.m_strPriKey;
         }
-        ss<<")default charset = utf-8, ENGINE=InnoDB";
+        ss<<")default charset = utf8, ENGINE=InnoDB";
+        string tmp = ss.str();
         if(m_ptrConn->Execute(ss.str().c_str()))
         {
             return true;

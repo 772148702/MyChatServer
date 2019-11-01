@@ -43,10 +43,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
+CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
+CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
 
 # Include any dependencies generated for this target.
 include CMakeFiles/testlib.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/testlib.dir/flags.make
 
 CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o: CMakeFiles/testlib.dir/flags.make
 CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o: third_party/gmock/gmock-gtest-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o -c /home/lzy/MyChatAppServer/third_party/gmock/gmock-gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o -c /home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock-gtest-all.cc
 
 CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/third_party/gmock/gmock-gtest-all.cc > CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock-gtest-all.cc > CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.i
 
 CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/third_party/gmock/gmock-gtest-all.cc -o CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock-gtest-all.cc -o CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.s
 
 CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o: CMakeFiles/testlib.dir/flags.make
 CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o: third_party/gmock/gmock_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o -c /home/lzy/MyChatAppServer/third_party/gmock/gmock_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o -c /home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock_main.cc
 
 CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/third_party/gmock/gmock_main.cc > CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock_main.cc > CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.i
 
 CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/third_party/gmock/gmock_main.cc -o CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock_main.cc -o CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.s
 
 # Object files for target testlib
 testlib_OBJECTS = \
@@ -95,7 +95,7 @@ libtestlib.a: CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o
 libtestlib.a: CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o
 libtestlib.a: CMakeFiles/testlib.dir/build.make
 libtestlib.a: CMakeFiles/testlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtestlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtestlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/testlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/testlib.dir/clean:
 .PHONY : CMakeFiles/testlib.dir/clean
 
 CMakeFiles/testlib.dir/depend:
-	cd /home/lzy/MyChatAppServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer/CMakeFiles/testlib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lzy/myChatServer/MyChatServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer/CMakeFiles/testlib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/testlib.dir/depend
 

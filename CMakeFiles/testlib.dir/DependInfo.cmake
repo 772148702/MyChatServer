@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lzy/MyChatAppServer/third_party/gmock/gmock-gtest-all.cc" "/home/lzy/MyChatAppServer/CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o"
-  "/home/lzy/MyChatAppServer/third_party/gmock/gmock_main.cc" "/home/lzy/MyChatAppServer/CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o"
+  "/home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock-gtest-all.cc" "/home/lzy/myChatServer/MyChatServer/CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o"
+  "/home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock_main.cc" "/home/lzy/myChatServer/MyChatServer/CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

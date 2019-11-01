@@ -43,10 +43,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
+CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
+CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mysqlMgrtest.dir/depend.make
@@ -59,32 +59,47 @@ include CMakeFiles/mysqlMgrtest.dir/flags.make
 
 CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o: CMakeFiles/mysqlMgrtest.dir/flags.make
 CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o: test/sql/mysqlMgrtest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o -c /home/lzy/MyChatAppServer/test/sql/mysqlMgrtest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o -c /home/lzy/myChatServer/MyChatServer/test/sql/mysqlMgrtest.cpp
 
 CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/test/sql/mysqlMgrtest.cpp > CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/test/sql/mysqlMgrtest.cpp > CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.i
 
 CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/test/sql/mysqlMgrtest.cpp -o CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/test/sql/mysqlMgrtest.cpp -o CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.s
+
+CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o: CMakeFiles/mysqlMgrtest.dir/flags.make
+CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o: myChatserver/chatserversrc/UserManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o -c /home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp
+
+CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp > CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.i
+
+CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp -o CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.s
 
 # Object files for target mysqlMgrtest
 mysqlMgrtest_OBJECTS = \
-"CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o"
+"CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o" \
+"CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o"
 
 # External object files for target mysqlMgrtest
 mysqlMgrtest_EXTERNAL_OBJECTS =
 
 mysqlMgrtest: CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o
+mysqlMgrtest: CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o
 mysqlMgrtest: CMakeFiles/mysqlMgrtest.dir/build.make
 mysqlMgrtest: libmysqllib.a
 mysqlMgrtest: libmysqlapilib.a
 mysqlMgrtest: libnetlib.a
 mysqlMgrtest: libtestlib.a
 mysqlMgrtest: CMakeFiles/mysqlMgrtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mysqlMgrtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable mysqlMgrtest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mysqlMgrtest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -97,6 +112,6 @@ CMakeFiles/mysqlMgrtest.dir/clean:
 .PHONY : CMakeFiles/mysqlMgrtest.dir/clean
 
 CMakeFiles/mysqlMgrtest.dir/depend:
-	cd /home/lzy/MyChatAppServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer/CMakeFiles/mysqlMgrtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lzy/myChatServer/MyChatServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlMgrtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mysqlMgrtest.dir/depend
 

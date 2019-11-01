@@ -98,8 +98,10 @@ chatserversrc/MonitorSession.cpp
 chatserversrc/MonitorServer.cpp
 chatserversrc/HttpSession.cpp
 chatserversrc/HttpServer.cpp
-chatserversrc/BussinessLogic.cpp myChatserver/chatserversrc/UserManager.cpp myChatserver/chatserversrc/UserManager.h)
-
+chatserversrc/BussinessLogic.cpp
+)
+set(mychatserver_srcs
+myChatserver/chatserversrc/UserManager.cpp )
 
 set(mymysqlmgr_srcs
 		myChatserver/mysqlmgr/MysqlManager.cpp
@@ -110,7 +112,7 @@ set(mymysqlmgr_srcs
 		myChatserver/mysqlmgr/TaskList.h
 		myChatserver/mysqlmgr/MysqlThrdMgr.cpp
 		myChatserver/mysqlmgr/MysqlThrdMgr.h)
-set(mychatserver_srcs)
+
 
 add_executable(chatserver ${net_srcs} ${json_srcs}  ${chatserver_srcs} ${mysqlapi_srcs} ${mysqlmgr_srcs} ${zlib_srcs} ${utils_srcs})
 #光包含库目录是没用的，还必须使用TARGET_LINK_LIBRARIES链接该库
@@ -122,13 +124,14 @@ set(testutils_srcs
 		third_party/gmock/gmock_main.cc)
 
 set(mysql_srcs
-		test/sql/mysqlMgrtest.cpp)
+		test/sql/mysqlMgrtest.cpp
+		test/chatserver/UserManagertest.cpp)
 
 add_library(testlib ${testutils_srcs})
 add_library(netlib ${net_srcs})
 add_library(mysqllib  ${mymysqlmgr_srcs}  )
 add_library(mysqlapilib ${mysqlapi_srcs})
-
+add_library(mychat ${mychatserver_srcs})
 
 file(GLOB temp_src_temp ${PROJECT_SOURCE_DIR}/test/*/*test.cpp)
 foreach(test_src_temp ${temp_src_temp})
@@ -136,6 +139,6 @@ foreach(test_src_temp ${temp_src_temp})
 	string(REPLACE ".cpp" "" test_bare_name_without_extension ${test_bare_name})
 	string(REPLACE "\"" "" test_name ${test_bare_name_without_extension})
 
-	add_executable(${test_name}   ${test_src_temp} )
+	add_executable(${test_name}   ${test_src_temp}  ${mychatserver_srcs})
 	target_link_libraries(${test_name}  mysqllib mysqlapilib  netlib testlib  mysqlclient  )
 endforeach(test_src_temp ${temp_src_temp})

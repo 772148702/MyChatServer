@@ -17,7 +17,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_reader.cpp.o"
   "CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_value.cpp.o"
   "CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.o"
-  "CMakeFiles/chatserver.dir/myChatserver/chatserversrc/UserManager.cpp.o"
   "CMakeFiles/chatserver.dir/mysqlapi/DatabaseMysql.cpp.o"
   "CMakeFiles/chatserver.dir/mysqlapi/Field.cpp.o"
   "CMakeFiles/chatserver.dir/mysqlapi/QueryResult.cpp.o"

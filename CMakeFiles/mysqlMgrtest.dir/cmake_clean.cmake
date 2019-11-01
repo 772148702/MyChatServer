@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o"
   "CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o"
   "mysqlMgrtest"
   "mysqlMgrtest.pdb"

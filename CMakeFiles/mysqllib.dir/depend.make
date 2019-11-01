@@ -8,8 +8,22 @@ CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: mysqlapi/Field
 CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: mysqlapi/QueryResult.h
 CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: base/AsyncLog.h
 
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o: myChatserver/mysqlmgr/MysqlTask.h
 CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o: myChatserver/mysqlmgr/MysqlThrd.cpp
 CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o: myChatserver/mysqlmgr/MysqlThrd.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o: myChatserver/mysqlmgr/TaskList.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o: mysqlapi/DatabaseMysql.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o: mysqlapi/Field.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o: mysqlapi/QueryResult.h
+
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: myChatserver/mysqlmgr/MysqlTask.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: myChatserver/mysqlmgr/MysqlThrd.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: myChatserver/mysqlmgr/MysqlThrdMgr.cpp
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: myChatserver/mysqlmgr/MysqlThrdMgr.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: myChatserver/mysqlmgr/TaskList.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: mysqlapi/DatabaseMysql.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: mysqlapi/Field.h
+CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o: mysqlapi/QueryResult.h
 
 CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/TaskList.cpp.o: myChatserver/mysqlmgr/MysqlTask.h
 CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/TaskList.cpp.o: myChatserver/mysqlmgr/TaskList.cpp

@@ -48,10 +48,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
+CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
+CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles /home/lzy/MyChatAppServer/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/myChatServer/MyChatServer/CMakeFiles /home/lzy/myChatServer/MyChatServer/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/myChatServer/MyChatServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named UserManagertest
+
+# Build rule for target.
+UserManagertest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 UserManagertest
+.PHONY : UserManagertest
+
+# fast build rule for target.
+UserManagertest/fast:
+	$(MAKE) -f CMakeFiles/UserManagertest.dir/build.make CMakeFiles/UserManagertest.dir/build
+.PHONY : UserManagertest/fast
 
 #=============================================================================
 # Target rules for targets named mysqlMgrtest
@@ -150,19 +163,6 @@ mysqlapilib/fast:
 .PHONY : mysqlapilib/fast
 
 #=============================================================================
-# Target rules for targets named chatserver
-
-# Build rule for target.
-chatserver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chatserver
-.PHONY : chatserver
-
-# fast build rule for target.
-chatserver/fast:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/build
-.PHONY : chatserver/fast
-
-#=============================================================================
 # Target rules for targets named Timestamptest
 
 # Build rule for target.
@@ -174,6 +174,32 @@ Timestamptest: cmake_check_build_system
 Timestamptest/fast:
 	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/build
 .PHONY : Timestamptest/fast
+
+#=============================================================================
+# Target rules for targets named mychat
+
+# Build rule for target.
+mychat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mychat
+.PHONY : mychat
+
+# fast build rule for target.
+mychat/fast:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/build
+.PHONY : mychat/fast
+
+#=============================================================================
+# Target rules for targets named chatserver
+
+# Build rule for target.
+chatserver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chatserver
+.PHONY : chatserver
+
+# fast build rule for target.
+chatserver/fast:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/build
+.PHONY : chatserver/fast
 
 #=============================================================================
 # Target rules for targets named netlib
@@ -705,7 +731,10 @@ myChatserver/chatserversrc/UserManager.o: myChatserver/chatserversrc/UserManager
 
 # target to build an object file
 myChatserver/chatserversrc/UserManager.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/chatserversrc/UserManager.cpp.o
+	$(MAKE) -f CMakeFiles/UserManagertest.dir/build.make CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.o
+	$(MAKE) -f CMakeFiles/mysqlMgrtest.dir/build.make CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/myChatserver/chatserversrc/UserManager.cpp.o
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.o
 .PHONY : myChatserver/chatserversrc/UserManager.cpp.o
 
 myChatserver/chatserversrc/UserManager.i: myChatserver/chatserversrc/UserManager.cpp.i
@@ -714,7 +743,10 @@ myChatserver/chatserversrc/UserManager.i: myChatserver/chatserversrc/UserManager
 
 # target to preprocess a source file
 myChatserver/chatserversrc/UserManager.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/chatserversrc/UserManager.cpp.i
+	$(MAKE) -f CMakeFiles/UserManagertest.dir/build.make CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.i
+	$(MAKE) -f CMakeFiles/mysqlMgrtest.dir/build.make CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.i
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/myChatserver/chatserversrc/UserManager.cpp.i
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.i
 .PHONY : myChatserver/chatserversrc/UserManager.cpp.i
 
 myChatserver/chatserversrc/UserManager.s: myChatserver/chatserversrc/UserManager.cpp.s
@@ -723,7 +755,10 @@ myChatserver/chatserversrc/UserManager.s: myChatserver/chatserversrc/UserManager
 
 # target to generate assembly for a file
 myChatserver/chatserversrc/UserManager.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/chatserversrc/UserManager.cpp.s
+	$(MAKE) -f CMakeFiles/UserManagertest.dir/build.make CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.s
+	$(MAKE) -f CMakeFiles/mysqlMgrtest.dir/build.make CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.s
+	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/myChatserver/chatserversrc/UserManager.cpp.s
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.s
 .PHONY : myChatserver/chatserversrc/UserManager.cpp.s
 
 myChatserver/mysqlmgr/MysqlManager.o: myChatserver/mysqlmgr/MysqlManager.cpp.o
@@ -1629,6 +1664,33 @@ test/base/Timestamptest.cpp.s:
 	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/test/base/Timestamptest.cpp.s
 .PHONY : test/base/Timestamptest.cpp.s
 
+test/chatserver/UserManagertest.o: test/chatserver/UserManagertest.cpp.o
+
+.PHONY : test/chatserver/UserManagertest.o
+
+# target to build an object file
+test/chatserver/UserManagertest.cpp.o:
+	$(MAKE) -f CMakeFiles/UserManagertest.dir/build.make CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.o
+.PHONY : test/chatserver/UserManagertest.cpp.o
+
+test/chatserver/UserManagertest.i: test/chatserver/UserManagertest.cpp.i
+
+.PHONY : test/chatserver/UserManagertest.i
+
+# target to preprocess a source file
+test/chatserver/UserManagertest.cpp.i:
+	$(MAKE) -f CMakeFiles/UserManagertest.dir/build.make CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.i
+.PHONY : test/chatserver/UserManagertest.cpp.i
+
+test/chatserver/UserManagertest.s: test/chatserver/UserManagertest.cpp.s
+
+.PHONY : test/chatserver/UserManagertest.s
+
+# target to generate assembly for a file
+test/chatserver/UserManagertest.cpp.s:
+	$(MAKE) -f CMakeFiles/UserManagertest.dir/build.make CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.s
+.PHONY : test/chatserver/UserManagertest.cpp.s
+
 test/sql/mysqlMgrtest.o: test/sql/mysqlMgrtest.cpp.o
 
 .PHONY : test/sql/mysqlMgrtest.o
@@ -2256,13 +2318,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... UserManagertest"
 	@echo "... edit_cache"
 	@echo "... mysqlMgrtest"
 	@echo "... testlib"
 	@echo "... mysqlapilib"
+	@echo "... Timestamptest"
+	@echo "... mychat"
 	@echo "... rebuild_cache"
 	@echo "... chatserver"
-	@echo "... Timestamptest"
 	@echo "... netlib"
 	@echo "... mysqllib"
 	@echo "... base/AsyncLog.o"
@@ -2415,6 +2479,9 @@ help:
 	@echo "... test/base/Timestamptest.o"
 	@echo "... test/base/Timestamptest.i"
 	@echo "... test/base/Timestamptest.s"
+	@echo "... test/chatserver/UserManagertest.o"
+	@echo "... test/chatserver/UserManagertest.i"
+	@echo "... test/chatserver/UserManagertest.s"
 	@echo "... test/sql/mysqlMgrtest.o"
 	@echo "... test/sql/mysqlMgrtest.i"
 	@echo "... test/sql/mysqlMgrtest.s"
