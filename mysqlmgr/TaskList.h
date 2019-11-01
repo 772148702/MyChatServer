@@ -11,12 +11,12 @@ public:
     CTaskList();
     ~CTaskList(void);
 
-    bool Push(IMysqlTask* poTask);                  // Âß¼­Ïß³ÌÐÞ¸Ä 
-    IMysqlTask* Pop();				                // Êý¾Ý¿âÏß³ÌÐÞ¸Ä 
+    bool Push(IMysqlTask* poTask);                  // ï¿½ß¼ï¿½ï¿½ß³ï¿½ï¿½Þ¸ï¿½ 
+    IMysqlTask* Pop();				                // ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ß³ï¿½ï¿½Þ¸ï¿½ 
 
 private:
-	uint16_t            m_uReadIndex;               // Êý¾Ý¿âÏß³ÌÐÞ¸Ä 
-	uint16_t            m_uWriteIndex;              // Âß¼­Ïß³ÌÐÞ¸Ä   
+	uint16_t            m_uReadIndex;               // ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ß³ï¿½ï¿½Þ¸ï¿½ 
+	uint16_t            m_uWriteIndex;              // ï¿½ß¼ï¿½ï¿½ß³ï¿½ï¿½Þ¸ï¿½   
 	IMysqlTask*         m_pTaskNode[MAX_TASK_NUM];
 };
 

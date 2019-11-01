@@ -48,6 +48,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/mysqlMgrtest.dir/DependInfo.cmake"
+  "CMakeFiles/testlib.dir/DependInfo.cmake"
+  "CMakeFiles/mysqlapilib.dir/DependInfo.cmake"
   "CMakeFiles/chatserver.dir/DependInfo.cmake"
   "CMakeFiles/Timestamptest.dir/DependInfo.cmake"
+  "CMakeFiles/netlib.dir/DependInfo.cmake"
+  "CMakeFiles/mysqllib.dir/DependInfo.cmake"
   )

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlTask.h
+
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlThrd.cpp
+MysqlThrd.h
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlThrd.h
+
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlThrd.h
+
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/TaskList.cpp
+cstring
+-
+TaskList.h
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/TaskList.h
+
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/TaskList.h
+cstdint
+-
+MysqlTask.h
+/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlTask.h
+

@@ -394,6 +394,7 @@ CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.o: jsoncpp1.9.0/writer.h
 
 CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: myChatserver/mysqlmgr/MysqlManager.cpp
 CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: myChatserver/mysqlmgr/MysqlManager.h
+CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: base/AsyncLog.h
 CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: mysqlapi/DatabaseMysql.h
 CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: mysqlapi/Field.h
 CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o: mysqlapi/QueryResult.h

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtestlib.a  CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o
+/usr/bin/ranlib libtestlib.a

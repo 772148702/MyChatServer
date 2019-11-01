@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named mysqlMgrtest
+
+# Build rule for target.
+mysqlMgrtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mysqlMgrtest
+.PHONY : mysqlMgrtest
+
+# fast build rule for target.
+mysqlMgrtest/fast:
+	$(MAKE) -f CMakeFiles/mysqlMgrtest.dir/build.make CMakeFiles/mysqlMgrtest.dir/build
+.PHONY : mysqlMgrtest/fast
+
+#=============================================================================
+# Target rules for targets named testlib
+
+# Build rule for target.
+testlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testlib
+.PHONY : testlib
+
+# fast build rule for target.
+testlib/fast:
+	$(MAKE) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/build
+.PHONY : testlib/fast
+
+#=============================================================================
+# Target rules for targets named mysqlapilib
+
+# Build rule for target.
+mysqlapilib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mysqlapilib
+.PHONY : mysqlapilib
+
+# fast build rule for target.
+mysqlapilib/fast:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/build
+.PHONY : mysqlapilib/fast
+
+#=============================================================================
 # Target rules for targets named chatserver
 
 # Build rule for target.
@@ -136,6 +175,32 @@ Timestamptest/fast:
 	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/build
 .PHONY : Timestamptest/fast
 
+#=============================================================================
+# Target rules for targets named netlib
+
+# Build rule for target.
+netlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 netlib
+.PHONY : netlib
+
+# fast build rule for target.
+netlib/fast:
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/build
+.PHONY : netlib/fast
+
+#=============================================================================
+# Target rules for targets named mysqllib
+
+# Build rule for target.
+mysqllib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mysqllib
+.PHONY : mysqllib
+
+# fast build rule for target.
+mysqllib/fast:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/build
+.PHONY : mysqllib/fast
+
 base/AsyncLog.o: base/AsyncLog.cpp.o
 
 .PHONY : base/AsyncLog.o
@@ -143,7 +208,7 @@ base/AsyncLog.o: base/AsyncLog.cpp.o
 # target to build an object file
 base/AsyncLog.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/AsyncLog.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/AsyncLog.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/AsyncLog.cpp.o
 .PHONY : base/AsyncLog.cpp.o
 
 base/AsyncLog.i: base/AsyncLog.cpp.i
@@ -153,7 +218,7 @@ base/AsyncLog.i: base/AsyncLog.cpp.i
 # target to preprocess a source file
 base/AsyncLog.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/AsyncLog.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/AsyncLog.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/AsyncLog.cpp.i
 .PHONY : base/AsyncLog.cpp.i
 
 base/AsyncLog.s: base/AsyncLog.cpp.s
@@ -163,7 +228,7 @@ base/AsyncLog.s: base/AsyncLog.cpp.s
 # target to generate assembly for a file
 base/AsyncLog.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/AsyncLog.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/AsyncLog.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/AsyncLog.cpp.s
 .PHONY : base/AsyncLog.cpp.s
 
 base/ConfigFileReader.o: base/ConfigFileReader.cpp.o
@@ -173,7 +238,7 @@ base/ConfigFileReader.o: base/ConfigFileReader.cpp.o
 # target to build an object file
 base/ConfigFileReader.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/ConfigFileReader.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/ConfigFileReader.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o
 .PHONY : base/ConfigFileReader.cpp.o
 
 base/ConfigFileReader.i: base/ConfigFileReader.cpp.i
@@ -183,7 +248,7 @@ base/ConfigFileReader.i: base/ConfigFileReader.cpp.i
 # target to preprocess a source file
 base/ConfigFileReader.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/ConfigFileReader.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/ConfigFileReader.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.i
 .PHONY : base/ConfigFileReader.cpp.i
 
 base/ConfigFileReader.s: base/ConfigFileReader.cpp.s
@@ -193,7 +258,7 @@ base/ConfigFileReader.s: base/ConfigFileReader.cpp.s
 # target to generate assembly for a file
 base/ConfigFileReader.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/ConfigFileReader.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/ConfigFileReader.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.s
 .PHONY : base/ConfigFileReader.cpp.s
 
 base/Platform.o: base/Platform.cpp.o
@@ -203,7 +268,7 @@ base/Platform.o: base/Platform.cpp.o
 # target to build an object file
 base/Platform.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Platform.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Platform.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Platform.cpp.o
 .PHONY : base/Platform.cpp.o
 
 base/Platform.i: base/Platform.cpp.i
@@ -213,7 +278,7 @@ base/Platform.i: base/Platform.cpp.i
 # target to preprocess a source file
 base/Platform.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Platform.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Platform.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Platform.cpp.i
 .PHONY : base/Platform.cpp.i
 
 base/Platform.s: base/Platform.cpp.s
@@ -223,7 +288,7 @@ base/Platform.s: base/Platform.cpp.s
 # target to generate assembly for a file
 base/Platform.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Platform.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Platform.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Platform.cpp.s
 .PHONY : base/Platform.cpp.s
 
 base/Timestamp.o: base/Timestamp.cpp.o
@@ -233,7 +298,7 @@ base/Timestamp.o: base/Timestamp.cpp.o
 # target to build an object file
 base/Timestamp.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Timestamp.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Timestamp.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Timestamp.cpp.o
 .PHONY : base/Timestamp.cpp.o
 
 base/Timestamp.i: base/Timestamp.cpp.i
@@ -243,7 +308,7 @@ base/Timestamp.i: base/Timestamp.cpp.i
 # target to preprocess a source file
 base/Timestamp.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Timestamp.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Timestamp.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Timestamp.cpp.i
 .PHONY : base/Timestamp.cpp.i
 
 base/Timestamp.s: base/Timestamp.cpp.s
@@ -253,7 +318,7 @@ base/Timestamp.s: base/Timestamp.cpp.s
 # target to generate assembly for a file
 base/Timestamp.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/base/Timestamp.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/base/Timestamp.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/base/Timestamp.cpp.s
 .PHONY : base/Timestamp.cpp.s
 
 chatserversrc/BussinessLogic.o: chatserversrc/BussinessLogic.cpp.o
@@ -634,13 +699,40 @@ jsoncpp1.9.0/json_writer.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.s
 .PHONY : jsoncpp1.9.0/json_writer.cpp.s
 
+myChatserver/chatserversrc/UserManager.o: myChatserver/chatserversrc/UserManager.cpp.o
+
+.PHONY : myChatserver/chatserversrc/UserManager.o
+
+# target to build an object file
+myChatserver/chatserversrc/UserManager.cpp.o:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/chatserversrc/UserManager.cpp.o
+.PHONY : myChatserver/chatserversrc/UserManager.cpp.o
+
+myChatserver/chatserversrc/UserManager.i: myChatserver/chatserversrc/UserManager.cpp.i
+
+.PHONY : myChatserver/chatserversrc/UserManager.i
+
+# target to preprocess a source file
+myChatserver/chatserversrc/UserManager.cpp.i:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/chatserversrc/UserManager.cpp.i
+.PHONY : myChatserver/chatserversrc/UserManager.cpp.i
+
+myChatserver/chatserversrc/UserManager.s: myChatserver/chatserversrc/UserManager.cpp.s
+
+.PHONY : myChatserver/chatserversrc/UserManager.s
+
+# target to generate assembly for a file
+myChatserver/chatserversrc/UserManager.cpp.s:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/chatserversrc/UserManager.cpp.s
+.PHONY : myChatserver/chatserversrc/UserManager.cpp.s
+
 myChatserver/mysqlmgr/MysqlManager.o: myChatserver/mysqlmgr/MysqlManager.cpp.o
 
 .PHONY : myChatserver/mysqlmgr/MysqlManager.o
 
 # target to build an object file
 myChatserver/mysqlmgr/MysqlManager.cpp.o:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o
 .PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.o
 
 myChatserver/mysqlmgr/MysqlManager.i: myChatserver/mysqlmgr/MysqlManager.cpp.i
@@ -649,7 +741,7 @@ myChatserver/mysqlmgr/MysqlManager.i: myChatserver/mysqlmgr/MysqlManager.cpp.i
 
 # target to preprocess a source file
 myChatserver/mysqlmgr/MysqlManager.cpp.i:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.i
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlManager.cpp.i
 .PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.i
 
 myChatserver/mysqlmgr/MysqlManager.s: myChatserver/mysqlmgr/MysqlManager.cpp.s
@@ -658,8 +750,89 @@ myChatserver/mysqlmgr/MysqlManager.s: myChatserver/mysqlmgr/MysqlManager.cpp.s
 
 # target to generate assembly for a file
 myChatserver/mysqlmgr/MysqlManager.cpp.s:
-	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/myChatserver/mysqlmgr/MysqlManager.cpp.s
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlManager.cpp.s
 .PHONY : myChatserver/mysqlmgr/MysqlManager.cpp.s
+
+myChatserver/mysqlmgr/MysqlThrd.o: myChatserver/mysqlmgr/MysqlThrd.cpp.o
+
+.PHONY : myChatserver/mysqlmgr/MysqlThrd.o
+
+# target to build an object file
+myChatserver/mysqlmgr/MysqlThrd.cpp.o:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o
+.PHONY : myChatserver/mysqlmgr/MysqlThrd.cpp.o
+
+myChatserver/mysqlmgr/MysqlThrd.i: myChatserver/mysqlmgr/MysqlThrd.cpp.i
+
+.PHONY : myChatserver/mysqlmgr/MysqlThrd.i
+
+# target to preprocess a source file
+myChatserver/mysqlmgr/MysqlThrd.cpp.i:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.i
+.PHONY : myChatserver/mysqlmgr/MysqlThrd.cpp.i
+
+myChatserver/mysqlmgr/MysqlThrd.s: myChatserver/mysqlmgr/MysqlThrd.cpp.s
+
+.PHONY : myChatserver/mysqlmgr/MysqlThrd.s
+
+# target to generate assembly for a file
+myChatserver/mysqlmgr/MysqlThrd.cpp.s:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.s
+.PHONY : myChatserver/mysqlmgr/MysqlThrd.cpp.s
+
+myChatserver/mysqlmgr/MysqlThrdMgr.o: myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o
+
+.PHONY : myChatserver/mysqlmgr/MysqlThrdMgr.o
+
+# target to build an object file
+myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o
+.PHONY : myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o
+
+myChatserver/mysqlmgr/MysqlThrdMgr.i: myChatserver/mysqlmgr/MysqlThrdMgr.cpp.i
+
+.PHONY : myChatserver/mysqlmgr/MysqlThrdMgr.i
+
+# target to preprocess a source file
+myChatserver/mysqlmgr/MysqlThrdMgr.cpp.i:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.i
+.PHONY : myChatserver/mysqlmgr/MysqlThrdMgr.cpp.i
+
+myChatserver/mysqlmgr/MysqlThrdMgr.s: myChatserver/mysqlmgr/MysqlThrdMgr.cpp.s
+
+.PHONY : myChatserver/mysqlmgr/MysqlThrdMgr.s
+
+# target to generate assembly for a file
+myChatserver/mysqlmgr/MysqlThrdMgr.cpp.s:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.s
+.PHONY : myChatserver/mysqlmgr/MysqlThrdMgr.cpp.s
+
+myChatserver/mysqlmgr/TaskList.o: myChatserver/mysqlmgr/TaskList.cpp.o
+
+.PHONY : myChatserver/mysqlmgr/TaskList.o
+
+# target to build an object file
+myChatserver/mysqlmgr/TaskList.cpp.o:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/TaskList.cpp.o
+.PHONY : myChatserver/mysqlmgr/TaskList.cpp.o
+
+myChatserver/mysqlmgr/TaskList.i: myChatserver/mysqlmgr/TaskList.cpp.i
+
+.PHONY : myChatserver/mysqlmgr/TaskList.i
+
+# target to preprocess a source file
+myChatserver/mysqlmgr/TaskList.cpp.i:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/TaskList.cpp.i
+.PHONY : myChatserver/mysqlmgr/TaskList.cpp.i
+
+myChatserver/mysqlmgr/TaskList.s: myChatserver/mysqlmgr/TaskList.cpp.s
+
+.PHONY : myChatserver/mysqlmgr/TaskList.s
+
+# target to generate assembly for a file
+myChatserver/mysqlmgr/TaskList.cpp.s:
+	$(MAKE) -f CMakeFiles/mysqllib.dir/build.make CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/TaskList.cpp.s
+.PHONY : myChatserver/mysqlmgr/TaskList.cpp.s
 
 mysqlapi/DatabaseMysql.o: mysqlapi/DatabaseMysql.cpp.o
 
@@ -667,6 +840,7 @@ mysqlapi/DatabaseMysql.o: mysqlapi/DatabaseMysql.cpp.o
 
 # target to build an object file
 mysqlapi/DatabaseMysql.cpp.o:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/DatabaseMysql.cpp.o
 .PHONY : mysqlapi/DatabaseMysql.cpp.o
 
@@ -676,6 +850,7 @@ mysqlapi/DatabaseMysql.i: mysqlapi/DatabaseMysql.cpp.i
 
 # target to preprocess a source file
 mysqlapi/DatabaseMysql.cpp.i:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/DatabaseMysql.cpp.i
 .PHONY : mysqlapi/DatabaseMysql.cpp.i
 
@@ -685,6 +860,7 @@ mysqlapi/DatabaseMysql.s: mysqlapi/DatabaseMysql.cpp.s
 
 # target to generate assembly for a file
 mysqlapi/DatabaseMysql.cpp.s:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/DatabaseMysql.cpp.s
 .PHONY : mysqlapi/DatabaseMysql.cpp.s
 
@@ -694,6 +870,7 @@ mysqlapi/Field.o: mysqlapi/Field.cpp.o
 
 # target to build an object file
 mysqlapi/Field.cpp.o:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/Field.cpp.o
 .PHONY : mysqlapi/Field.cpp.o
 
@@ -703,6 +880,7 @@ mysqlapi/Field.i: mysqlapi/Field.cpp.i
 
 # target to preprocess a source file
 mysqlapi/Field.cpp.i:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/Field.cpp.i
 .PHONY : mysqlapi/Field.cpp.i
 
@@ -712,6 +890,7 @@ mysqlapi/Field.s: mysqlapi/Field.cpp.s
 
 # target to generate assembly for a file
 mysqlapi/Field.cpp.s:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/Field.cpp.s
 .PHONY : mysqlapi/Field.cpp.s
 
@@ -721,6 +900,7 @@ mysqlapi/QueryResult.o: mysqlapi/QueryResult.cpp.o
 
 # target to build an object file
 mysqlapi/QueryResult.cpp.o:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/QueryResult.cpp.o
 .PHONY : mysqlapi/QueryResult.cpp.o
 
@@ -730,6 +910,7 @@ mysqlapi/QueryResult.i: mysqlapi/QueryResult.cpp.i
 
 # target to preprocess a source file
 mysqlapi/QueryResult.cpp.i:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.i
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/QueryResult.cpp.i
 .PHONY : mysqlapi/QueryResult.cpp.i
 
@@ -739,8 +920,117 @@ mysqlapi/QueryResult.s: mysqlapi/QueryResult.cpp.s
 
 # target to generate assembly for a file
 mysqlapi/QueryResult.cpp.s:
+	$(MAKE) -f CMakeFiles/mysqlapilib.dir/build.make CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.s
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlapi/QueryResult.cpp.s
 .PHONY : mysqlapi/QueryResult.cpp.s
+
+mysqlmgr/MysqlManager.o: mysqlmgr/MysqlManager.cpp.o
+
+.PHONY : mysqlmgr/MysqlManager.o
+
+# target to build an object file
+mysqlmgr/MysqlManager.cpp.o:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.o
+.PHONY : mysqlmgr/MysqlManager.cpp.o
+
+mysqlmgr/MysqlManager.i: mysqlmgr/MysqlManager.cpp.i
+
+.PHONY : mysqlmgr/MysqlManager.i
+
+# target to preprocess a source file
+mysqlmgr/MysqlManager.cpp.i:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.i
+.PHONY : mysqlmgr/MysqlManager.cpp.i
+
+mysqlmgr/MysqlManager.s: mysqlmgr/MysqlManager.cpp.s
+
+.PHONY : mysqlmgr/MysqlManager.s
+
+# target to generate assembly for a file
+mysqlmgr/MysqlManager.cpp.s:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlManager.cpp.s
+.PHONY : mysqlmgr/MysqlManager.cpp.s
+
+mysqlmgr/MysqlThrd.o: mysqlmgr/MysqlThrd.cpp.o
+
+.PHONY : mysqlmgr/MysqlThrd.o
+
+# target to build an object file
+mysqlmgr/MysqlThrd.cpp.o:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.o
+.PHONY : mysqlmgr/MysqlThrd.cpp.o
+
+mysqlmgr/MysqlThrd.i: mysqlmgr/MysqlThrd.cpp.i
+
+.PHONY : mysqlmgr/MysqlThrd.i
+
+# target to preprocess a source file
+mysqlmgr/MysqlThrd.cpp.i:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.i
+.PHONY : mysqlmgr/MysqlThrd.cpp.i
+
+mysqlmgr/MysqlThrd.s: mysqlmgr/MysqlThrd.cpp.s
+
+.PHONY : mysqlmgr/MysqlThrd.s
+
+# target to generate assembly for a file
+mysqlmgr/MysqlThrd.cpp.s:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrd.cpp.s
+.PHONY : mysqlmgr/MysqlThrd.cpp.s
+
+mysqlmgr/MysqlThrdMgr.o: mysqlmgr/MysqlThrdMgr.cpp.o
+
+.PHONY : mysqlmgr/MysqlThrdMgr.o
+
+# target to build an object file
+mysqlmgr/MysqlThrdMgr.cpp.o:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.o
+.PHONY : mysqlmgr/MysqlThrdMgr.cpp.o
+
+mysqlmgr/MysqlThrdMgr.i: mysqlmgr/MysqlThrdMgr.cpp.i
+
+.PHONY : mysqlmgr/MysqlThrdMgr.i
+
+# target to preprocess a source file
+mysqlmgr/MysqlThrdMgr.cpp.i:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.i
+.PHONY : mysqlmgr/MysqlThrdMgr.cpp.i
+
+mysqlmgr/MysqlThrdMgr.s: mysqlmgr/MysqlThrdMgr.cpp.s
+
+.PHONY : mysqlmgr/MysqlThrdMgr.s
+
+# target to generate assembly for a file
+mysqlmgr/MysqlThrdMgr.cpp.s:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/MysqlThrdMgr.cpp.s
+.PHONY : mysqlmgr/MysqlThrdMgr.cpp.s
+
+mysqlmgr/TaskList.o: mysqlmgr/TaskList.cpp.o
+
+.PHONY : mysqlmgr/TaskList.o
+
+# target to build an object file
+mysqlmgr/TaskList.cpp.o:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.o
+.PHONY : mysqlmgr/TaskList.cpp.o
+
+mysqlmgr/TaskList.i: mysqlmgr/TaskList.cpp.i
+
+.PHONY : mysqlmgr/TaskList.i
+
+# target to preprocess a source file
+mysqlmgr/TaskList.cpp.i:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.i
+.PHONY : mysqlmgr/TaskList.cpp.i
+
+mysqlmgr/TaskList.s: mysqlmgr/TaskList.cpp.s
+
+.PHONY : mysqlmgr/TaskList.s
+
+# target to generate assembly for a file
+mysqlmgr/TaskList.cpp.s:
+	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/mysqlmgr/TaskList.cpp.s
+.PHONY : mysqlmgr/TaskList.cpp.s
 
 net/Acceptor.o: net/Acceptor.cpp.o
 
@@ -749,7 +1039,7 @@ net/Acceptor.o: net/Acceptor.cpp.o
 # target to build an object file
 net/Acceptor.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Acceptor.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Acceptor.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Acceptor.cpp.o
 .PHONY : net/Acceptor.cpp.o
 
 net/Acceptor.i: net/Acceptor.cpp.i
@@ -759,7 +1049,7 @@ net/Acceptor.i: net/Acceptor.cpp.i
 # target to preprocess a source file
 net/Acceptor.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Acceptor.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Acceptor.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Acceptor.cpp.i
 .PHONY : net/Acceptor.cpp.i
 
 net/Acceptor.s: net/Acceptor.cpp.s
@@ -769,7 +1059,7 @@ net/Acceptor.s: net/Acceptor.cpp.s
 # target to generate assembly for a file
 net/Acceptor.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Acceptor.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Acceptor.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Acceptor.cpp.s
 .PHONY : net/Acceptor.cpp.s
 
 net/Buffer.o: net/Buffer.cpp.o
@@ -779,7 +1069,7 @@ net/Buffer.o: net/Buffer.cpp.o
 # target to build an object file
 net/Buffer.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Buffer.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Buffer.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Buffer.cpp.o
 .PHONY : net/Buffer.cpp.o
 
 net/Buffer.i: net/Buffer.cpp.i
@@ -789,7 +1079,7 @@ net/Buffer.i: net/Buffer.cpp.i
 # target to preprocess a source file
 net/Buffer.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Buffer.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Buffer.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Buffer.cpp.i
 .PHONY : net/Buffer.cpp.i
 
 net/Buffer.s: net/Buffer.cpp.s
@@ -799,7 +1089,7 @@ net/Buffer.s: net/Buffer.cpp.s
 # target to generate assembly for a file
 net/Buffer.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Buffer.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Buffer.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Buffer.cpp.s
 .PHONY : net/Buffer.cpp.s
 
 net/Channel.o: net/Channel.cpp.o
@@ -809,7 +1099,7 @@ net/Channel.o: net/Channel.cpp.o
 # target to build an object file
 net/Channel.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Channel.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Channel.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Channel.cpp.o
 .PHONY : net/Channel.cpp.o
 
 net/Channel.i: net/Channel.cpp.i
@@ -819,7 +1109,7 @@ net/Channel.i: net/Channel.cpp.i
 # target to preprocess a source file
 net/Channel.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Channel.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Channel.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Channel.cpp.i
 .PHONY : net/Channel.cpp.i
 
 net/Channel.s: net/Channel.cpp.s
@@ -829,7 +1119,7 @@ net/Channel.s: net/Channel.cpp.s
 # target to generate assembly for a file
 net/Channel.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Channel.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Channel.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Channel.cpp.s
 .PHONY : net/Channel.cpp.s
 
 net/Connector.o: net/Connector.cpp.o
@@ -839,7 +1129,7 @@ net/Connector.o: net/Connector.cpp.o
 # target to build an object file
 net/Connector.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Connector.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Connector.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Connector.cpp.o
 .PHONY : net/Connector.cpp.o
 
 net/Connector.i: net/Connector.cpp.i
@@ -849,7 +1139,7 @@ net/Connector.i: net/Connector.cpp.i
 # target to preprocess a source file
 net/Connector.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Connector.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Connector.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Connector.cpp.i
 .PHONY : net/Connector.cpp.i
 
 net/Connector.s: net/Connector.cpp.s
@@ -859,7 +1149,7 @@ net/Connector.s: net/Connector.cpp.s
 # target to generate assembly for a file
 net/Connector.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Connector.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Connector.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Connector.cpp.s
 .PHONY : net/Connector.cpp.s
 
 net/EpollPoller.o: net/EpollPoller.cpp.o
@@ -869,7 +1159,7 @@ net/EpollPoller.o: net/EpollPoller.cpp.o
 # target to build an object file
 net/EpollPoller.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EpollPoller.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EpollPoller.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EpollPoller.cpp.o
 .PHONY : net/EpollPoller.cpp.o
 
 net/EpollPoller.i: net/EpollPoller.cpp.i
@@ -879,7 +1169,7 @@ net/EpollPoller.i: net/EpollPoller.cpp.i
 # target to preprocess a source file
 net/EpollPoller.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EpollPoller.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EpollPoller.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EpollPoller.cpp.i
 .PHONY : net/EpollPoller.cpp.i
 
 net/EpollPoller.s: net/EpollPoller.cpp.s
@@ -889,7 +1179,7 @@ net/EpollPoller.s: net/EpollPoller.cpp.s
 # target to generate assembly for a file
 net/EpollPoller.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EpollPoller.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EpollPoller.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EpollPoller.cpp.s
 .PHONY : net/EpollPoller.cpp.s
 
 net/EventLoop.o: net/EventLoop.cpp.o
@@ -899,7 +1189,7 @@ net/EventLoop.o: net/EventLoop.cpp.o
 # target to build an object file
 net/EventLoop.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoop.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoop.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoop.cpp.o
 .PHONY : net/EventLoop.cpp.o
 
 net/EventLoop.i: net/EventLoop.cpp.i
@@ -909,7 +1199,7 @@ net/EventLoop.i: net/EventLoop.cpp.i
 # target to preprocess a source file
 net/EventLoop.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoop.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoop.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoop.cpp.i
 .PHONY : net/EventLoop.cpp.i
 
 net/EventLoop.s: net/EventLoop.cpp.s
@@ -919,7 +1209,7 @@ net/EventLoop.s: net/EventLoop.cpp.s
 # target to generate assembly for a file
 net/EventLoop.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoop.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoop.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoop.cpp.s
 .PHONY : net/EventLoop.cpp.s
 
 net/EventLoopThread.o: net/EventLoopThread.cpp.o
@@ -929,7 +1219,7 @@ net/EventLoopThread.o: net/EventLoopThread.cpp.o
 # target to build an object file
 net/EventLoopThread.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThread.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThread.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o
 .PHONY : net/EventLoopThread.cpp.o
 
 net/EventLoopThread.i: net/EventLoopThread.cpp.i
@@ -939,7 +1229,7 @@ net/EventLoopThread.i: net/EventLoopThread.cpp.i
 # target to preprocess a source file
 net/EventLoopThread.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThread.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThread.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThread.cpp.i
 .PHONY : net/EventLoopThread.cpp.i
 
 net/EventLoopThread.s: net/EventLoopThread.cpp.s
@@ -949,7 +1239,7 @@ net/EventLoopThread.s: net/EventLoopThread.cpp.s
 # target to generate assembly for a file
 net/EventLoopThread.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThread.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThread.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThread.cpp.s
 .PHONY : net/EventLoopThread.cpp.s
 
 net/EventLoopThreadPool.o: net/EventLoopThreadPool.cpp.o
@@ -959,7 +1249,7 @@ net/EventLoopThreadPool.o: net/EventLoopThreadPool.cpp.o
 # target to build an object file
 net/EventLoopThreadPool.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThreadPool.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThreadPool.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o
 .PHONY : net/EventLoopThreadPool.cpp.o
 
 net/EventLoopThreadPool.i: net/EventLoopThreadPool.cpp.i
@@ -969,7 +1259,7 @@ net/EventLoopThreadPool.i: net/EventLoopThreadPool.cpp.i
 # target to preprocess a source file
 net/EventLoopThreadPool.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThreadPool.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThreadPool.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.i
 .PHONY : net/EventLoopThreadPool.cpp.i
 
 net/EventLoopThreadPool.s: net/EventLoopThreadPool.cpp.s
@@ -979,7 +1269,7 @@ net/EventLoopThreadPool.s: net/EventLoopThreadPool.cpp.s
 # target to generate assembly for a file
 net/EventLoopThreadPool.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/EventLoopThreadPool.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/EventLoopThreadPool.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.s
 .PHONY : net/EventLoopThreadPool.cpp.s
 
 net/InetAddress.o: net/InetAddress.cpp.o
@@ -989,7 +1279,7 @@ net/InetAddress.o: net/InetAddress.cpp.o
 # target to build an object file
 net/InetAddress.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/InetAddress.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/InetAddress.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/InetAddress.cpp.o
 .PHONY : net/InetAddress.cpp.o
 
 net/InetAddress.i: net/InetAddress.cpp.i
@@ -999,7 +1289,7 @@ net/InetAddress.i: net/InetAddress.cpp.i
 # target to preprocess a source file
 net/InetAddress.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/InetAddress.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/InetAddress.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/InetAddress.cpp.i
 .PHONY : net/InetAddress.cpp.i
 
 net/InetAddress.s: net/InetAddress.cpp.s
@@ -1009,7 +1299,7 @@ net/InetAddress.s: net/InetAddress.cpp.s
 # target to generate assembly for a file
 net/InetAddress.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/InetAddress.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/InetAddress.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/InetAddress.cpp.s
 .PHONY : net/InetAddress.cpp.s
 
 net/PollPoller.o: net/PollPoller.cpp.o
@@ -1019,7 +1309,7 @@ net/PollPoller.o: net/PollPoller.cpp.o
 # target to build an object file
 net/PollPoller.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/PollPoller.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/PollPoller.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/PollPoller.cpp.o
 .PHONY : net/PollPoller.cpp.o
 
 net/PollPoller.i: net/PollPoller.cpp.i
@@ -1029,7 +1319,7 @@ net/PollPoller.i: net/PollPoller.cpp.i
 # target to preprocess a source file
 net/PollPoller.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/PollPoller.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/PollPoller.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/PollPoller.cpp.i
 .PHONY : net/PollPoller.cpp.i
 
 net/PollPoller.s: net/PollPoller.cpp.s
@@ -1039,7 +1329,7 @@ net/PollPoller.s: net/PollPoller.cpp.s
 # target to generate assembly for a file
 net/PollPoller.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/PollPoller.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/PollPoller.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/PollPoller.cpp.s
 .PHONY : net/PollPoller.cpp.s
 
 net/Poller.o: net/Poller.cpp.o
@@ -1049,7 +1339,7 @@ net/Poller.o: net/Poller.cpp.o
 # target to build an object file
 net/Poller.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Poller.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Poller.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Poller.cpp.o
 .PHONY : net/Poller.cpp.o
 
 net/Poller.i: net/Poller.cpp.i
@@ -1059,7 +1349,7 @@ net/Poller.i: net/Poller.cpp.i
 # target to preprocess a source file
 net/Poller.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Poller.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Poller.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Poller.cpp.i
 .PHONY : net/Poller.cpp.i
 
 net/Poller.s: net/Poller.cpp.s
@@ -1069,7 +1359,7 @@ net/Poller.s: net/Poller.cpp.s
 # target to generate assembly for a file
 net/Poller.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Poller.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Poller.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Poller.cpp.s
 .PHONY : net/Poller.cpp.s
 
 net/ProtocolStream.o: net/ProtocolStream.cpp.o
@@ -1079,7 +1369,7 @@ net/ProtocolStream.o: net/ProtocolStream.cpp.o
 # target to build an object file
 net/ProtocolStream.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/ProtocolStream.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/ProtocolStream.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o
 .PHONY : net/ProtocolStream.cpp.o
 
 net/ProtocolStream.i: net/ProtocolStream.cpp.i
@@ -1089,7 +1379,7 @@ net/ProtocolStream.i: net/ProtocolStream.cpp.i
 # target to preprocess a source file
 net/ProtocolStream.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/ProtocolStream.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/ProtocolStream.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/ProtocolStream.cpp.i
 .PHONY : net/ProtocolStream.cpp.i
 
 net/ProtocolStream.s: net/ProtocolStream.cpp.s
@@ -1099,7 +1389,7 @@ net/ProtocolStream.s: net/ProtocolStream.cpp.s
 # target to generate assembly for a file
 net/ProtocolStream.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/ProtocolStream.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/ProtocolStream.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/ProtocolStream.cpp.s
 .PHONY : net/ProtocolStream.cpp.s
 
 net/SelectPoller.o: net/SelectPoller.cpp.o
@@ -1109,7 +1399,7 @@ net/SelectPoller.o: net/SelectPoller.cpp.o
 # target to build an object file
 net/SelectPoller.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/SelectPoller.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/SelectPoller.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/SelectPoller.cpp.o
 .PHONY : net/SelectPoller.cpp.o
 
 net/SelectPoller.i: net/SelectPoller.cpp.i
@@ -1119,7 +1409,7 @@ net/SelectPoller.i: net/SelectPoller.cpp.i
 # target to preprocess a source file
 net/SelectPoller.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/SelectPoller.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/SelectPoller.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/SelectPoller.cpp.i
 .PHONY : net/SelectPoller.cpp.i
 
 net/SelectPoller.s: net/SelectPoller.cpp.s
@@ -1129,7 +1419,7 @@ net/SelectPoller.s: net/SelectPoller.cpp.s
 # target to generate assembly for a file
 net/SelectPoller.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/SelectPoller.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/SelectPoller.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/SelectPoller.cpp.s
 .PHONY : net/SelectPoller.cpp.s
 
 net/Sockets.o: net/Sockets.cpp.o
@@ -1139,7 +1429,7 @@ net/Sockets.o: net/Sockets.cpp.o
 # target to build an object file
 net/Sockets.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Sockets.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Sockets.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Sockets.cpp.o
 .PHONY : net/Sockets.cpp.o
 
 net/Sockets.i: net/Sockets.cpp.i
@@ -1149,7 +1439,7 @@ net/Sockets.i: net/Sockets.cpp.i
 # target to preprocess a source file
 net/Sockets.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Sockets.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Sockets.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Sockets.cpp.i
 .PHONY : net/Sockets.cpp.i
 
 net/Sockets.s: net/Sockets.cpp.s
@@ -1159,7 +1449,7 @@ net/Sockets.s: net/Sockets.cpp.s
 # target to generate assembly for a file
 net/Sockets.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Sockets.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Sockets.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Sockets.cpp.s
 .PHONY : net/Sockets.cpp.s
 
 net/TcpClient.o: net/TcpClient.cpp.o
@@ -1169,7 +1459,7 @@ net/TcpClient.o: net/TcpClient.cpp.o
 # target to build an object file
 net/TcpClient.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpClient.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpClient.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpClient.cpp.o
 .PHONY : net/TcpClient.cpp.o
 
 net/TcpClient.i: net/TcpClient.cpp.i
@@ -1179,7 +1469,7 @@ net/TcpClient.i: net/TcpClient.cpp.i
 # target to preprocess a source file
 net/TcpClient.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpClient.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpClient.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpClient.cpp.i
 .PHONY : net/TcpClient.cpp.i
 
 net/TcpClient.s: net/TcpClient.cpp.s
@@ -1189,7 +1479,7 @@ net/TcpClient.s: net/TcpClient.cpp.s
 # target to generate assembly for a file
 net/TcpClient.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpClient.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpClient.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpClient.cpp.s
 .PHONY : net/TcpClient.cpp.s
 
 net/TcpConnection.o: net/TcpConnection.cpp.o
@@ -1199,7 +1489,7 @@ net/TcpConnection.o: net/TcpConnection.cpp.o
 # target to build an object file
 net/TcpConnection.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpConnection.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpConnection.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpConnection.cpp.o
 .PHONY : net/TcpConnection.cpp.o
 
 net/TcpConnection.i: net/TcpConnection.cpp.i
@@ -1209,7 +1499,7 @@ net/TcpConnection.i: net/TcpConnection.cpp.i
 # target to preprocess a source file
 net/TcpConnection.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpConnection.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpConnection.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpConnection.cpp.i
 .PHONY : net/TcpConnection.cpp.i
 
 net/TcpConnection.s: net/TcpConnection.cpp.s
@@ -1219,7 +1509,7 @@ net/TcpConnection.s: net/TcpConnection.cpp.s
 # target to generate assembly for a file
 net/TcpConnection.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpConnection.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpConnection.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpConnection.cpp.s
 .PHONY : net/TcpConnection.cpp.s
 
 net/TcpServer.o: net/TcpServer.cpp.o
@@ -1229,7 +1519,7 @@ net/TcpServer.o: net/TcpServer.cpp.o
 # target to build an object file
 net/TcpServer.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpServer.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpServer.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpServer.cpp.o
 .PHONY : net/TcpServer.cpp.o
 
 net/TcpServer.i: net/TcpServer.cpp.i
@@ -1239,7 +1529,7 @@ net/TcpServer.i: net/TcpServer.cpp.i
 # target to preprocess a source file
 net/TcpServer.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpServer.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpServer.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpServer.cpp.i
 .PHONY : net/TcpServer.cpp.i
 
 net/TcpServer.s: net/TcpServer.cpp.s
@@ -1249,7 +1539,7 @@ net/TcpServer.s: net/TcpServer.cpp.s
 # target to generate assembly for a file
 net/TcpServer.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TcpServer.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TcpServer.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TcpServer.cpp.s
 .PHONY : net/TcpServer.cpp.s
 
 net/Timer.o: net/Timer.cpp.o
@@ -1259,7 +1549,7 @@ net/Timer.o: net/Timer.cpp.o
 # target to build an object file
 net/Timer.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Timer.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Timer.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Timer.cpp.o
 .PHONY : net/Timer.cpp.o
 
 net/Timer.i: net/Timer.cpp.i
@@ -1269,7 +1559,7 @@ net/Timer.i: net/Timer.cpp.i
 # target to preprocess a source file
 net/Timer.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Timer.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Timer.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Timer.cpp.i
 .PHONY : net/Timer.cpp.i
 
 net/Timer.s: net/Timer.cpp.s
@@ -1279,7 +1569,7 @@ net/Timer.s: net/Timer.cpp.s
 # target to generate assembly for a file
 net/Timer.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/Timer.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/Timer.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/Timer.cpp.s
 .PHONY : net/Timer.cpp.s
 
 net/TimerQueue.o: net/TimerQueue.cpp.o
@@ -1289,7 +1579,7 @@ net/TimerQueue.o: net/TimerQueue.cpp.o
 # target to build an object file
 net/TimerQueue.cpp.o:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TimerQueue.cpp.o
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TimerQueue.cpp.o
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TimerQueue.cpp.o
 .PHONY : net/TimerQueue.cpp.o
 
 net/TimerQueue.i: net/TimerQueue.cpp.i
@@ -1299,7 +1589,7 @@ net/TimerQueue.i: net/TimerQueue.cpp.i
 # target to preprocess a source file
 net/TimerQueue.cpp.i:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TimerQueue.cpp.i
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TimerQueue.cpp.i
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TimerQueue.cpp.i
 .PHONY : net/TimerQueue.cpp.i
 
 net/TimerQueue.s: net/TimerQueue.cpp.s
@@ -1309,7 +1599,7 @@ net/TimerQueue.s: net/TimerQueue.cpp.s
 # target to generate assembly for a file
 net/TimerQueue.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/net/TimerQueue.cpp.s
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/net/TimerQueue.cpp.s
+	$(MAKE) -f CMakeFiles/netlib.dir/build.make CMakeFiles/netlib.dir/net/TimerQueue.cpp.s
 .PHONY : net/TimerQueue.cpp.s
 
 test/base/Timestamptest.o: test/base/Timestamptest.cpp.o
@@ -1339,13 +1629,67 @@ test/base/Timestamptest.cpp.s:
 	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/test/base/Timestamptest.cpp.s
 .PHONY : test/base/Timestamptest.cpp.s
 
+test/sql/mysqlMgrtest.o: test/sql/mysqlMgrtest.cpp.o
+
+.PHONY : test/sql/mysqlMgrtest.o
+
+# target to build an object file
+test/sql/mysqlMgrtest.cpp.o:
+	$(MAKE) -f CMakeFiles/mysqlMgrtest.dir/build.make CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o
+.PHONY : test/sql/mysqlMgrtest.cpp.o
+
+test/sql/mysqlMgrtest.i: test/sql/mysqlMgrtest.cpp.i
+
+.PHONY : test/sql/mysqlMgrtest.i
+
+# target to preprocess a source file
+test/sql/mysqlMgrtest.cpp.i:
+	$(MAKE) -f CMakeFiles/mysqlMgrtest.dir/build.make CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.i
+.PHONY : test/sql/mysqlMgrtest.cpp.i
+
+test/sql/mysqlMgrtest.s: test/sql/mysqlMgrtest.cpp.s
+
+.PHONY : test/sql/mysqlMgrtest.s
+
+# target to generate assembly for a file
+test/sql/mysqlMgrtest.cpp.s:
+	$(MAKE) -f CMakeFiles/mysqlMgrtest.dir/build.make CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.s
+.PHONY : test/sql/mysqlMgrtest.cpp.s
+
+third_party/gmock/gmock-gtest-all.o: third_party/gmock/gmock-gtest-all.cc.o
+
+.PHONY : third_party/gmock/gmock-gtest-all.o
+
+# target to build an object file
+third_party/gmock/gmock-gtest-all.cc.o:
+	$(MAKE) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.o
+.PHONY : third_party/gmock/gmock-gtest-all.cc.o
+
+third_party/gmock/gmock-gtest-all.i: third_party/gmock/gmock-gtest-all.cc.i
+
+.PHONY : third_party/gmock/gmock-gtest-all.i
+
+# target to preprocess a source file
+third_party/gmock/gmock-gtest-all.cc.i:
+	$(MAKE) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.i
+.PHONY : third_party/gmock/gmock-gtest-all.cc.i
+
+third_party/gmock/gmock-gtest-all.s: third_party/gmock/gmock-gtest-all.cc.s
+
+.PHONY : third_party/gmock/gmock-gtest-all.s
+
+# target to generate assembly for a file
+third_party/gmock/gmock-gtest-all.cc.s:
+	$(MAKE) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/third_party/gmock/gmock-gtest-all.cc.s
+.PHONY : third_party/gmock/gmock-gtest-all.cc.s
+
 third_party/gmock/gmock_main.o: third_party/gmock/gmock_main.cc.o
 
 .PHONY : third_party/gmock/gmock_main.o
 
 # target to build an object file
 third_party/gmock/gmock_main.cc.o:
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/third_party/gmock/gmock_main.cc.o
+	$(MAKE) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.o
 .PHONY : third_party/gmock/gmock_main.cc.o
 
 third_party/gmock/gmock_main.i: third_party/gmock/gmock_main.cc.i
@@ -1354,7 +1698,7 @@ third_party/gmock/gmock_main.i: third_party/gmock/gmock_main.cc.i
 
 # target to preprocess a source file
 third_party/gmock/gmock_main.cc.i:
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/third_party/gmock/gmock_main.cc.i
+	$(MAKE) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.i
 .PHONY : third_party/gmock/gmock_main.cc.i
 
 third_party/gmock/gmock_main.s: third_party/gmock/gmock_main.cc.s
@@ -1363,7 +1707,7 @@ third_party/gmock/gmock_main.s: third_party/gmock/gmock_main.cc.s
 
 # target to generate assembly for a file
 third_party/gmock/gmock_main.cc.s:
-	$(MAKE) -f CMakeFiles/Timestamptest.dir/build.make CMakeFiles/Timestamptest.dir/third_party/gmock/gmock_main.cc.s
+	$(MAKE) -f CMakeFiles/testlib.dir/build.make CMakeFiles/testlib.dir/third_party/gmock/gmock_main.cc.s
 .PHONY : third_party/gmock/gmock_main.cc.s
 
 utils/DaemonRun.o: utils/DaemonRun.cpp.o
@@ -1912,10 +2256,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... mysqlMgrtest"
+	@echo "... testlib"
+	@echo "... mysqlapilib"
+	@echo "... rebuild_cache"
 	@echo "... chatserver"
 	@echo "... Timestamptest"
+	@echo "... netlib"
+	@echo "... mysqllib"
 	@echo "... base/AsyncLog.o"
 	@echo "... base/AsyncLog.i"
 	@echo "... base/AsyncLog.s"
@@ -1970,9 +2319,21 @@ help:
 	@echo "... jsoncpp1.9.0/json_writer.o"
 	@echo "... jsoncpp1.9.0/json_writer.i"
 	@echo "... jsoncpp1.9.0/json_writer.s"
+	@echo "... myChatserver/chatserversrc/UserManager.o"
+	@echo "... myChatserver/chatserversrc/UserManager.i"
+	@echo "... myChatserver/chatserversrc/UserManager.s"
 	@echo "... myChatserver/mysqlmgr/MysqlManager.o"
 	@echo "... myChatserver/mysqlmgr/MysqlManager.i"
 	@echo "... myChatserver/mysqlmgr/MysqlManager.s"
+	@echo "... myChatserver/mysqlmgr/MysqlThrd.o"
+	@echo "... myChatserver/mysqlmgr/MysqlThrd.i"
+	@echo "... myChatserver/mysqlmgr/MysqlThrd.s"
+	@echo "... myChatserver/mysqlmgr/MysqlThrdMgr.o"
+	@echo "... myChatserver/mysqlmgr/MysqlThrdMgr.i"
+	@echo "... myChatserver/mysqlmgr/MysqlThrdMgr.s"
+	@echo "... myChatserver/mysqlmgr/TaskList.o"
+	@echo "... myChatserver/mysqlmgr/TaskList.i"
+	@echo "... myChatserver/mysqlmgr/TaskList.s"
 	@echo "... mysqlapi/DatabaseMysql.o"
 	@echo "... mysqlapi/DatabaseMysql.i"
 	@echo "... mysqlapi/DatabaseMysql.s"
@@ -1982,6 +2343,18 @@ help:
 	@echo "... mysqlapi/QueryResult.o"
 	@echo "... mysqlapi/QueryResult.i"
 	@echo "... mysqlapi/QueryResult.s"
+	@echo "... mysqlmgr/MysqlManager.o"
+	@echo "... mysqlmgr/MysqlManager.i"
+	@echo "... mysqlmgr/MysqlManager.s"
+	@echo "... mysqlmgr/MysqlThrd.o"
+	@echo "... mysqlmgr/MysqlThrd.i"
+	@echo "... mysqlmgr/MysqlThrd.s"
+	@echo "... mysqlmgr/MysqlThrdMgr.o"
+	@echo "... mysqlmgr/MysqlThrdMgr.i"
+	@echo "... mysqlmgr/MysqlThrdMgr.s"
+	@echo "... mysqlmgr/TaskList.o"
+	@echo "... mysqlmgr/TaskList.i"
+	@echo "... mysqlmgr/TaskList.s"
 	@echo "... net/Acceptor.o"
 	@echo "... net/Acceptor.i"
 	@echo "... net/Acceptor.s"
@@ -2042,6 +2415,12 @@ help:
 	@echo "... test/base/Timestamptest.o"
 	@echo "... test/base/Timestamptest.i"
 	@echo "... test/base/Timestamptest.s"
+	@echo "... test/sql/mysqlMgrtest.o"
+	@echo "... test/sql/mysqlMgrtest.i"
+	@echo "... test/sql/mysqlMgrtest.s"
+	@echo "... third_party/gmock/gmock-gtest-all.o"
+	@echo "... third_party/gmock/gmock-gtest-all.i"
+	@echo "... third_party/gmock/gmock-gtest-all.s"
 	@echo "... third_party/gmock/gmock_main.o"
 	@echo "... third_party/gmock/gmock_main.i"
 	@echo "... third_party/gmock/gmock_main.s"

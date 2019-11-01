@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmysqllib.a  CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlManager.cpp.o CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrd.cpp.o CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/TaskList.cpp.o CMakeFiles/mysqllib.dir/myChatserver/mysqlmgr/MysqlThrdMgr.cpp.o
+/usr/bin/ranlib libmysqllib.a

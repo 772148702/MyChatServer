@@ -3,10 +3,11 @@
 //
 
 #pragma  once
-#include "mysqlapi/DatabaseMysql.h"
+
 #include <vector>
 #include <map>
 #include <memory>
+#include "../../mysqlapi/DatabaseMysql.h"
 
 struct STableFiled
 {
@@ -62,6 +63,8 @@ protected:
     std::string m_strDatabase;
     std::string m_strCharacterSet;
     std::vector<STableInfo>   m_vecTables;
+public:
+    const vector<STableInfo> &getMVecTables() const;
 
 };
 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmysqlapilib.a  CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o
+/usr/bin/ranlib libmysqlapilib.a

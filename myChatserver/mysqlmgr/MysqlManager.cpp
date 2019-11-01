@@ -58,6 +58,7 @@ CMysqlManager::CMysqlManager() {
     }
     {
         STableInfo chat;
+        chat.m_strName = "t_chat";
         chat.m_mapField["f_id"] = { "f_id", "bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID'", "bigint(20)" };
         chat.m_mapField["f_senderid"] = { "f_senderid", "bigint(20) NOT NULL COMMENT '发送者id'", "bigint(20)" };
         chat.m_mapField["f_targetid"] = { "f_targetid", "bigint(20) NOT NULL COMMENT '接收者id'", "bigint(20)" };
@@ -256,6 +257,10 @@ bool CMysqlManager::_CreateTable(const STableInfo &table) {
 
 bool CMysqlManager::_UpdateTable(const STableInfo &table) {
     return false;
+}
+
+const vector<STableInfo> &CMysqlManager::getMVecTables() const {
+    return m_vecTables;
 }
 
 
