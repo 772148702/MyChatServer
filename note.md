@@ -57,3 +57,10 @@ m_userinfo.userid=0,使其session无效。
  ### DeleteFriend
  需要调试才能够弄清楚GROUNP_BOUNDARY的含义。
  
+ 
+ 
+ ###problem need to modify or fix
+ 1. the user information cached in vector Usermanager.cpp should be stored in 
+ memory database.
+ 2. the member friends in User should be write as  pointer for the memory aclloation.
+ 

@@ -48,10 +48,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/myChatServer/MyChatServer/CMakeFiles /home/lzy/myChatServer/MyChatServer/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles /home/lzy/MyChatAppServer/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/myChatServer/MyChatServer/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzy/MyChatAppServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

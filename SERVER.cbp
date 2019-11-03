@@ -8,24 +8,24 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="UserManagertest">
-				<Option output="/home/lzy/myChatServer/MyChatServer/UserManagertest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/UserManagertest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -36,21 +36,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 UserManagertest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 UserManagertest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="UserManagertest/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/UserManagertest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/UserManagertest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -61,31 +61,31 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 UserManagertest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 UserManagertest/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mysqlMgrtest">
-				<Option output="/home/lzy/myChatServer/MyChatServer/mysqlMgrtest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/mysqlMgrtest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -96,21 +96,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mysqlMgrtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mysqlMgrtest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mysqlMgrtest/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/mysqlMgrtest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/mysqlMgrtest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -121,21 +121,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mysqlMgrtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mysqlMgrtest/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="testlib">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libtestlib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libtestlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -146,21 +146,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 testlib"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 testlib"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="testlib/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libtestlib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libtestlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -171,21 +171,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 testlib/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 testlib/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mysqlapilib">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libmysqlapilib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libmysqlapilib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -196,21 +196,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mysqlapilib"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mysqlapilib"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mysqlapilib/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libmysqlapilib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libmysqlapilib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -221,21 +221,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mysqlapilib/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mysqlapilib/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Timestamptest">
-				<Option output="/home/lzy/myChatServer/MyChatServer/Timestamptest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/Timestamptest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -246,21 +246,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 Timestamptest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 Timestamptest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Timestamptest/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/Timestamptest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/Timestamptest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -271,21 +271,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 Timestamptest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 Timestamptest/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mychat">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libmychat.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libmychat.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -296,21 +296,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mychat"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mychat"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mychat/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libmychat.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libmychat.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -321,31 +321,31 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mychat/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mychat/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="chatserver">
-				<Option output="/home/lzy/myChatServer/MyChatServer/chatserver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/chatserver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -356,21 +356,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 chatserver"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 chatserver"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="chatserver/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/chatserver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/chatserver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -381,21 +381,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 chatserver/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 chatserver/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="netlib">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libnetlib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libnetlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -406,21 +406,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 netlib"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 netlib"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="netlib/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libnetlib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libnetlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -431,21 +431,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 netlib/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 netlib/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mysqllib">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libmysqllib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libmysqllib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -456,21 +456,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mysqllib"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mysqllib"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mysqllib/fast">
-				<Option output="/home/lzy/myChatServer/MyChatServer/libmysqllib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/lzy/myChatServer/MyChatServer"/>
+				<Option output="/home/lzy/MyChatAppServer/libmysqllib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lzy/MyChatAppServer"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lzy/myChatServer/MyChatServer"/>
-					<Add directory="/home/lzy/myChatServer/MyChatServer/third_party/gmock"/>
+					<Add directory="/home/lzy/MyChatAppServer"/>
+					<Add directory="/home/lzy/MyChatAppServer/third_party/gmock"/>
 					<Add directory="/usr/include/c++/4.8"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
 					<Add directory="/usr/include/c++/4.8/backward"/>
@@ -481,468 +481,468 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 mysqllib/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lzy/myChatServer/MyChatServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 mysqllib/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/lzy/MyChatAppServer/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/AsyncLog.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/base/AsyncLog.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/AsyncLog.h">
+		<Unit filename="/home/lzy/MyChatAppServer/base/AsyncLog.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/ConfigFileReader.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/base/ConfigFileReader.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/ConfigFileReader.h">
+		<Unit filename="/home/lzy/MyChatAppServer/base/ConfigFileReader.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/Platform.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/base/Platform.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/Platform.h">
+		<Unit filename="/home/lzy/MyChatAppServer/base/Platform.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/Timestamp.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/base/Timestamp.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/base/Timestamp.h">
+		<Unit filename="/home/lzy/MyChatAppServer/base/Timestamp.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/BussinessLogic.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/BussinessLogic.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/BussinessLogic.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/BussinessLogic.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/ChatServer.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/ChatServer.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/ChatServer.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/ChatServer.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/ChatSession.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/ChatSession.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/ChatSession.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/ChatSession.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/HttpServer.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/HttpServer.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/HttpServer.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/HttpServer.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/HttpSession.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/HttpSession.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/HttpSession.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/HttpSession.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/MonitorServer.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/MonitorServer.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/MonitorServer.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/MonitorServer.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/MonitorSession.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/MonitorSession.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/MonitorSession.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/MonitorSession.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/MsgCacheManager.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/MsgCacheManager.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/MsgCacheManager.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/MsgCacheManager.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/TcpSession.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/TcpSession.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/TcpSession.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/TcpSession.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/UserManager.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/UserManager.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/UserManager.h">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/UserManager.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/chatserversrc/main.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/chatserversrc/main.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/jsoncpp1.9.0/json_reader.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/jsoncpp1.9.0/json_reader.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/jsoncpp1.9.0/json_value.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/jsoncpp1.9.0/json_value.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/jsoncpp1.9.0/json_writer.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/jsoncpp1.9.0/json_writer.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.cpp">
 			<Option target="UserManagertest"/>
 			<Option target="mysqlMgrtest"/>
 			<Option target="Timestamptest"/>
 			<Option target="mychat"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.h">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.h">
 			<Option target="UserManagertest"/>
 			<Option target="mysqlMgrtest"/>
 			<Option target="Timestamptest"/>
 			<Option target="mychat"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/MysqlManager.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlManager.cpp">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/MysqlManager.h">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlManager.h">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/MysqlTask.h">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlTask.h">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/MysqlThrd.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlThrd.cpp">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/MysqlThrd.h">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlThrd.h">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/MysqlThrdMgr.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlThrdMgr.cpp">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/MysqlThrdMgr.h">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/MysqlThrdMgr.h">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/TaskList.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/TaskList.cpp">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/myChatserver/mysqlmgr/TaskList.h">
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/mysqlmgr/TaskList.h">
 			<Option target="mysqllib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlapi/DatabaseMysql.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlapi/DatabaseMysql.cpp">
 			<Option target="mysqlapilib"/>
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlapi/DatabaseMysql.h">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlapi/DatabaseMysql.h">
 			<Option target="mysqlapilib"/>
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlapi/Field.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlapi/Field.cpp">
 			<Option target="mysqlapilib"/>
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlapi/Field.h">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlapi/Field.h">
 			<Option target="mysqlapilib"/>
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlapi/QueryResult.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlapi/QueryResult.cpp">
 			<Option target="mysqlapilib"/>
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlapi/QueryResult.h">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlapi/QueryResult.h">
 			<Option target="mysqlapilib"/>
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/MysqlManager.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/MysqlManager.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/MysqlManager.h">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/MysqlManager.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/MysqlThrd.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/MysqlThrd.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/MysqlThrd.h">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/MysqlThrd.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/MysqlThrdMgr.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/MysqlThrdMgr.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/MysqlThrdMgr.h">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/MysqlThrdMgr.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/TaskList.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/TaskList.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/mysqlmgr/TaskList.h">
+		<Unit filename="/home/lzy/MyChatAppServer/mysqlmgr/TaskList.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Acceptor.cpp">
-			<Option target="chatserver"/>
-			<Option target="netlib"/>
-		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Acceptor.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Acceptor.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Buffer.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Acceptor.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Buffer.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Buffer.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Channel.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Buffer.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Channel.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Channel.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Connector.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Channel.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Connector.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Connector.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EpollPoller.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Connector.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EpollPoller.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EpollPoller.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EventLoop.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EpollPoller.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EventLoop.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EventLoop.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EventLoopThread.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EventLoop.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EventLoopThread.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EventLoopThread.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EventLoopThreadPool.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EventLoopThread.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/EventLoopThreadPool.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EventLoopThreadPool.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/InetAddress.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/EventLoopThreadPool.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/InetAddress.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/InetAddress.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/PollPoller.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/InetAddress.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/PollPoller.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/PollPoller.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Poller.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/PollPoller.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Poller.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Poller.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/ProtocolStream.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Poller.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/ProtocolStream.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/ProtocolStream.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/SelectPoller.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/ProtocolStream.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/SelectPoller.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/SelectPoller.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Sockets.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/SelectPoller.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Sockets.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Sockets.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TcpClient.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Sockets.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TcpClient.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TcpClient.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TcpConnection.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TcpClient.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TcpConnection.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TcpConnection.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TcpServer.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TcpConnection.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TcpServer.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TcpServer.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Timer.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TcpServer.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/Timer.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Timer.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TimerQueue.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/Timer.h">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/net/TimerQueue.h">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TimerQueue.cpp">
 			<Option target="chatserver"/>
 			<Option target="netlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/test/base/Timestamptest.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/net/TimerQueue.h">
+			<Option target="chatserver"/>
+			<Option target="netlib"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/test/base/Timestamptest.cpp">
 			<Option target="Timestamptest"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/test/chatserver/UserManagertest.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/test/chatserver/UserManagertest.cpp">
 			<Option target="UserManagertest"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/test/sql/mysqlMgrtest.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/test/sql/mysqlMgrtest.cpp">
 			<Option target="mysqlMgrtest"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock-gtest-all.cc">
+		<Unit filename="/home/lzy/MyChatAppServer/third_party/gmock/gmock-gtest-all.cc">
 			<Option target="testlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/third_party/gmock/gmock_main.cc">
+		<Unit filename="/home/lzy/MyChatAppServer/third_party/gmock/gmock_main.cc">
 			<Option target="testlib"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/DaemonRun.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/DaemonRun.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/DaemonRun.h">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/DaemonRun.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/MD5.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/MD5.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/MD5.h">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/MD5.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/StringUtil.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/StringUtil.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/StringUtil.h">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/StringUtil.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/URLEncodeUtil.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/URLEncodeUtil.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/utils/URLEncodeUtil.h">
+		<Unit filename="/home/lzy/MyChatAppServer/utils/URLEncodeUtil.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/ZlibUtil.cpp">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/ZlibUtil.cpp">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/ZlibUtil.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/ZlibUtil.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/adler32.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/adler32.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/compress.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/compress.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/crc32.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/crc32.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/crc32.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/crc32.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/deflate.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/deflate.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/deflate.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/deflate.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/gzclose.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/gzclose.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/gzlib.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/gzlib.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/gzread.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/gzread.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/gzwrite.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/gzwrite.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/infback.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/infback.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/inffast.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/inffast.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/inffast.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/inffast.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/inflate.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/inflate.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/inflate.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/inflate.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/inftrees.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/inftrees.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/inftrees.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/inftrees.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/trees.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/trees.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/trees.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/trees.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/uncompr.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/uncompr.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/zutil.c">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/zutil.c">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/zlib1.2.11/zutil.h">
+		<Unit filename="/home/lzy/MyChatAppServer/zlib1.2.11/zutil.h">
 			<Option target="chatserver"/>
 		</Unit>
-		<Unit filename="/home/lzy/myChatServer/MyChatServer/CMakeLists.txt">
+		<Unit filename="/home/lzy/MyChatAppServer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

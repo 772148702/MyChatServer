@@ -43,10 +43,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
 
 # Include any dependencies generated for this target.
 include CMakeFiles/netlib.dir/depend.make
@@ -59,302 +59,302 @@ include CMakeFiles/netlib.dir/flags.make
 
 CMakeFiles/netlib.dir/base/AsyncLog.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/base/AsyncLog.cpp.o: base/AsyncLog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/netlib.dir/base/AsyncLog.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/AsyncLog.cpp.o -c /home/lzy/myChatServer/MyChatServer/base/AsyncLog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/netlib.dir/base/AsyncLog.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/AsyncLog.cpp.o -c /home/lzy/MyChatAppServer/base/AsyncLog.cpp
 
 CMakeFiles/netlib.dir/base/AsyncLog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/base/AsyncLog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/base/AsyncLog.cpp > CMakeFiles/netlib.dir/base/AsyncLog.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/base/AsyncLog.cpp > CMakeFiles/netlib.dir/base/AsyncLog.cpp.i
 
 CMakeFiles/netlib.dir/base/AsyncLog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/base/AsyncLog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/base/AsyncLog.cpp -o CMakeFiles/netlib.dir/base/AsyncLog.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/base/AsyncLog.cpp -o CMakeFiles/netlib.dir/base/AsyncLog.cpp.s
 
 CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o: base/ConfigFileReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o -c /home/lzy/myChatServer/MyChatServer/base/ConfigFileReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.o -c /home/lzy/MyChatAppServer/base/ConfigFileReader.cpp
 
 CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/base/ConfigFileReader.cpp > CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/base/ConfigFileReader.cpp > CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.i
 
 CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/base/ConfigFileReader.cpp -o CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/base/ConfigFileReader.cpp -o CMakeFiles/netlib.dir/base/ConfigFileReader.cpp.s
 
 CMakeFiles/netlib.dir/base/Platform.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/base/Platform.cpp.o: base/Platform.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/netlib.dir/base/Platform.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/Platform.cpp.o -c /home/lzy/myChatServer/MyChatServer/base/Platform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/netlib.dir/base/Platform.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/Platform.cpp.o -c /home/lzy/MyChatAppServer/base/Platform.cpp
 
 CMakeFiles/netlib.dir/base/Platform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/base/Platform.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/base/Platform.cpp > CMakeFiles/netlib.dir/base/Platform.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/base/Platform.cpp > CMakeFiles/netlib.dir/base/Platform.cpp.i
 
 CMakeFiles/netlib.dir/base/Platform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/base/Platform.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/base/Platform.cpp -o CMakeFiles/netlib.dir/base/Platform.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/base/Platform.cpp -o CMakeFiles/netlib.dir/base/Platform.cpp.s
 
 CMakeFiles/netlib.dir/base/Timestamp.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/base/Timestamp.cpp.o: base/Timestamp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/netlib.dir/base/Timestamp.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/Timestamp.cpp.o -c /home/lzy/myChatServer/MyChatServer/base/Timestamp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/netlib.dir/base/Timestamp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/base/Timestamp.cpp.o -c /home/lzy/MyChatAppServer/base/Timestamp.cpp
 
 CMakeFiles/netlib.dir/base/Timestamp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/base/Timestamp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/base/Timestamp.cpp > CMakeFiles/netlib.dir/base/Timestamp.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/base/Timestamp.cpp > CMakeFiles/netlib.dir/base/Timestamp.cpp.i
 
 CMakeFiles/netlib.dir/base/Timestamp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/base/Timestamp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/base/Timestamp.cpp -o CMakeFiles/netlib.dir/base/Timestamp.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/base/Timestamp.cpp -o CMakeFiles/netlib.dir/base/Timestamp.cpp.s
 
 CMakeFiles/netlib.dir/net/Acceptor.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/Acceptor.cpp.o: net/Acceptor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/netlib.dir/net/Acceptor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Acceptor.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/Acceptor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/netlib.dir/net/Acceptor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Acceptor.cpp.o -c /home/lzy/MyChatAppServer/net/Acceptor.cpp
 
 CMakeFiles/netlib.dir/net/Acceptor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/Acceptor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/Acceptor.cpp > CMakeFiles/netlib.dir/net/Acceptor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/Acceptor.cpp > CMakeFiles/netlib.dir/net/Acceptor.cpp.i
 
 CMakeFiles/netlib.dir/net/Acceptor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/Acceptor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/Acceptor.cpp -o CMakeFiles/netlib.dir/net/Acceptor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/Acceptor.cpp -o CMakeFiles/netlib.dir/net/Acceptor.cpp.s
 
 CMakeFiles/netlib.dir/net/Buffer.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/Buffer.cpp.o: net/Buffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/netlib.dir/net/Buffer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Buffer.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/Buffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/netlib.dir/net/Buffer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Buffer.cpp.o -c /home/lzy/MyChatAppServer/net/Buffer.cpp
 
 CMakeFiles/netlib.dir/net/Buffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/Buffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/Buffer.cpp > CMakeFiles/netlib.dir/net/Buffer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/Buffer.cpp > CMakeFiles/netlib.dir/net/Buffer.cpp.i
 
 CMakeFiles/netlib.dir/net/Buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/Buffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/Buffer.cpp -o CMakeFiles/netlib.dir/net/Buffer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/Buffer.cpp -o CMakeFiles/netlib.dir/net/Buffer.cpp.s
 
 CMakeFiles/netlib.dir/net/Channel.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/Channel.cpp.o: net/Channel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/netlib.dir/net/Channel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Channel.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/Channel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/netlib.dir/net/Channel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Channel.cpp.o -c /home/lzy/MyChatAppServer/net/Channel.cpp
 
 CMakeFiles/netlib.dir/net/Channel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/Channel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/Channel.cpp > CMakeFiles/netlib.dir/net/Channel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/Channel.cpp > CMakeFiles/netlib.dir/net/Channel.cpp.i
 
 CMakeFiles/netlib.dir/net/Channel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/Channel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/Channel.cpp -o CMakeFiles/netlib.dir/net/Channel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/Channel.cpp -o CMakeFiles/netlib.dir/net/Channel.cpp.s
 
 CMakeFiles/netlib.dir/net/Connector.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/Connector.cpp.o: net/Connector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/netlib.dir/net/Connector.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Connector.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/Connector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/netlib.dir/net/Connector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Connector.cpp.o -c /home/lzy/MyChatAppServer/net/Connector.cpp
 
 CMakeFiles/netlib.dir/net/Connector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/Connector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/Connector.cpp > CMakeFiles/netlib.dir/net/Connector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/Connector.cpp > CMakeFiles/netlib.dir/net/Connector.cpp.i
 
 CMakeFiles/netlib.dir/net/Connector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/Connector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/Connector.cpp -o CMakeFiles/netlib.dir/net/Connector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/Connector.cpp -o CMakeFiles/netlib.dir/net/Connector.cpp.s
 
 CMakeFiles/netlib.dir/net/EpollPoller.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/EpollPoller.cpp.o: net/EpollPoller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/netlib.dir/net/EpollPoller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EpollPoller.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/EpollPoller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/netlib.dir/net/EpollPoller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EpollPoller.cpp.o -c /home/lzy/MyChatAppServer/net/EpollPoller.cpp
 
 CMakeFiles/netlib.dir/net/EpollPoller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/EpollPoller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/EpollPoller.cpp > CMakeFiles/netlib.dir/net/EpollPoller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/EpollPoller.cpp > CMakeFiles/netlib.dir/net/EpollPoller.cpp.i
 
 CMakeFiles/netlib.dir/net/EpollPoller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/EpollPoller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/EpollPoller.cpp -o CMakeFiles/netlib.dir/net/EpollPoller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/EpollPoller.cpp -o CMakeFiles/netlib.dir/net/EpollPoller.cpp.s
 
 CMakeFiles/netlib.dir/net/EventLoop.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/EventLoop.cpp.o: net/EventLoop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/netlib.dir/net/EventLoop.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EventLoop.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/EventLoop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/netlib.dir/net/EventLoop.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EventLoop.cpp.o -c /home/lzy/MyChatAppServer/net/EventLoop.cpp
 
 CMakeFiles/netlib.dir/net/EventLoop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/EventLoop.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/EventLoop.cpp > CMakeFiles/netlib.dir/net/EventLoop.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/EventLoop.cpp > CMakeFiles/netlib.dir/net/EventLoop.cpp.i
 
 CMakeFiles/netlib.dir/net/EventLoop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/EventLoop.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/EventLoop.cpp -o CMakeFiles/netlib.dir/net/EventLoop.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/EventLoop.cpp -o CMakeFiles/netlib.dir/net/EventLoop.cpp.s
 
 CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o: net/EventLoopThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/EventLoopThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EventLoopThread.cpp.o -c /home/lzy/MyChatAppServer/net/EventLoopThread.cpp
 
 CMakeFiles/netlib.dir/net/EventLoopThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/EventLoopThread.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/EventLoopThread.cpp > CMakeFiles/netlib.dir/net/EventLoopThread.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/EventLoopThread.cpp > CMakeFiles/netlib.dir/net/EventLoopThread.cpp.i
 
 CMakeFiles/netlib.dir/net/EventLoopThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/EventLoopThread.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/EventLoopThread.cpp -o CMakeFiles/netlib.dir/net/EventLoopThread.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/EventLoopThread.cpp -o CMakeFiles/netlib.dir/net/EventLoopThread.cpp.s
 
 CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o: net/EventLoopThreadPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/EventLoopThreadPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.o -c /home/lzy/MyChatAppServer/net/EventLoopThreadPool.cpp
 
 CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/EventLoopThreadPool.cpp > CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/EventLoopThreadPool.cpp > CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.i
 
 CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/EventLoopThreadPool.cpp -o CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/EventLoopThreadPool.cpp -o CMakeFiles/netlib.dir/net/EventLoopThreadPool.cpp.s
 
 CMakeFiles/netlib.dir/net/InetAddress.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/InetAddress.cpp.o: net/InetAddress.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/netlib.dir/net/InetAddress.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/InetAddress.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/InetAddress.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/netlib.dir/net/InetAddress.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/InetAddress.cpp.o -c /home/lzy/MyChatAppServer/net/InetAddress.cpp
 
 CMakeFiles/netlib.dir/net/InetAddress.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/InetAddress.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/InetAddress.cpp > CMakeFiles/netlib.dir/net/InetAddress.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/InetAddress.cpp > CMakeFiles/netlib.dir/net/InetAddress.cpp.i
 
 CMakeFiles/netlib.dir/net/InetAddress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/InetAddress.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/InetAddress.cpp -o CMakeFiles/netlib.dir/net/InetAddress.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/InetAddress.cpp -o CMakeFiles/netlib.dir/net/InetAddress.cpp.s
 
 CMakeFiles/netlib.dir/net/Poller.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/Poller.cpp.o: net/Poller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/netlib.dir/net/Poller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Poller.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/Poller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/netlib.dir/net/Poller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Poller.cpp.o -c /home/lzy/MyChatAppServer/net/Poller.cpp
 
 CMakeFiles/netlib.dir/net/Poller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/Poller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/Poller.cpp > CMakeFiles/netlib.dir/net/Poller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/Poller.cpp > CMakeFiles/netlib.dir/net/Poller.cpp.i
 
 CMakeFiles/netlib.dir/net/Poller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/Poller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/Poller.cpp -o CMakeFiles/netlib.dir/net/Poller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/Poller.cpp -o CMakeFiles/netlib.dir/net/Poller.cpp.s
 
 CMakeFiles/netlib.dir/net/PollPoller.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/PollPoller.cpp.o: net/PollPoller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/netlib.dir/net/PollPoller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/PollPoller.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/PollPoller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/netlib.dir/net/PollPoller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/PollPoller.cpp.o -c /home/lzy/MyChatAppServer/net/PollPoller.cpp
 
 CMakeFiles/netlib.dir/net/PollPoller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/PollPoller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/PollPoller.cpp > CMakeFiles/netlib.dir/net/PollPoller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/PollPoller.cpp > CMakeFiles/netlib.dir/net/PollPoller.cpp.i
 
 CMakeFiles/netlib.dir/net/PollPoller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/PollPoller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/PollPoller.cpp -o CMakeFiles/netlib.dir/net/PollPoller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/PollPoller.cpp -o CMakeFiles/netlib.dir/net/PollPoller.cpp.s
 
 CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o: net/ProtocolStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/ProtocolStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/ProtocolStream.cpp.o -c /home/lzy/MyChatAppServer/net/ProtocolStream.cpp
 
 CMakeFiles/netlib.dir/net/ProtocolStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/ProtocolStream.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/ProtocolStream.cpp > CMakeFiles/netlib.dir/net/ProtocolStream.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/ProtocolStream.cpp > CMakeFiles/netlib.dir/net/ProtocolStream.cpp.i
 
 CMakeFiles/netlib.dir/net/ProtocolStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/ProtocolStream.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/ProtocolStream.cpp -o CMakeFiles/netlib.dir/net/ProtocolStream.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/ProtocolStream.cpp -o CMakeFiles/netlib.dir/net/ProtocolStream.cpp.s
 
 CMakeFiles/netlib.dir/net/SelectPoller.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/SelectPoller.cpp.o: net/SelectPoller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/netlib.dir/net/SelectPoller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/SelectPoller.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/SelectPoller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/netlib.dir/net/SelectPoller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/SelectPoller.cpp.o -c /home/lzy/MyChatAppServer/net/SelectPoller.cpp
 
 CMakeFiles/netlib.dir/net/SelectPoller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/SelectPoller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/SelectPoller.cpp > CMakeFiles/netlib.dir/net/SelectPoller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/SelectPoller.cpp > CMakeFiles/netlib.dir/net/SelectPoller.cpp.i
 
 CMakeFiles/netlib.dir/net/SelectPoller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/SelectPoller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/SelectPoller.cpp -o CMakeFiles/netlib.dir/net/SelectPoller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/SelectPoller.cpp -o CMakeFiles/netlib.dir/net/SelectPoller.cpp.s
 
 CMakeFiles/netlib.dir/net/Sockets.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/Sockets.cpp.o: net/Sockets.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/netlib.dir/net/Sockets.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Sockets.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/Sockets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/netlib.dir/net/Sockets.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Sockets.cpp.o -c /home/lzy/MyChatAppServer/net/Sockets.cpp
 
 CMakeFiles/netlib.dir/net/Sockets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/Sockets.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/Sockets.cpp > CMakeFiles/netlib.dir/net/Sockets.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/Sockets.cpp > CMakeFiles/netlib.dir/net/Sockets.cpp.i
 
 CMakeFiles/netlib.dir/net/Sockets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/Sockets.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/Sockets.cpp -o CMakeFiles/netlib.dir/net/Sockets.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/Sockets.cpp -o CMakeFiles/netlib.dir/net/Sockets.cpp.s
 
 CMakeFiles/netlib.dir/net/TcpClient.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/TcpClient.cpp.o: net/TcpClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/netlib.dir/net/TcpClient.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TcpClient.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/TcpClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/netlib.dir/net/TcpClient.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TcpClient.cpp.o -c /home/lzy/MyChatAppServer/net/TcpClient.cpp
 
 CMakeFiles/netlib.dir/net/TcpClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/TcpClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/TcpClient.cpp > CMakeFiles/netlib.dir/net/TcpClient.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/TcpClient.cpp > CMakeFiles/netlib.dir/net/TcpClient.cpp.i
 
 CMakeFiles/netlib.dir/net/TcpClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/TcpClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/TcpClient.cpp -o CMakeFiles/netlib.dir/net/TcpClient.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/TcpClient.cpp -o CMakeFiles/netlib.dir/net/TcpClient.cpp.s
 
 CMakeFiles/netlib.dir/net/TcpConnection.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/TcpConnection.cpp.o: net/TcpConnection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/netlib.dir/net/TcpConnection.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TcpConnection.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/TcpConnection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/netlib.dir/net/TcpConnection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TcpConnection.cpp.o -c /home/lzy/MyChatAppServer/net/TcpConnection.cpp
 
 CMakeFiles/netlib.dir/net/TcpConnection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/TcpConnection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/TcpConnection.cpp > CMakeFiles/netlib.dir/net/TcpConnection.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/TcpConnection.cpp > CMakeFiles/netlib.dir/net/TcpConnection.cpp.i
 
 CMakeFiles/netlib.dir/net/TcpConnection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/TcpConnection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/TcpConnection.cpp -o CMakeFiles/netlib.dir/net/TcpConnection.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/TcpConnection.cpp -o CMakeFiles/netlib.dir/net/TcpConnection.cpp.s
 
 CMakeFiles/netlib.dir/net/TcpServer.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/TcpServer.cpp.o: net/TcpServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/netlib.dir/net/TcpServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TcpServer.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/TcpServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/netlib.dir/net/TcpServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TcpServer.cpp.o -c /home/lzy/MyChatAppServer/net/TcpServer.cpp
 
 CMakeFiles/netlib.dir/net/TcpServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/TcpServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/TcpServer.cpp > CMakeFiles/netlib.dir/net/TcpServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/TcpServer.cpp > CMakeFiles/netlib.dir/net/TcpServer.cpp.i
 
 CMakeFiles/netlib.dir/net/TcpServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/TcpServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/TcpServer.cpp -o CMakeFiles/netlib.dir/net/TcpServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/TcpServer.cpp -o CMakeFiles/netlib.dir/net/TcpServer.cpp.s
 
 CMakeFiles/netlib.dir/net/Timer.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/Timer.cpp.o: net/Timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/netlib.dir/net/Timer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Timer.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/netlib.dir/net/Timer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/Timer.cpp.o -c /home/lzy/MyChatAppServer/net/Timer.cpp
 
 CMakeFiles/netlib.dir/net/Timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/Timer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/Timer.cpp > CMakeFiles/netlib.dir/net/Timer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/Timer.cpp > CMakeFiles/netlib.dir/net/Timer.cpp.i
 
 CMakeFiles/netlib.dir/net/Timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/Timer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/Timer.cpp -o CMakeFiles/netlib.dir/net/Timer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/Timer.cpp -o CMakeFiles/netlib.dir/net/Timer.cpp.s
 
 CMakeFiles/netlib.dir/net/TimerQueue.cpp.o: CMakeFiles/netlib.dir/flags.make
 CMakeFiles/netlib.dir/net/TimerQueue.cpp.o: net/TimerQueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/netlib.dir/net/TimerQueue.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TimerQueue.cpp.o -c /home/lzy/myChatServer/MyChatServer/net/TimerQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/netlib.dir/net/TimerQueue.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/netlib.dir/net/TimerQueue.cpp.o -c /home/lzy/MyChatAppServer/net/TimerQueue.cpp
 
 CMakeFiles/netlib.dir/net/TimerQueue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/netlib.dir/net/TimerQueue.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/net/TimerQueue.cpp > CMakeFiles/netlib.dir/net/TimerQueue.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/net/TimerQueue.cpp > CMakeFiles/netlib.dir/net/TimerQueue.cpp.i
 
 CMakeFiles/netlib.dir/net/TimerQueue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/netlib.dir/net/TimerQueue.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/net/TimerQueue.cpp -o CMakeFiles/netlib.dir/net/TimerQueue.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/net/TimerQueue.cpp -o CMakeFiles/netlib.dir/net/TimerQueue.cpp.s
 
 # Object files for target netlib
 netlib_OBJECTS = \
@@ -410,7 +410,7 @@ libnetlib.a: CMakeFiles/netlib.dir/net/Timer.cpp.o
 libnetlib.a: CMakeFiles/netlib.dir/net/TimerQueue.cpp.o
 libnetlib.a: CMakeFiles/netlib.dir/build.make
 libnetlib.a: CMakeFiles/netlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX static library libnetlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX static library libnetlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/netlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/netlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -424,6 +424,6 @@ CMakeFiles/netlib.dir/clean:
 .PHONY : CMakeFiles/netlib.dir/clean
 
 CMakeFiles/netlib.dir/depend:
-	cd /home/lzy/myChatServer/MyChatServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer/CMakeFiles/netlib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lzy/MyChatAppServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer/CMakeFiles/netlib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/netlib.dir/depend
 

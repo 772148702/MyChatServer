@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS = -g  
+C_FLAGS =  
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/lzy/myChatServer/MyChatServer -I/home/lzy/myChatServer/MyChatServer/third_party/gmock 
+C_INCLUDES = -I/home/lzy/MyChatAppServer -I/home/lzy/MyChatAppServer/third_party/gmock 
 
-CXX_FLAGS =  -std=c++0x -g -Wall -O0 -Wno-unused-variable -pthread -g  
+CXX_FLAGS =  -std=c++0x -g -Wall -O0 -Wno-unused-variable -pthread  
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lzy/myChatServer/MyChatServer -I/home/lzy/myChatServer/MyChatServer/third_party/gmock 
+CXX_INCLUDES = -I/home/lzy/MyChatAppServer -I/home/lzy/MyChatAppServer/third_party/gmock 
 

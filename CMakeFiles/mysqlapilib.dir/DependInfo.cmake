@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lzy/myChatServer/MyChatServer/mysqlapi/DatabaseMysql.cpp" "/home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o"
-  "/home/lzy/myChatServer/MyChatServer/mysqlapi/Field.cpp" "/home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o"
-  "/home/lzy/myChatServer/MyChatServer/mysqlapi/QueryResult.cpp" "/home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o"
+  "/home/lzy/MyChatAppServer/mysqlapi/DatabaseMysql.cpp" "/home/lzy/MyChatAppServer/CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o"
+  "/home/lzy/MyChatAppServer/mysqlapi/Field.cpp" "/home/lzy/MyChatAppServer/CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o"
+  "/home/lzy/MyChatAppServer/mysqlapi/QueryResult.cpp" "/home/lzy/MyChatAppServer/CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

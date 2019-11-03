@@ -43,10 +43,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
 
 # Include any dependencies generated for this target.
 include CMakeFiles/UserManagertest.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/UserManagertest.dir/flags.make
 
 CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.o: CMakeFiles/UserManagertest.dir/flags.make
 CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.o: test/chatserver/UserManagertest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.o -c /home/lzy/myChatServer/MyChatServer/test/chatserver/UserManagertest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.o -c /home/lzy/MyChatAppServer/test/chatserver/UserManagertest.cpp
 
 CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/test/chatserver/UserManagertest.cpp > CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/test/chatserver/UserManagertest.cpp > CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.i
 
 CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/test/chatserver/UserManagertest.cpp -o CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/test/chatserver/UserManagertest.cpp -o CMakeFiles/UserManagertest.dir/test/chatserver/UserManagertest.cpp.s
 
 CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.o: CMakeFiles/UserManagertest.dir/flags.make
 CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.o: myChatserver/chatserversrc/UserManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.o -c /home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.o -c /home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.cpp
 
 CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp > CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.cpp > CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.i
 
 CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp -o CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.cpp -o CMakeFiles/UserManagertest.dir/myChatserver/chatserversrc/UserManager.cpp.s
 
 # Object files for target UserManagertest
 UserManagertest_OBJECTS = \
@@ -99,7 +99,7 @@ UserManagertest: libmysqlapilib.a
 UserManagertest: libnetlib.a
 UserManagertest: libtestlib.a
 UserManagertest: CMakeFiles/UserManagertest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable UserManagertest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable UserManagertest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UserManagertest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -112,6 +112,6 @@ CMakeFiles/UserManagertest.dir/clean:
 .PHONY : CMakeFiles/UserManagertest.dir/clean
 
 CMakeFiles/UserManagertest.dir/depend:
-	cd /home/lzy/myChatServer/MyChatServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer/CMakeFiles/UserManagertest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lzy/MyChatAppServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer/CMakeFiles/UserManagertest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/UserManagertest.dir/depend
 

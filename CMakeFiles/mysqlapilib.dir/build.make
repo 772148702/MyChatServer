@@ -43,10 +43,10 @@ RM = /home/lzy/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_SOURCE_DIR = /home/lzy/MyChatAppServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzy/myChatServer/MyChatServer
+CMAKE_BINARY_DIR = /home/lzy/MyChatAppServer
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mysqlapilib.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/mysqlapilib.dir/flags.make
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o: CMakeFiles/mysqlapilib.dir/flags.make
 CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o: mysqlapi/DatabaseMysql.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o -c /home/lzy/myChatServer/MyChatServer/mysqlapi/DatabaseMysql.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.o -c /home/lzy/MyChatAppServer/mysqlapi/DatabaseMysql.cpp
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/mysqlapi/DatabaseMysql.cpp > CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/mysqlapi/DatabaseMysql.cpp > CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.i
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/mysqlapi/DatabaseMysql.cpp -o CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/mysqlapi/DatabaseMysql.cpp -o CMakeFiles/mysqlapilib.dir/mysqlapi/DatabaseMysql.cpp.s
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o: CMakeFiles/mysqlapilib.dir/flags.make
 CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o: mysqlapi/Field.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o -c /home/lzy/myChatServer/MyChatServer/mysqlapi/Field.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o -c /home/lzy/MyChatAppServer/mysqlapi/Field.cpp
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/mysqlapi/Field.cpp > CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/mysqlapi/Field.cpp > CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.i
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/mysqlapi/Field.cpp -o CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/mysqlapi/Field.cpp -o CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.s
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o: CMakeFiles/mysqlapilib.dir/flags.make
 CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o: mysqlapi/QueryResult.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o -c /home/lzy/myChatServer/MyChatServer/mysqlapi/QueryResult.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o -c /home/lzy/MyChatAppServer/mysqlapi/QueryResult.cpp
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/myChatServer/MyChatServer/mysqlapi/QueryResult.cpp > CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/mysqlapi/QueryResult.cpp > CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.i
 
 CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/myChatServer/MyChatServer/mysqlapi/QueryResult.cpp -o CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/mysqlapi/QueryResult.cpp -o CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.s
 
 # Object files for target mysqlapilib
 mysqlapilib_OBJECTS = \
@@ -110,7 +110,7 @@ libmysqlapilib.a: CMakeFiles/mysqlapilib.dir/mysqlapi/Field.cpp.o
 libmysqlapilib.a: CMakeFiles/mysqlapilib.dir/mysqlapi/QueryResult.cpp.o
 libmysqlapilib.a: CMakeFiles/mysqlapilib.dir/build.make
 libmysqlapilib.a: CMakeFiles/mysqlapilib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/myChatServer/MyChatServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libmysqlapilib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libmysqlapilib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/mysqlapilib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mysqlapilib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -124,6 +124,6 @@ CMakeFiles/mysqlapilib.dir/clean:
 .PHONY : CMakeFiles/mysqlapilib.dir/clean
 
 CMakeFiles/mysqlapilib.dir/depend:
-	cd /home/lzy/myChatServer/MyChatServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer /home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlapilib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lzy/MyChatAppServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer /home/lzy/MyChatAppServer/CMakeFiles/mysqlapilib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mysqlapilib.dir/depend
 

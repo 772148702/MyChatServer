@@ -60,11 +60,15 @@ public:
     bool addUser(User u);
     bool getUserInfoByUserIdInMemory(int32_t userid, User& u);
     bool getUserInfoByUserIdInDb(int32_t userid, User& u);
-    bool LoadUsersFromDb();
+    bool loadUsersFromDb();
+    bool loadFriendInfoFromDb(int32_t userid, list<FriendInfo>& r);
+
 
     bool addFriendInfoDb(int32_t smallUserid, int32_t bigUserid, string smallMarkName, string BiMarkName, string smallTeamName=DEFAULT_TEAMNAME,string BigTeamName=DEFAULT_TEAMNAME);
     bool updateFriendInfo(int32_t smallUserid,int32_t bigUserid,string markname, string teamname,bool isSwap);
-    bool getFriendInfo(int32_t userid,vector<FriendInfo>& users);
+    bool getFriendInfo(int32_t userid,list<FriendInfo>& users);
+
+
 
 
     bool getMysqlDatabasePtr( std::unique_ptr<CDatabaseMysql>& pConn,string functionName);

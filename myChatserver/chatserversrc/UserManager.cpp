@@ -8,7 +8,7 @@
 #include "mysqlapi/DatabaseMysql.h"
 #include "base/AsyncLog.h"
 #include "UserManager.h"
-
+#define  SQL_LENGTH 256
 void getUserFrompRow(int32_t userid, User& user,Field* pRow)
 {
     user.userid = userid;
@@ -38,7 +38,7 @@ bool UserManager::init(const char *dbServer, const char *dbUserName, const char 
      m_strDbUserName = dbUserName;
      m_strDbPassword = dbPassword;
      m_ptrListUsers.reset(new list<User>());
-     LoadUsersFromDb();
+     loadUsersFromDb();
      return true;
 
 }
@@ -69,10 +69,19 @@ bool UserManager::addUser(User u) {
 }
 
 bool UserManager::getUserInfoByUserIdInMemory(int32_t userid, User &u) {
- return false;
+    list<User> ListUser = *(m_ptrListUsers);
+    for (auto user: ListUser)
+    {
+        if(userid==user.userid)
+        {
+            u= user;
+            return true;
+        }
+    }
+    return false;
 }
 
-bool UserManager::LoadUsersFromDb() {
+bool UserManager::loadUsersFromDb() {
     std::unique_ptr<CDatabaseMysql> pConn;
     pConn.reset(new CDatabaseMysql());
     if (!pConn->Initialize(m_strDbServer, m_strDbUserName, m_strDbPassword, m_strDbName))
@@ -100,6 +109,7 @@ bool UserManager::LoadUsersFromDb() {
         u.username = pRow[1].GetString();
         u.nickname = pRow[2].GetString();
         u.password = pRow[3].GetString();
+        loadFriendInfoFromDb(u.userid,u.friends);
         m_ptrListUsers->push_back(std::move(u));
         LOGI("userid: %d, username: %s, password: %s, nickname: %s, signature: %s", u.userid, u.username.c_str(), u.password.c_str(), u.nickname.c_str());
 
@@ -160,6 +170,9 @@ bool UserManager::addFriendInfoDb(int32_t smallUserid, int32_t bigUserid, string
     pConn.reset(new CDatabaseMysql());
     if (!pConn->Initialize(m_strDbServer, m_strDbUserName, m_strDbPassword, m_strDbName))
     {
+
+        LOGF("UserManager::addFriendInfoDb failed, please check params: dbserver: %s, dbusername: %s, , dbpassword: %s, dbname: %s",
+             m_strDbServer.c_str(), m_strDbUserName.c_str(), m_strDbPassword.c_str(), m_strDbName.c_str());
         return false;
     }
     char sql[256];
@@ -176,13 +189,84 @@ bool UserManager::addFriendInfoDb(int32_t smallUserid, int32_t bigUserid, string
 
 bool
 UserManager::updateFriendInfo(int32_t smallUserid, int32_t bigUserid, string markname, string teamname, bool isSwap) {
-    return false;
+    std::unique_ptr<CDatabaseMysql> pConn;
+    pConn.reset(new CDatabaseMysql());
+    if (!pConn->Initialize(m_strDbServer, m_strDbUserName, m_strDbPassword, m_strDbName))
+    {
+        LOGF("UserManager::updateFriendInfo failed, please check params: dbserver: %s, dbusername: %s, , dbpassword: %s, dbname: %s",
+             m_strDbServer.c_str(), m_strDbUserName.c_str(), m_strDbPassword.c_str(), m_strDbName.c_str());
+        return false;
+    }
+    char sql[SQL_LENGTH];
+    if(!isSwap)
+    {
+        snprintf(sql,SQL_LENGTH,"UPDATE t_user_relationship SET f_user1_markname='%s', f_user1_teamnae='%s' where f_user1_id = %d and f_user2_id=%d"
+        ,markname.c_str(),teamname.c_str(),smallUserid,bigUserid);
+    } else
+    {
+        snprintf(sql,SQL_LENGTH,"UPDATE t_user_relationship SET f_user2_markname='%s', f_user2_teamnae='%s' where f_user1_id = %d and f_user2_id=%d"
+                ,markname.c_str(),teamname.c_str(),smallUserid,bigUserid);
+    }
+    if(!pConn->Execute(sql))
+    {
+        LOGE("UserManager::updateFriendInfo %s",sql);
+        return false;
+    }
+    return true;
 }
 
-bool UserManager::getFriendInfo(int32_t userid, vector<FriendInfo> &users) {
-    return false;
+bool UserManager::getFriendInfo(int32_t userid, list<FriendInfo> &friendsInfo) {
+    loadFriendInfoFromDb(userid,friendsInfo);
 }
 
 const shared_ptr<std::list<User>> &UserManager::getMPtrListUsers() const {
     return m_ptrListUsers;
+}
+
+bool UserManager::loadFriendInfoFromDb(int32_t userid, list<FriendInfo>& r) {
+    std::unique_ptr<CDatabaseMysql> pConn;
+    pConn.reset(new CDatabaseMysql());
+    if (!pConn->Initialize(m_strDbServer, m_strDbUserName, m_strDbPassword, m_strDbName))
+    {
+        LOGF("UserManager::loadFriendInfoFromDb failed, please check params: dbserver: %s, dbusername: %s, , dbpassword: %s, dbname: %s",
+             m_strDbServer.c_str(), m_strDbUserName.c_str(), m_strDbPassword.c_str(), m_strDbName.c_str());
+        return false;
+    }
+    char sql[SQL_LENGTH];
+    snprintf(sql,SQL_LENGTH,"select f_user_id1, f_user_id2, f_user1_markname, f_user1_teamname, f_user2_name, f_user_teamname from t_user_relationship where "
+                            "f_user_id1=%d OR f_user_id2=%d",userid,userid);
+
+    QueryResult* pResult = pConn->Query(sql);
+
+    while(true)
+    {
+        Field * pRow = pResult->Fetch();
+        if(pRow==NULL) break;
+        int32_t  userid1 = pRow[0].GetInt32();
+        int32_t  userid2 = pRow[1].GetInt32();
+        string   user1_markname = pRow[2].GetString();
+        string   user1_teamname = pRow[3].GetString();
+        string   user2_markname = pRow[4].GetString();
+        string   user2_teamname = pRow[5].GetString();
+        FriendInfo f;
+        if(userid==userid1)
+        {
+            f.friendid = userid2;
+            f.markname = user2_markname;
+            f.teamname = user2_teamname;
+        } else
+        {
+            f.friendid = userid1;
+            f.markname = user1_markname;
+            f.teamname = user1_teamname;
+        }
+        r.emplace_back(f);
+        if(!pResult->NextRow())
+        {
+            break;
+        }
+        pRow = pResult->Fetch();
+    }
+    return true;
+
 }

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lzy/myChatServer/MyChatServer/myChatserver/chatserversrc/UserManager.cpp" "/home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o"
-  "/home/lzy/myChatServer/MyChatServer/test/sql/mysqlMgrtest.cpp" "/home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o"
+  "/home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.cpp" "/home/lzy/MyChatAppServer/CMakeFiles/mysqlMgrtest.dir/myChatserver/chatserversrc/UserManager.cpp.o"
+  "/home/lzy/MyChatAppServer/test/sql/mysqlMgrtest.cpp" "/home/lzy/MyChatAppServer/CMakeFiles/mysqlMgrtest.dir/test/sql/mysqlMgrtest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,10 +17,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqllib.dir/DependInfo.cmake"
-  "/home/lzy/myChatServer/MyChatServer/CMakeFiles/mysqlapilib.dir/DependInfo.cmake"
-  "/home/lzy/myChatServer/MyChatServer/CMakeFiles/netlib.dir/DependInfo.cmake"
-  "/home/lzy/myChatServer/MyChatServer/CMakeFiles/testlib.dir/DependInfo.cmake"
+  "/home/lzy/MyChatAppServer/CMakeFiles/mysqllib.dir/DependInfo.cmake"
+  "/home/lzy/MyChatAppServer/CMakeFiles/mysqlapilib.dir/DependInfo.cmake"
+  "/home/lzy/MyChatAppServer/CMakeFiles/netlib.dir/DependInfo.cmake"
+  "/home/lzy/MyChatAppServer/CMakeFiles/testlib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
