@@ -62,15 +62,16 @@ public:
     bool getUserInfoByUserIdInDb(int32_t userid, User& u);
     bool loadUsersFromDb();
     bool loadFriendInfoFromDb(int32_t userid, list<FriendInfo>& r);
-
+    bool isFriend(int32_t userid, int32_t  friendid);
 
     bool addFriendInfoDb(int32_t smallUserid, int32_t bigUserid, string smallMarkName, string BiMarkName, string smallTeamName=DEFAULT_TEAMNAME,string BigTeamName=DEFAULT_TEAMNAME);
     bool updateFriendInfo(int32_t smallUserid,int32_t bigUserid,string markname, string teamname,bool isSwap);
     bool getFriendInfo(int32_t userid,list<FriendInfo>& users);
 
+    bool addGroup(const char* groupname, int32_t ownerid, int32_t& groupid);
 
 
-
+    bool addChatMsg(int32_t senderid, int32_t targetid, const string& msg);
     bool getMysqlDatabasePtr( std::unique_ptr<CDatabaseMysql>& pConn,string functionName);
 private:
     std::atomic_int    m_baseUserId{0};
@@ -85,6 +86,7 @@ public:
 
 private:
     std::shared_ptr<std::list<User>> m_ptrListUsers;
+    mutex m_mutex;
 };
 
 

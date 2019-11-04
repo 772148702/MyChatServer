@@ -270,3 +270,85 @@ bool UserManager::loadFriendInfoFromDb(int32_t userid, list<FriendInfo>& r) {
     return true;
 
 }
+
+bool UserManager::isFriend(int32_t userid, int32_t friendid) {
+    list<User> & users = *(m_ptrListUsers);
+    int user1=-1,user2=-1;
+    User tempUser;
+    for(auto user:users)
+    {
+        if(user.userid==userid)
+        {
+            user1 = userid;
+            tempUser = user;
+            break;
+        }
+    }
+    if(user1==-1) return false;
+    for (auto userFriend: tempUser.friends)
+    {
+        if(userFriend.friendid==friendid)
+        {
+            user2 = friendid;
+            break;
+        }
+    }
+    if(user2==-1) return false;
+    return true;
+}
+
+bool UserManager::addChatMsg(int32_t senderid, int32_t targetid, const string &msg) {
+    std::unique_ptr<CDatabaseMysql> pConn;
+    pConn.reset(new CDatabaseMysql());
+    if (!pConn->Initialize(m_strDbServer, m_strDbUserName, m_strDbPassword, m_strDbName))
+    {
+        LOGF("UserManager::loadFriendInfoFromDb failed, please check params: dbserver: %s, dbusername: %s, , dbpassword: %s, dbname: %s",
+             m_strDbServer.c_str(), m_strDbUserName.c_str(), m_strDbPassword.c_str(), m_strDbName.c_str());
+        return false;
+    }
+    char sql[SQL_LENGTH];
+    snprintf(sql,SQL_LENGTH,"INSERT INTO t_chatmsg(f_senderid, f_targetid,f_msgcontent),VALUES(%d,'%s','%s')");
+
+    if (!pConn->Execute(sql))
+    {
+        LOGE("UserManager::addChatMsg, sql: %s, senderid: %d, targetid: %d, chatmsg: %s", sql, senderid, targetid, msg.c_str());
+        return false;
+    }
+
+    return true;
+
+}
+
+bool UserManager::addGroup(const char *groupname, int32_t ownerid, int32_t &groupid) {
+    std::unique_ptr<CDatabaseMysql> pConn;
+    pConn.reset(new CDatabaseMysql());
+    if (!pConn->Initialize(m_strDbServer, m_strDbUserName, m_strDbPassword, m_strDbName))
+    {
+        LOGE("UserManager::AddGroup failed, please check params: dbserver: %s, dbusername: %s, dbname: %s, dbpassword: %s, groupname: %s, ownerid: %d",
+             m_strDbServer.c_str(), m_strDbUserName.c_str(), m_strDbPassword.c_str(), m_strDbName.c_str(), groupname, ownerid);
+        return false;
+    }
+    ++m_baseGroupId;
+    char sql[SQL_LENGTH];
+    snprintf(sql,SQL_LENGTH,"INSERT INTO t_user(f_user_id, f_username, f_nickname, f_password, f_owner_id, f_register_time) VALUES(%d, '%d', '%s', '', %d,  NOW())", m_baseGroupId.load(), m_baseGroupId.load(), groupname, ownerid);
+    if (!pConn->Execute(sql))
+    {
+        LOGE("insert group error, sql: %s", sql);
+        return false;
+    }
+    groupid = m_baseGroupId;
+
+    User u;
+    u.userid = groupid;
+    char szUserName[12] = { 0 };
+    snprintf(szUserName, 12, "%d", groupid);
+    u.username = szUserName;
+    u.nickname = groupname;
+    u.ownerid = ownerid;
+    {
+        std::lock_guard<std::mutex> guard(m_mutex);
+        m_ptrListUsers->push_back(u);
+    }
+
+    return true;
+}

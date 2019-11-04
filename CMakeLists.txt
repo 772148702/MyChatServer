@@ -131,7 +131,7 @@ add_library(testlib ${testutils_srcs})
 add_library(netlib ${net_srcs})
 add_library(mysqllib  ${mymysqlmgr_srcs}  )
 add_library(mysqlapilib ${mysqlapi_srcs})
-add_library(mychat ${mychatserver_srcs})
+add_library(mychat ${mychatserver_srcs} myChatserver/chatserversrc/MsgCacheManager.h myChatserver/chatserversrc/MsgCacheManager.cpp myChatserver/chatserversrc/ChatSession.cpp myChatserver/chatserversrc/ChatSession.h myChatserver/chatserversrc/TcpSession.cpp myChatserver/chatserversrc/TcpSession.h myChatserver/chatserversrc/ChatServer.cpp myChatserver/chatserversrc/ChatServer.h)
 
 file(GLOB temp_src_temp ${PROJECT_SOURCE_DIR}/test/*/*test.cpp)
 foreach(test_src_temp ${temp_src_temp})

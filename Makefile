@@ -725,6 +725,114 @@ jsoncpp1.9.0/json_writer.cpp.s:
 	$(MAKE) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/jsoncpp1.9.0/json_writer.cpp.s
 .PHONY : jsoncpp1.9.0/json_writer.cpp.s
 
+myChatserver/chatserversrc/ChatServer.o: myChatserver/chatserversrc/ChatServer.cpp.o
+
+.PHONY : myChatserver/chatserversrc/ChatServer.o
+
+# target to build an object file
+myChatserver/chatserversrc/ChatServer.cpp.o:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.o
+.PHONY : myChatserver/chatserversrc/ChatServer.cpp.o
+
+myChatserver/chatserversrc/ChatServer.i: myChatserver/chatserversrc/ChatServer.cpp.i
+
+.PHONY : myChatserver/chatserversrc/ChatServer.i
+
+# target to preprocess a source file
+myChatserver/chatserversrc/ChatServer.cpp.i:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.i
+.PHONY : myChatserver/chatserversrc/ChatServer.cpp.i
+
+myChatserver/chatserversrc/ChatServer.s: myChatserver/chatserversrc/ChatServer.cpp.s
+
+.PHONY : myChatserver/chatserversrc/ChatServer.s
+
+# target to generate assembly for a file
+myChatserver/chatserversrc/ChatServer.cpp.s:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.s
+.PHONY : myChatserver/chatserversrc/ChatServer.cpp.s
+
+myChatserver/chatserversrc/ChatSession.o: myChatserver/chatserversrc/ChatSession.cpp.o
+
+.PHONY : myChatserver/chatserversrc/ChatSession.o
+
+# target to build an object file
+myChatserver/chatserversrc/ChatSession.cpp.o:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.o
+.PHONY : myChatserver/chatserversrc/ChatSession.cpp.o
+
+myChatserver/chatserversrc/ChatSession.i: myChatserver/chatserversrc/ChatSession.cpp.i
+
+.PHONY : myChatserver/chatserversrc/ChatSession.i
+
+# target to preprocess a source file
+myChatserver/chatserversrc/ChatSession.cpp.i:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.i
+.PHONY : myChatserver/chatserversrc/ChatSession.cpp.i
+
+myChatserver/chatserversrc/ChatSession.s: myChatserver/chatserversrc/ChatSession.cpp.s
+
+.PHONY : myChatserver/chatserversrc/ChatSession.s
+
+# target to generate assembly for a file
+myChatserver/chatserversrc/ChatSession.cpp.s:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.s
+.PHONY : myChatserver/chatserversrc/ChatSession.cpp.s
+
+myChatserver/chatserversrc/MsgCacheManager.o: myChatserver/chatserversrc/MsgCacheManager.cpp.o
+
+.PHONY : myChatserver/chatserversrc/MsgCacheManager.o
+
+# target to build an object file
+myChatserver/chatserversrc/MsgCacheManager.cpp.o:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.o
+.PHONY : myChatserver/chatserversrc/MsgCacheManager.cpp.o
+
+myChatserver/chatserversrc/MsgCacheManager.i: myChatserver/chatserversrc/MsgCacheManager.cpp.i
+
+.PHONY : myChatserver/chatserversrc/MsgCacheManager.i
+
+# target to preprocess a source file
+myChatserver/chatserversrc/MsgCacheManager.cpp.i:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.i
+.PHONY : myChatserver/chatserversrc/MsgCacheManager.cpp.i
+
+myChatserver/chatserversrc/MsgCacheManager.s: myChatserver/chatserversrc/MsgCacheManager.cpp.s
+
+.PHONY : myChatserver/chatserversrc/MsgCacheManager.s
+
+# target to generate assembly for a file
+myChatserver/chatserversrc/MsgCacheManager.cpp.s:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.s
+.PHONY : myChatserver/chatserversrc/MsgCacheManager.cpp.s
+
+myChatserver/chatserversrc/TcpSession.o: myChatserver/chatserversrc/TcpSession.cpp.o
+
+.PHONY : myChatserver/chatserversrc/TcpSession.o
+
+# target to build an object file
+myChatserver/chatserversrc/TcpSession.cpp.o:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.o
+.PHONY : myChatserver/chatserversrc/TcpSession.cpp.o
+
+myChatserver/chatserversrc/TcpSession.i: myChatserver/chatserversrc/TcpSession.cpp.i
+
+.PHONY : myChatserver/chatserversrc/TcpSession.i
+
+# target to preprocess a source file
+myChatserver/chatserversrc/TcpSession.cpp.i:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.i
+.PHONY : myChatserver/chatserversrc/TcpSession.cpp.i
+
+myChatserver/chatserversrc/TcpSession.s: myChatserver/chatserversrc/TcpSession.cpp.s
+
+.PHONY : myChatserver/chatserversrc/TcpSession.s
+
+# target to generate assembly for a file
+myChatserver/chatserversrc/TcpSession.cpp.s:
+	$(MAKE) -f CMakeFiles/mychat.dir/build.make CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.s
+.PHONY : myChatserver/chatserversrc/TcpSession.cpp.s
+
 myChatserver/chatserversrc/UserManager.o: myChatserver/chatserversrc/UserManager.cpp.o
 
 .PHONY : myChatserver/chatserversrc/UserManager.o
@@ -2383,6 +2491,18 @@ help:
 	@echo "... jsoncpp1.9.0/json_writer.o"
 	@echo "... jsoncpp1.9.0/json_writer.i"
 	@echo "... jsoncpp1.9.0/json_writer.s"
+	@echo "... myChatserver/chatserversrc/ChatServer.o"
+	@echo "... myChatserver/chatserversrc/ChatServer.i"
+	@echo "... myChatserver/chatserversrc/ChatServer.s"
+	@echo "... myChatserver/chatserversrc/ChatSession.o"
+	@echo "... myChatserver/chatserversrc/ChatSession.i"
+	@echo "... myChatserver/chatserversrc/ChatSession.s"
+	@echo "... myChatserver/chatserversrc/MsgCacheManager.o"
+	@echo "... myChatserver/chatserversrc/MsgCacheManager.i"
+	@echo "... myChatserver/chatserversrc/MsgCacheManager.s"
+	@echo "... myChatserver/chatserversrc/TcpSession.o"
+	@echo "... myChatserver/chatserversrc/TcpSession.i"
+	@echo "... myChatserver/chatserversrc/TcpSession.s"
 	@echo "... myChatserver/chatserversrc/UserManager.o"
 	@echo "... myChatserver/chatserversrc/UserManager.i"
 	@echo "... myChatserver/chatserversrc/UserManager.s"

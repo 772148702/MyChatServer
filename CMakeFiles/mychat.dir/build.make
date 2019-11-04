@@ -70,17 +70,77 @@ CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.cpp -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.s
 
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.o: CMakeFiles/mychat.dir/flags.make
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.o: myChatserver/chatserversrc/MsgCacheManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.o -c /home/lzy/MyChatAppServer/myChatserver/chatserversrc/MsgCacheManager.cpp
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/myChatserver/chatserversrc/MsgCacheManager.cpp > CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.i
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/myChatserver/chatserversrc/MsgCacheManager.cpp -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.s
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.o: CMakeFiles/mychat.dir/flags.make
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.o: myChatserver/chatserversrc/ChatSession.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.o -c /home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatSession.cpp
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatSession.cpp > CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.i
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatSession.cpp -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.s
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.o: CMakeFiles/mychat.dir/flags.make
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.o: myChatserver/chatserversrc/TcpSession.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.o -c /home/lzy/MyChatAppServer/myChatserver/chatserversrc/TcpSession.cpp
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/myChatserver/chatserversrc/TcpSession.cpp > CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.i
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/myChatserver/chatserversrc/TcpSession.cpp -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.s
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.o: CMakeFiles/mychat.dir/flags.make
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.o: myChatserver/chatserversrc/ChatServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.o -c /home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatServer.cpp
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatServer.cpp > CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.i
+
+CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatServer.cpp -o CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.s
+
 # Object files for target mychat
 mychat_OBJECTS = \
-"CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.o"
+"CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.o" \
+"CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.o" \
+"CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.o" \
+"CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.o" \
+"CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.o"
 
 # External object files for target mychat
 mychat_EXTERNAL_OBJECTS =
 
 libmychat.a: CMakeFiles/mychat.dir/myChatserver/chatserversrc/UserManager.cpp.o
+libmychat.a: CMakeFiles/mychat.dir/myChatserver/chatserversrc/MsgCacheManager.cpp.o
+libmychat.a: CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatSession.cpp.o
+libmychat.a: CMakeFiles/mychat.dir/myChatserver/chatserversrc/TcpSession.cpp.o
+libmychat.a: CMakeFiles/mychat.dir/myChatserver/chatserversrc/ChatServer.cpp.o
 libmychat.a: CMakeFiles/mychat.dir/build.make
 libmychat.a: CMakeFiles/mychat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmychat.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lzy/MyChatAppServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libmychat.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/mychat.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mychat.dir/link.txt --verbose=$(VERBOSE)
 

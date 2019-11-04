@@ -592,6 +592,30 @@
 		<Unit filename="/home/lzy/MyChatAppServer/jsoncpp1.9.0/json_writer.cpp">
 			<Option target="chatserver"/>
 		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatServer.cpp">
+			<Option target="mychat"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatServer.h">
+			<Option target="mychat"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatSession.cpp">
+			<Option target="mychat"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/ChatSession.h">
+			<Option target="mychat"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/MsgCacheManager.cpp">
+			<Option target="mychat"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/MsgCacheManager.h">
+			<Option target="mychat"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/TcpSession.cpp">
+			<Option target="mychat"/>
+		</Unit>
+		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/TcpSession.h">
+			<Option target="mychat"/>
+		</Unit>
 		<Unit filename="/home/lzy/MyChatAppServer/myChatserver/chatserversrc/UserManager.cpp">
 			<Option target="UserManagertest"/>
 			<Option target="mysqlMgrtest"/>
